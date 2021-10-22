@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="5"
-  DTS:VersionGUID="{22421DAF-BF1C-45F0-988E-D488D621C096}">
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{02D965EE-D853-40F1-B40C-5A08CDDA0540}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -51,6 +51,23 @@
         </ExecutePackageTask>
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Execute Package Source Vehicle"
+      DTS:CreationName="Microsoft.ExecutePackageTask"
+      DTS:Description="Execute Package Task"
+      DTS:DTSID="{4979D5C6-AE65-4833-9D51-C4EBCB6B8CA0}"
+      DTS:ExecutableType="Microsoft.ExecutePackageTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute Package Source Vehicle"
+      DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecutePackageTask>
+          <UseProjectReference>True</UseProjectReference>
+          <PackageName>Nhan_SourceVehicles_Stage_Package.dtsx</PackageName>
+        </ExecutePackageTask>
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -65,13 +82,17 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="244.666666666667,41.3333333333334"
+          Size="244,42.4"
+          Id="Package\Execute Package Source Casualties"
+          TopLeft="96.87499855645,123.499997791648" />
+        <NodeLayout
+          Size="244.8,41.6"
           Id="Package\Execute Package Source PostCodes"
           TopLeft="87.1428586268915,30.5882357231061" />
         <NodeLayout
-          Size="244,42.6666666666667"
-          Id="Package\Execute Package Source Casualties"
-          TopLeft="96.87499855645,123.499997791648" />
+          Size="229.6,41.6"
+          Id="Package\Execute Package Source Vehicle"
+          TopLeft="442.142864672505,41.2941182261932" />
       </GraphLayout>
     </LayoutInfo>
   </Package>

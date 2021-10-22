@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{1D8BC816-EE68-4247-9AB2-FD89C9601B00}">
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{9F0B7EC1-9AED-4948-AC18-084F71A003CE}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -25,7 +25,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="0"
           DTS:ConnectRetryInterval="0"
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\HKI-Năm 4\HTTTTTKD(BI)\Data-Labs\Vehicles1114.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\HKI-Năm 4\HTTTTTKD(BI)\Data-Labs\Vehicles1114.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -37,7 +37,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="0"
           DTS:ConnectRetryInterval="0"
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\HKI-Năm 4\HTTTTTKD(BI)\Data-Labs\Vehicles1114.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\HKI-Năm 4\HTTTTTKD(BI)\Data-Labs\Vehicles1114.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -140,7 +140,6 @@
       DTS:refId="Package\ExcelVehicles--&gt; SQL SourceBI"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:Disabled="True"
       DTS:DTSID="{67081B27-93B2-40B5-BA59-CF11AD83FE70}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -151,331 +150,6 @@
         <pipeline
           version="1">
           <components>
-            <component
-              refId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="OLE DB Destination"
-              name="OLE DB Destination"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[Vehicle Table]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">3</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[NHANLANG\NHANLANG.SourceBI]"
-                  connectionManagerRefId="Package.ConnectionManagers[NHANLANG\NHANLANG.SourceBI]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input]"
-                  errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Accident_Index]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Accident_Index"
-                      externalMetadataColumnId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Accident_Index]"
-                      lineageId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle.Outputs[Excel Source Output].Columns[Accident_Index]" />
-                    <inputColumn
-                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Vehicle_Reference]"
-                      cachedDataType="r8"
-                      cachedName="Vehicle_Reference"
-                      externalMetadataColumnId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Reference]"
-                      lineageId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle.Outputs[Excel Source Output].Columns[Vehicle_Reference]" />
-                    <inputColumn
-                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Vehicle_Type]"
-                      cachedDataType="r8"
-                      cachedName="Vehicle_Type"
-                      externalMetadataColumnId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Type]"
-                      lineageId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle.Outputs[Excel Source Output].Columns[Vehicle_Type]" />
-                    <inputColumn
-                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Towing_and_Articulation]"
-                      cachedDataType="r8"
-                      cachedName="Towing_and_Articulation"
-                      externalMetadataColumnId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Towing_and_Articulation]"
-                      lineageId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle.Outputs[Excel Source Output].Columns[Towing_and_Articulation]" />
-                    <inputColumn
-                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Vehicle_Manoeuvre]"
-                      cachedDataType="r8"
-                      cachedName="Vehicle_Manoeuvre"
-                      externalMetadataColumnId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Manoeuvre]"
-                      lineageId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle.Outputs[Excel Source Output].Columns[Vehicle_Manoeuvre]" />
-                    <inputColumn
-                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Vehicle_Location-Restricted_Lane]"
-                      cachedDataType="r8"
-                      cachedName="Vehicle_Location-Restricted_Lane"
-                      externalMetadataColumnId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Location-Restricted_Lane]"
-                      lineageId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle.Outputs[Excel Source Output].Columns[Vehicle_Location-Restricted_Lane]" />
-                    <inputColumn
-                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Junction_Location]"
-                      cachedDataType="r8"
-                      cachedName="Junction_Location"
-                      externalMetadataColumnId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Junction_Location]"
-                      lineageId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle.Outputs[Excel Source Output].Columns[Junction_Location]" />
-                    <inputColumn
-                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Skidding_and_Overturning]"
-                      cachedDataType="r8"
-                      cachedName="Skidding_and_Overturning"
-                      externalMetadataColumnId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Skidding_and_Overturning]"
-                      lineageId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle.Outputs[Excel Source Output].Columns[Skidding_and_Overturning]" />
-                    <inputColumn
-                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Hit_Object_in_Carriageway]"
-                      cachedDataType="r8"
-                      cachedName="Hit_Object_in_Carriageway"
-                      externalMetadataColumnId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Hit_Object_in_Carriageway]"
-                      lineageId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle.Outputs[Excel Source Output].Columns[Hit_Object_in_Carriageway]" />
-                    <inputColumn
-                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Vehicle_Leaving_Carriageway]"
-                      cachedDataType="r8"
-                      cachedName="Vehicle_Leaving_Carriageway"
-                      externalMetadataColumnId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Leaving_Carriageway]"
-                      lineageId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle.Outputs[Excel Source Output].Columns[Vehicle_Leaving_Carriageway]" />
-                    <inputColumn
-                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Hit_Object_off_Carriageway]"
-                      cachedDataType="r8"
-                      cachedName="Hit_Object_off_Carriageway"
-                      externalMetadataColumnId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Hit_Object_off_Carriageway]"
-                      lineageId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle.Outputs[Excel Source Output].Columns[Hit_Object_off_Carriageway]" />
-                    <inputColumn
-                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[1st_Point_of_Impact]"
-                      cachedDataType="r8"
-                      cachedName="1st_Point_of_Impact"
-                      externalMetadataColumnId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[1st_Point_of_Impact]"
-                      lineageId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle.Outputs[Excel Source Output].Columns[1st_Point_of_Impact]" />
-                    <inputColumn
-                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Was_Vehicle_Left_Hand_Drive?]"
-                      cachedDataType="r8"
-                      cachedName="Was_Vehicle_Left_Hand_Drive?"
-                      externalMetadataColumnId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Was_Vehicle_Left_Hand_Drive?]"
-                      lineageId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle.Outputs[Excel Source Output].Columns[Was_Vehicle_Left_Hand_Drive?]" />
-                    <inputColumn
-                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Journey_Purpose_of_Driver]"
-                      cachedDataType="r8"
-                      cachedName="Journey_Purpose_of_Driver"
-                      externalMetadataColumnId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Journey_Purpose_of_Driver]"
-                      lineageId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle.Outputs[Excel Source Output].Columns[Journey_Purpose_of_Driver]" />
-                    <inputColumn
-                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Sex_of_Driver]"
-                      cachedDataType="r8"
-                      cachedName="Sex_of_Driver"
-                      externalMetadataColumnId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sex_of_Driver]"
-                      lineageId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle.Outputs[Excel Source Output].Columns[Sex_of_Driver]" />
-                    <inputColumn
-                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Age_of_Driver]"
-                      cachedDataType="r8"
-                      cachedName="Age_of_Driver"
-                      externalMetadataColumnId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Age_of_Driver]"
-                      lineageId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle.Outputs[Excel Source Output].Columns[Age_of_Driver]" />
-                    <inputColumn
-                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Age_Band_of_Driver]"
-                      cachedDataType="r8"
-                      cachedName="Age_Band_of_Driver"
-                      externalMetadataColumnId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Age_Band_of_Driver]"
-                      lineageId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle.Outputs[Excel Source Output].Columns[Age_Band_of_Driver]" />
-                    <inputColumn
-                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Engine_Capacity_(CC)]"
-                      cachedDataType="r8"
-                      cachedName="Engine_Capacity_(CC)"
-                      externalMetadataColumnId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Engine_Capacity_(CC)]"
-                      lineageId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle.Outputs[Excel Source Output].Columns[Engine_Capacity_(CC)]" />
-                    <inputColumn
-                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Propulsion_Code]"
-                      cachedDataType="r8"
-                      cachedName="Propulsion_Code"
-                      externalMetadataColumnId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Propulsion_Code]"
-                      lineageId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle.Outputs[Excel Source Output].Columns[Propulsion_Code]" />
-                    <inputColumn
-                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Age_of_Vehicle]"
-                      cachedDataType="r8"
-                      cachedName="Age_of_Vehicle"
-                      externalMetadataColumnId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Age_of_Vehicle]"
-                      lineageId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle.Outputs[Excel Source Output].Columns[Age_of_Vehicle]" />
-                    <inputColumn
-                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Driver_IMD_Decile]"
-                      cachedDataType="r8"
-                      cachedName="Driver_IMD_Decile"
-                      externalMetadataColumnId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Driver_IMD_Decile]"
-                      lineageId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle.Outputs[Excel Source Output].Columns[Driver_IMD_Decile]" />
-                    <inputColumn
-                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Driver_Home_Area_Type]"
-                      cachedDataType="r8"
-                      cachedName="Driver_Home_Area_Type"
-                      externalMetadataColumnId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Driver_Home_Area_Type]"
-                      lineageId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle.Outputs[Excel Source Output].Columns[Driver_Home_Area_Type]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Accident_Index]"
-                      dataType="wstr"
-                      length="255"
-                      name="Accident_Index" />
-                    <externalMetadataColumn
-                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Reference]"
-                      dataType="r8"
-                      name="Vehicle_Reference" />
-                    <externalMetadataColumn
-                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Type]"
-                      dataType="r8"
-                      name="Vehicle_Type" />
-                    <externalMetadataColumn
-                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Towing_and_Articulation]"
-                      dataType="r8"
-                      name="Towing_and_Articulation" />
-                    <externalMetadataColumn
-                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Manoeuvre]"
-                      dataType="r8"
-                      name="Vehicle_Manoeuvre" />
-                    <externalMetadataColumn
-                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Location-Restricted_Lane]"
-                      dataType="r8"
-                      name="Vehicle_Location-Restricted_Lane" />
-                    <externalMetadataColumn
-                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Junction_Location]"
-                      dataType="r8"
-                      name="Junction_Location" />
-                    <externalMetadataColumn
-                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Skidding_and_Overturning]"
-                      dataType="r8"
-                      name="Skidding_and_Overturning" />
-                    <externalMetadataColumn
-                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Hit_Object_in_Carriageway]"
-                      dataType="r8"
-                      name="Hit_Object_in_Carriageway" />
-                    <externalMetadataColumn
-                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Leaving_Carriageway]"
-                      dataType="r8"
-                      name="Vehicle_Leaving_Carriageway" />
-                    <externalMetadataColumn
-                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Hit_Object_off_Carriageway]"
-                      dataType="r8"
-                      name="Hit_Object_off_Carriageway" />
-                    <externalMetadataColumn
-                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[1st_Point_of_Impact]"
-                      dataType="r8"
-                      name="1st_Point_of_Impact" />
-                    <externalMetadataColumn
-                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Was_Vehicle_Left_Hand_Drive?]"
-                      dataType="r8"
-                      name="Was_Vehicle_Left_Hand_Drive?" />
-                    <externalMetadataColumn
-                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Journey_Purpose_of_Driver]"
-                      dataType="r8"
-                      name="Journey_Purpose_of_Driver" />
-                    <externalMetadataColumn
-                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sex_of_Driver]"
-                      dataType="r8"
-                      name="Sex_of_Driver" />
-                    <externalMetadataColumn
-                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Age_of_Driver]"
-                      dataType="r8"
-                      name="Age_of_Driver" />
-                    <externalMetadataColumn
-                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Age_Band_of_Driver]"
-                      dataType="r8"
-                      name="Age_Band_of_Driver" />
-                    <externalMetadataColumn
-                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Engine_Capacity_(CC)]"
-                      dataType="r8"
-                      name="Engine_Capacity_(CC)" />
-                    <externalMetadataColumn
-                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Propulsion_Code]"
-                      dataType="r8"
-                      name="Propulsion_Code" />
-                    <externalMetadataColumn
-                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Age_of_Vehicle]"
-                      dataType="r8"
-                      name="Age_of_Vehicle" />
-                    <externalMetadataColumn
-                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Driver_IMD_Decile]"
-                      dataType="r8"
-                      name="Driver_IMD_Decile" />
-                    <externalMetadataColumn
-                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Driver_Home_Area_Type]"
-                      dataType="r8"
-                      name="Driver_Home_Area_Type" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
             <component
               refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle"
               componentClassID="Microsoft.ExcelSource"
@@ -955,11 +629,336 @@
                 </output>
               </outputs>
             </component>
+            <component
+              refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Vehicle Table"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Vehicle Table]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[NHANLANG\NHANLANG.SourceBI]"
+                  connectionManagerRefId="Package.ConnectionManagers[NHANLANG\NHANLANG.SourceBI]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].Columns[Accident_Index]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Accident_Index"
+                      externalMetadataColumnId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].ExternalColumns[Accident_Index]"
+                      lineageId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle.Outputs[Excel Source Output].Columns[Accident_Index]" />
+                    <inputColumn
+                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].Columns[Vehicle_Reference]"
+                      cachedDataType="r8"
+                      cachedName="Vehicle_Reference"
+                      externalMetadataColumnId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Reference]"
+                      lineageId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle.Outputs[Excel Source Output].Columns[Vehicle_Reference]" />
+                    <inputColumn
+                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].Columns[Vehicle_Type]"
+                      cachedDataType="r8"
+                      cachedName="Vehicle_Type"
+                      externalMetadataColumnId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Type]"
+                      lineageId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle.Outputs[Excel Source Output].Columns[Vehicle_Type]" />
+                    <inputColumn
+                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].Columns[Towing_and_Articulation]"
+                      cachedDataType="r8"
+                      cachedName="Towing_and_Articulation"
+                      externalMetadataColumnId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].ExternalColumns[Towing_and_Articulation]"
+                      lineageId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle.Outputs[Excel Source Output].Columns[Towing_and_Articulation]" />
+                    <inputColumn
+                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].Columns[Vehicle_Manoeuvre]"
+                      cachedDataType="r8"
+                      cachedName="Vehicle_Manoeuvre"
+                      externalMetadataColumnId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Manoeuvre]"
+                      lineageId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle.Outputs[Excel Source Output].Columns[Vehicle_Manoeuvre]" />
+                    <inputColumn
+                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].Columns[Vehicle_Location-Restricted_Lane]"
+                      cachedDataType="r8"
+                      cachedName="Vehicle_Location-Restricted_Lane"
+                      externalMetadataColumnId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Location-Restricted_Lane]"
+                      lineageId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle.Outputs[Excel Source Output].Columns[Vehicle_Location-Restricted_Lane]" />
+                    <inputColumn
+                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].Columns[Junction_Location]"
+                      cachedDataType="r8"
+                      cachedName="Junction_Location"
+                      externalMetadataColumnId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].ExternalColumns[Junction_Location]"
+                      lineageId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle.Outputs[Excel Source Output].Columns[Junction_Location]" />
+                    <inputColumn
+                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].Columns[Skidding_and_Overturning]"
+                      cachedDataType="r8"
+                      cachedName="Skidding_and_Overturning"
+                      externalMetadataColumnId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].ExternalColumns[Skidding_and_Overturning]"
+                      lineageId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle.Outputs[Excel Source Output].Columns[Skidding_and_Overturning]" />
+                    <inputColumn
+                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].Columns[Hit_Object_in_Carriageway]"
+                      cachedDataType="r8"
+                      cachedName="Hit_Object_in_Carriageway"
+                      externalMetadataColumnId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].ExternalColumns[Hit_Object_in_Carriageway]"
+                      lineageId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle.Outputs[Excel Source Output].Columns[Hit_Object_in_Carriageway]" />
+                    <inputColumn
+                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].Columns[Vehicle_Leaving_Carriageway]"
+                      cachedDataType="r8"
+                      cachedName="Vehicle_Leaving_Carriageway"
+                      externalMetadataColumnId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Leaving_Carriageway]"
+                      lineageId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle.Outputs[Excel Source Output].Columns[Vehicle_Leaving_Carriageway]" />
+                    <inputColumn
+                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].Columns[Hit_Object_off_Carriageway]"
+                      cachedDataType="r8"
+                      cachedName="Hit_Object_off_Carriageway"
+                      externalMetadataColumnId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].ExternalColumns[Hit_Object_off_Carriageway]"
+                      lineageId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle.Outputs[Excel Source Output].Columns[Hit_Object_off_Carriageway]" />
+                    <inputColumn
+                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].Columns[1st_Point_of_Impact]"
+                      cachedDataType="r8"
+                      cachedName="1st_Point_of_Impact"
+                      externalMetadataColumnId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].ExternalColumns[1st_Point_of_Impact]"
+                      lineageId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle.Outputs[Excel Source Output].Columns[1st_Point_of_Impact]" />
+                    <inputColumn
+                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].Columns[Was_Vehicle_Left_Hand_Drive?]"
+                      cachedDataType="r8"
+                      cachedName="Was_Vehicle_Left_Hand_Drive?"
+                      externalMetadataColumnId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].ExternalColumns[Was_Vehicle_Left_Hand_Drive?]"
+                      lineageId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle.Outputs[Excel Source Output].Columns[Was_Vehicle_Left_Hand_Drive?]" />
+                    <inputColumn
+                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].Columns[Journey_Purpose_of_Driver]"
+                      cachedDataType="r8"
+                      cachedName="Journey_Purpose_of_Driver"
+                      externalMetadataColumnId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].ExternalColumns[Journey_Purpose_of_Driver]"
+                      lineageId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle.Outputs[Excel Source Output].Columns[Journey_Purpose_of_Driver]" />
+                    <inputColumn
+                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].Columns[Sex_of_Driver]"
+                      cachedDataType="r8"
+                      cachedName="Sex_of_Driver"
+                      externalMetadataColumnId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].ExternalColumns[Sex_of_Driver]"
+                      lineageId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle.Outputs[Excel Source Output].Columns[Sex_of_Driver]" />
+                    <inputColumn
+                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].Columns[Age_of_Driver]"
+                      cachedDataType="r8"
+                      cachedName="Age_of_Driver"
+                      externalMetadataColumnId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].ExternalColumns[Age_of_Driver]"
+                      lineageId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle.Outputs[Excel Source Output].Columns[Age_of_Driver]" />
+                    <inputColumn
+                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].Columns[Age_Band_of_Driver]"
+                      cachedDataType="r8"
+                      cachedName="Age_Band_of_Driver"
+                      externalMetadataColumnId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].ExternalColumns[Age_Band_of_Driver]"
+                      lineageId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle.Outputs[Excel Source Output].Columns[Age_Band_of_Driver]" />
+                    <inputColumn
+                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].Columns[Engine_Capacity_(CC)]"
+                      cachedDataType="r8"
+                      cachedName="Engine_Capacity_(CC)"
+                      externalMetadataColumnId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].ExternalColumns[Engine_Capacity_(CC)]"
+                      lineageId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle.Outputs[Excel Source Output].Columns[Engine_Capacity_(CC)]" />
+                    <inputColumn
+                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].Columns[Propulsion_Code]"
+                      cachedDataType="r8"
+                      cachedName="Propulsion_Code"
+                      externalMetadataColumnId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].ExternalColumns[Propulsion_Code]"
+                      lineageId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle.Outputs[Excel Source Output].Columns[Propulsion_Code]" />
+                    <inputColumn
+                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].Columns[Age_of_Vehicle]"
+                      cachedDataType="r8"
+                      cachedName="Age_of_Vehicle"
+                      externalMetadataColumnId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].ExternalColumns[Age_of_Vehicle]"
+                      lineageId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle.Outputs[Excel Source Output].Columns[Age_of_Vehicle]" />
+                    <inputColumn
+                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].Columns[Driver_IMD_Decile]"
+                      cachedDataType="r8"
+                      cachedName="Driver_IMD_Decile"
+                      externalMetadataColumnId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].ExternalColumns[Driver_IMD_Decile]"
+                      lineageId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle.Outputs[Excel Source Output].Columns[Driver_IMD_Decile]" />
+                    <inputColumn
+                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].Columns[Driver_Home_Area_Type]"
+                      cachedDataType="r8"
+                      cachedName="Driver_Home_Area_Type"
+                      externalMetadataColumnId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].ExternalColumns[Driver_Home_Area_Type]"
+                      lineageId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle.Outputs[Excel Source Output].Columns[Driver_Home_Area_Type]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].ExternalColumns[Accident_Index]"
+                      dataType="wstr"
+                      length="255"
+                      name="Accident_Index" />
+                    <externalMetadataColumn
+                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Reference]"
+                      dataType="r8"
+                      name="Vehicle_Reference" />
+                    <externalMetadataColumn
+                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Type]"
+                      dataType="r8"
+                      name="Vehicle_Type" />
+                    <externalMetadataColumn
+                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].ExternalColumns[Towing_and_Articulation]"
+                      dataType="r8"
+                      name="Towing_and_Articulation" />
+                    <externalMetadataColumn
+                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Manoeuvre]"
+                      dataType="r8"
+                      name="Vehicle_Manoeuvre" />
+                    <externalMetadataColumn
+                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Location-Restricted_Lane]"
+                      dataType="r8"
+                      name="Vehicle_Location-Restricted_Lane" />
+                    <externalMetadataColumn
+                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].ExternalColumns[Junction_Location]"
+                      dataType="r8"
+                      name="Junction_Location" />
+                    <externalMetadataColumn
+                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].ExternalColumns[Skidding_and_Overturning]"
+                      dataType="r8"
+                      name="Skidding_and_Overturning" />
+                    <externalMetadataColumn
+                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].ExternalColumns[Hit_Object_in_Carriageway]"
+                      dataType="r8"
+                      name="Hit_Object_in_Carriageway" />
+                    <externalMetadataColumn
+                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Leaving_Carriageway]"
+                      dataType="r8"
+                      name="Vehicle_Leaving_Carriageway" />
+                    <externalMetadataColumn
+                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].ExternalColumns[Hit_Object_off_Carriageway]"
+                      dataType="r8"
+                      name="Hit_Object_off_Carriageway" />
+                    <externalMetadataColumn
+                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].ExternalColumns[1st_Point_of_Impact]"
+                      dataType="r8"
+                      name="1st_Point_of_Impact" />
+                    <externalMetadataColumn
+                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].ExternalColumns[Was_Vehicle_Left_Hand_Drive?]"
+                      dataType="r8"
+                      name="Was_Vehicle_Left_Hand_Drive?" />
+                    <externalMetadataColumn
+                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].ExternalColumns[Journey_Purpose_of_Driver]"
+                      dataType="r8"
+                      name="Journey_Purpose_of_Driver" />
+                    <externalMetadataColumn
+                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].ExternalColumns[Sex_of_Driver]"
+                      dataType="r8"
+                      name="Sex_of_Driver" />
+                    <externalMetadataColumn
+                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].ExternalColumns[Age_of_Driver]"
+                      dataType="r8"
+                      name="Age_of_Driver" />
+                    <externalMetadataColumn
+                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].ExternalColumns[Age_Band_of_Driver]"
+                      dataType="r8"
+                      name="Age_Band_of_Driver" />
+                    <externalMetadataColumn
+                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].ExternalColumns[Engine_Capacity_(CC)]"
+                      dataType="r8"
+                      name="Engine_Capacity_(CC)" />
+                    <externalMetadataColumn
+                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].ExternalColumns[Propulsion_Code]"
+                      dataType="r8"
+                      name="Propulsion_Code" />
+                    <externalMetadataColumn
+                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].ExternalColumns[Age_of_Vehicle]"
+                      dataType="r8"
+                      name="Age_of_Vehicle" />
+                    <externalMetadataColumn
+                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].ExternalColumns[Driver_IMD_Decile]"
+                      dataType="r8"
+                      name="Driver_IMD_Decile" />
+                    <externalMetadataColumn
+                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input].ExternalColumns[Driver_Home_Area_Type]"
+                      dataType="r8"
+                      name="Driver_Home_Area_Type" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
           </components>
           <paths>
             <path
               refId="Package\ExcelVehicles--&gt; SQL SourceBI.Paths[Excel Source Output]"
-              endId="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              endId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Inputs[OLE DB Destination Input]"
               name="Excel Source Output"
               startId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle.Outputs[Excel Source Output]" />
           </paths>
@@ -980,13 +979,13 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="224,41.6"
-          Id="Package\ExcelVehicles--&gt; SQL SourceBI"
-          TopLeft="107.142858967489,20.6470591130966" />
-        <NodeLayout
           Size="167.2,41.6"
           Id="Package\Data Profiling Task"
           TopLeft="397.14286390616,29.8235298300284" />
+        <NodeLayout
+          Size="224,41.6"
+          Id="Package\ExcelVehicles--&gt; SQL SourceBI"
+          TopLeft="107.142858967489,20.6470591130966" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -996,39 +995,39 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="140.8,41.6"
+          Id="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table"
+          TopLeft="277.142861862572,126.94117825089" />
+        <NodeLayout
           Size="112,41.6"
           Id="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle"
           TopLeft="85.0000014475414,21.3058826854072" />
-        <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination"
-          TopLeft="277.142861862572,126.94117825089" />
         <EdgeLayout
           Id="Package\ExcelVehicles--&gt; SQL SourceBI.Paths[Excel Source Output]"
           TopLeft="141.000001447541,62.9058826854072">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="221.342860415031,64.0352955654831"
+              EndConnector="206.542860415031,64.0352955654828"
               Start="0,0"
-              End="221.342860415031,56.5352955654831">
+              End="206.542860415031,56.5352955654828">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,28.0176477827415" />
+                    End="0,28.0176477827414" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,28.0176477827415"
-                    Point2="0,32.0176477827415"
-                    Point3="4,32.0176477827415" />
+                    Point1="0,28.0176477827414"
+                    Point2="0,32.0176477827414"
+                    Point3="4,32.0176477827414" />
                   <mssgle:LineSegment
-                    End="217.342860415031,32.0176477827415" />
+                    End="202.542860415031,32.0176477827414" />
                   <mssgle:CubicBezierSegment
-                    Point1="217.342860415031,32.0176477827415"
-                    Point2="221.342860415031,32.0176477827415"
-                    Point3="221.342860415031,36.0176477827415" />
+                    Point1="202.542860415031,32.0176477827414"
+                    Point2="206.542860415031,32.0176477827414"
+                    Point3="206.542860415031,36.0176477827414" />
                   <mssgle:LineSegment
-                    End="221.342860415031,56.5352955654831" />
+                    End="206.542860415031,56.5352955654828" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1041,7 +1040,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle">
+    design-time-name="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1054,7 +1053,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\ExcelVehicles--&gt; SQL SourceBI\OLE DB Destination">
+    design-time-name="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
