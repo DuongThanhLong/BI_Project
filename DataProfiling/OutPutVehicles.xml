@@ -1,0 +1,413 @@
+<?xml version="1.0"?>
+<DataProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/sqlserver/2008/DataDebugger/">
+  <ProfileVersion>1.0</ProfileVersion>
+  <DataSources>
+    <DtsDataSource ID="{2A9E38B5-5751-48F9-9E10-E724598CC32B}" Name="LocalHost.SourceBI">
+      <DtsConnectionManagerID>LocalHost.SourceBI</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{0EC48F43-6B21-4CD5-B332-28B1F1DAA3E8}" Name="OutPutVehicles.xml">
+      <DtsConnectionManagerID>OutPutVehicles.xml</DtsConnectionManagerID>
+    </DtsDataSource>
+  </DataSources>
+  <DataProfileInput>
+    <ProfileMode>Exact</ProfileMode>
+    <Timeout>0</Timeout>
+    <Requests>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq">
+        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <Table Schema="dbo" Table="Vehicle Table" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq">
+        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <Table Schema="dbo" Table="Vehicle Table" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq">
+        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <Table Schema="dbo" Table="Vehicle Table" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq">
+        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <Table Schema="dbo" Table="Vehicle Table" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq">
+        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <Table Schema="dbo" Table="Vehicle Table" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+    </Requests>
+  </DataProfileInput>
+  <DataProfileOutput>
+    <Profiles>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <Table DataSource="." Database="SourceBI" Schema="dbo" Table="Vehicle Table" RowCount="1048575" />
+        <Column Name="Accident_Index" SqlDbType="NVarChar" MaxLength="255" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <Table DataSource="." Database="SourceBI" Schema="dbo" Table="Vehicle Table" RowCount="1048575" />
+        <Column Name="Vehicle_Reference" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <Table DataSource="." Database="SourceBI" Schema="dbo" Table="Vehicle Table" RowCount="1048575" />
+        <Column Name="Vehicle_Type" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <Table DataSource="." Database="SourceBI" Schema="dbo" Table="Vehicle Table" RowCount="1048575" />
+        <Column Name="Towing_and_Articulation" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <Table DataSource="." Database="SourceBI" Schema="dbo" Table="Vehicle Table" RowCount="1048575" />
+        <Column Name="Vehicle_Manoeuvre" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <Table DataSource="." Database="SourceBI" Schema="dbo" Table="Vehicle Table" RowCount="1048575" />
+        <Column Name="Vehicle_Location-Restricted_Lane" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <Table DataSource="." Database="SourceBI" Schema="dbo" Table="Vehicle Table" RowCount="1048575" />
+        <Column Name="Junction_Location" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <Table DataSource="." Database="SourceBI" Schema="dbo" Table="Vehicle Table" RowCount="1048575" />
+        <Column Name="Skidding_and_Overturning" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <Table DataSource="." Database="SourceBI" Schema="dbo" Table="Vehicle Table" RowCount="1048575" />
+        <Column Name="Hit_Object_in_Carriageway" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <Table DataSource="." Database="SourceBI" Schema="dbo" Table="Vehicle Table" RowCount="1048575" />
+        <Column Name="Vehicle_Leaving_Carriageway" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <Table DataSource="." Database="SourceBI" Schema="dbo" Table="Vehicle Table" RowCount="1048575" />
+        <Column Name="Hit_Object_off_Carriageway" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <Table DataSource="." Database="SourceBI" Schema="dbo" Table="Vehicle Table" RowCount="1048575" />
+        <Column Name="1st_Point_of_Impact" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <Table DataSource="." Database="SourceBI" Schema="dbo" Table="Vehicle Table" RowCount="1048575" />
+        <Column Name="Was_Vehicle_Left_Hand_Drive?" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <Table DataSource="." Database="SourceBI" Schema="dbo" Table="Vehicle Table" RowCount="1048575" />
+        <Column Name="Journey_Purpose_of_Driver" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <Table DataSource="." Database="SourceBI" Schema="dbo" Table="Vehicle Table" RowCount="1048575" />
+        <Column Name="Sex_of_Driver" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <Table DataSource="." Database="SourceBI" Schema="dbo" Table="Vehicle Table" RowCount="1048575" />
+        <Column Name="Age_of_Driver" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <Table DataSource="." Database="SourceBI" Schema="dbo" Table="Vehicle Table" RowCount="1048575" />
+        <Column Name="Age_Band_of_Driver" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <Table DataSource="." Database="SourceBI" Schema="dbo" Table="Vehicle Table" RowCount="1048575" />
+        <Column Name="Engine_Capacity_(CC)" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <Table DataSource="." Database="SourceBI" Schema="dbo" Table="Vehicle Table" RowCount="1048575" />
+        <Column Name="Propulsion_Code" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <Table DataSource="." Database="SourceBI" Schema="dbo" Table="Vehicle Table" RowCount="1048575" />
+        <Column Name="Age_of_Vehicle" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <Table DataSource="." Database="SourceBI" Schema="dbo" Table="Vehicle Table" RowCount="1048575" />
+        <Column Name="Driver_IMD_Decile" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <Table DataSource="." Database="SourceBI" Schema="dbo" Table="Vehicle Table" RowCount="1048575" />
+        <Column Name="Driver_Home_Area_Type" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <Table DataSource="." Database="SourceBI" Schema="dbo" Table="Vehicle Table" RowCount="1048575" />
+        <Column Name="Vehicle_Reference" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>1</MinValue>
+        <MaxValue>91</MaxValue>
+        <Mean>1.55233149750852</Mean>
+        <StdDev>0.801887324793582</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <Table DataSource="." Database="SourceBI" Schema="dbo" Table="Vehicle Table" RowCount="1048575" />
+        <Column Name="Vehicle_Type" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>-1</MinValue>
+        <MaxValue>98</MaxValue>
+        <Mean>9.44266075388027</Mean>
+        <StdDev>8.15793219912594</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <Table DataSource="." Database="SourceBI" Schema="dbo" Table="Vehicle Table" RowCount="1048575" />
+        <Column Name="Towing_and_Articulation" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>-1</MinValue>
+        <MaxValue>5</MaxValue>
+        <Mean>0.0287523543857139</Mean>
+        <StdDev>0.293528487794642</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <Table DataSource="." Database="SourceBI" Schema="dbo" Table="Vehicle Table" RowCount="1048575" />
+        <Column Name="Vehicle_Manoeuvre" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>-1</MinValue>
+        <MaxValue>18</MaxValue>
+        <Mean>12.6095300765324</Mean>
+        <StdDev>6.16964752798717</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <Table DataSource="." Database="SourceBI" Schema="dbo" Table="Vehicle Table" RowCount="1048575" />
+        <Column Name="Vehicle_Location-Restricted_Lane" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>-1</MinValue>
+        <MaxValue>9</MaxValue>
+        <Mean>0.135597358319624</Mean>
+        <StdDev>0.999597098438285</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <Table DataSource="." Database="SourceBI" Schema="dbo" Table="Vehicle Table" RowCount="1048575" />
+        <Column Name="Junction_Location" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>-1</MinValue>
+        <MaxValue>8</MaxValue>
+        <Mean>2.7384831795532</Mean>
+        <StdDev>3.25001429335899</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <Table DataSource="." Database="SourceBI" Schema="dbo" Table="Vehicle Table" RowCount="1048575" />
+        <Column Name="Skidding_and_Overturning" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>-1</MinValue>
+        <MaxValue>5</MaxValue>
+        <Mean>0.186889826669528</Mean>
+        <StdDev>0.690710755649282</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <Table DataSource="." Database="SourceBI" Schema="dbo" Table="Vehicle Table" RowCount="1048575" />
+        <Column Name="Hit_Object_in_Carriageway" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>-1</MinValue>
+        <MaxValue>12</MaxValue>
+        <Mean>0.296321197816084</Mean>
+        <StdDev>1.57460521969872</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <Table DataSource="." Database="SourceBI" Schema="dbo" Table="Vehicle Table" RowCount="1048575" />
+        <Column Name="Vehicle_Leaving_Carriageway" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>-1</MinValue>
+        <MaxValue>8</MaxValue>
+        <Mean>0.345629068020886</Mean>
+        <StdDev>1.33919288164793</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <Table DataSource="." Database="SourceBI" Schema="dbo" Table="Vehicle Table" RowCount="1048575" />
+        <Column Name="Hit_Object_off_Carriageway" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>-1</MinValue>
+        <MaxValue>11</MaxValue>
+        <Mean>0.528613594640345</Mean>
+        <StdDev>2.03479712597695</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <Table DataSource="." Database="SourceBI" Schema="dbo" Table="Vehicle Table" RowCount="1048575" />
+        <Column Name="1st_Point_of_Impact" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>-1</MinValue>
+        <MaxValue>4</MaxValue>
+        <Mean>1.7948930691653</Mean>
+        <StdDev>1.16936377246102</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <Table DataSource="." Database="SourceBI" Schema="dbo" Table="Vehicle Table" RowCount="1048575" />
+        <Column Name="Was_Vehicle_Left_Hand_Drive?" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>-1</MinValue>
+        <MaxValue>2</MaxValue>
+        <Mean>1.00429821424314</Mean>
+        <StdDev>0.0675710157185024</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <Table DataSource="." Database="SourceBI" Schema="dbo" Table="Vehicle Table" RowCount="1048575" />
+        <Column Name="Journey_Purpose_of_Driver" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>-1</MinValue>
+        <MaxValue>6</MaxValue>
+        <Mean>4.71919414443411</Mean>
+        <StdDev>2.05226463530553</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <Table DataSource="." Database="SourceBI" Schema="dbo" Table="Vehicle Table" RowCount="1048575" />
+        <Column Name="Sex_of_Driver" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>1</MinValue>
+        <MaxValue>3</MaxValue>
+        <Mean>1.40811386882197</Mean>
+        <StdDev>0.602255626454167</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <Table DataSource="." Database="SourceBI" Schema="dbo" Table="Vehicle Table" RowCount="1048575" />
+        <Column Name="Age_of_Driver" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>-1</MinValue>
+        <MaxValue>100</MaxValue>
+        <Mean>35.3541472951386</Mean>
+        <StdDev>19.8581894551382</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <Table DataSource="." Database="SourceBI" Schema="dbo" Table="Vehicle Table" RowCount="1048575" />
+        <Column Name="Age_Band_of_Driver" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>-1</MinValue>
+        <MaxValue>11</MaxValue>
+        <Mean>5.96791168967408</Mean>
+        <StdDev>2.96157131133413</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <Table DataSource="." Database="SourceBI" Schema="dbo" Table="Vehicle Table" RowCount="1048575" />
+        <Column Name="Engine_Capacity_(CC)" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>-1</MinValue>
+        <MaxValue>91000</MaxValue>
+        <Mean>1429.68928021362</Mean>
+        <StdDev>1652.68332927617</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <Table DataSource="." Database="SourceBI" Schema="dbo" Table="Vehicle Table" RowCount="1048575" />
+        <Column Name="Propulsion_Code" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>-1</MinValue>
+        <MaxValue>12</MaxValue>
+        <Mean>0.827742412321484</Mean>
+        <StdDev>1.20085203410972</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <Table DataSource="." Database="SourceBI" Schema="dbo" Table="Vehicle Table" RowCount="1048575" />
+        <Column Name="Age_of_Vehicle" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>-1</MinValue>
+        <MaxValue>111</MaxValue>
+        <Mean>5.3885568509644</Mean>
+        <StdDev>5.61268491681542</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <Table DataSource="." Database="SourceBI" Schema="dbo" Table="Vehicle Table" RowCount="1048575" />
+        <Column Name="Driver_IMD_Decile" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>-1</MinValue>
+        <MaxValue>10</MaxValue>
+        <Mean>3.73000977517107</Mean>
+        <StdDev>3.6890771404837</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <Table DataSource="." Database="SourceBI" Schema="dbo" Table="Vehicle Table" RowCount="1048575" />
+        <Column Name="Driver_Home_Area_Type" SqlDbType="Float" MaxLength="0" Precision="53" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>-1</MinValue>
+        <MaxValue>3</MaxValue>
+        <Mean>0.918448370407458</Mean>
+        <StdDev>1.08387195463155</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <Table DataSource="." Database="SourceBI" Schema="dbo" Table="Vehicle Table" RowCount="1048575" />
+        <Column Name="Accident_Index" SqlDbType="NVarChar" MaxLength="255" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>8</MinLength>
+        <MaxLength>13</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>9</Length>
+            <Count>460</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>8</Length>
+            <Count>401869</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>13</Length>
+            <Count>646246</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <Table DataSource="." Database="SourceBI" Schema="dbo" Table="Vehicle Table" RowCount="1048575" />
+        <Column Name="Accident_Index" SqlDbType="NVarChar" MaxLength="255" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>355310</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>2.01E+12</Value>
+            <Count>401716</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+    </Profiles>
+  </DataProfileOutput>
+</DataProfile>

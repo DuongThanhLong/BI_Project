@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "Profiling_Accidents", "Profiling_Accidents\Profiling_Accidents.dtproj", "{B0E53AAB-0001-4E5A-A28D-E7205BCA76C8}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "Profiling_Casualities", "Profiling_Casualitites\Profiling_Casualities.dtproj", "{AAFB7B20-989E-47E3-8F21-F78C7BC6E640}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "Profiling_PCD", "Profiling_PCD\Profiling_PCD.dtproj", "{907745F6-2F9F-4522-8A20-685CB9C8903D}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "Profiling_PostCodes", "Profiling_PostCodes\Profiling_PostCodes.dtproj", "{4168903F-074E-4C78-8F5E-ABDA14014C98}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "Profiling_Vehicles", "Profiling_Vehicles\Profiling_Vehicles.dtproj", "{0D31D7C7-D0EF-4CCE-A7BD-715FC579C978}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B0E53AAB-0001-4E5A-A28D-E7205BCA76C8}.Development|Default.ActiveCfg = Development
+		{B0E53AAB-0001-4E5A-A28D-E7205BCA76C8}.Development|Default.Build.0 = Development
+		{AAFB7B20-989E-47E3-8F21-F78C7BC6E640}.Development|Default.ActiveCfg = Development
+		{AAFB7B20-989E-47E3-8F21-F78C7BC6E640}.Development|Default.Build.0 = Development
+		{907745F6-2F9F-4522-8A20-685CB9C8903D}.Development|Default.ActiveCfg = Development
+		{907745F6-2F9F-4522-8A20-685CB9C8903D}.Development|Default.Build.0 = Development
+		{4168903F-074E-4C78-8F5E-ABDA14014C98}.Development|Default.ActiveCfg = Development
+		{4168903F-074E-4C78-8F5E-ABDA14014C98}.Development|Default.Build.0 = Development
+		{0D31D7C7-D0EF-4CCE-A7BD-715FC579C978}.Development|Default.ActiveCfg = Development
+		{0D31D7C7-D0EF-4CCE-A7BD-715FC579C978}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2EAE1D2F-1935-4C52-9259-6496FD9B233D}
+	EndGlobalSection
+EndGlobal
