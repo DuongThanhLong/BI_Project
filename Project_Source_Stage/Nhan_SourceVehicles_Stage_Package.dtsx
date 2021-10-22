@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="5"
-  DTS:VersionGUID="{9F0B7EC1-9AED-4948-AC18-084F71A003CE}">
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{0D8E2CCF-1F4E-4605-AE0B-3D09A1A19DF1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -41,6 +41,30 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 2]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{79D7081F-D5E5-49E4-93A6-BD4B64156F8C}"
+      DTS:ObjectName="Excel Connection Manager 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Documents\Năm học 2021-2022\Hệ thống thông tin phục vụ trí tuệ kinh doanh\Labs\Labs\2021-2022 - BI Project - UK Accidents\Data\UK Accidents Data 2011-2014\Vehicles1114.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.SourceBI]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{47839558-3A7A-4C66-B033-D31F8FE8F1C2}"
+      DTS:ObjectName="LocalHost.SourceBI">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=SourceBI;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[NHANLANG\NHANLANG.SourceBI]"
       DTS:CreationName="OLEDB"
       DTS:DTSID="{92E9C0FF-9BE5-4DB3-B456-1469D13CD819}"
@@ -62,80 +86,9 @@
           DTS:ConnectionString="Data Source=NHANLANG\NHANLANG;Initial Catalog=SourceBI;Integrated Security=True;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[OutPutVehicle.xml]"
-      DTS:CreationName="FILE"
-      DTS:DTSID="{A618B46D-CF3D-440F-9FF7-192760E73495}"
-      DTS:ObjectName="OutPutVehicle.xml">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:FileUsageType="1"
-          DTS:ConnectionString="D:\HKI-Năm 4\HTTTTTKD(BI)\Data-Labs\OutPutVehicle.xml" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
-    <DTS:Executable
-      DTS:refId="Package\Data Profiling Task"
-      DTS:CreationName="Microsoft.DataProfilingTask"
-      DTS:Description="Data Profiling Task"
-      DTS:DTSID="{548BB220-F720-4EB6-879D-63E8AB85B01A}"
-      DTS:ExecutableType="Microsoft.DataProfilingTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Data Profiling Task"
-      DTS:TaskContact="Data Profiling Task; Microsoft Corporation; SQL Server 2019; (c) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <DataProfilingTaskData
-          Destination="OutPutVehicle.xml"
-          OverwriteDestination="True">
-          <ProfileInput><![CDATA[<?xml version="1.0" encoding="utf-16"?>
-<DataProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/sqlserver/2008/DataDebugger/">
-  <ProfileVersion>1.0</ProfileVersion>
-  <DataSources />
-  <DataProfileInput>
-    <ProfileMode>Exact</ProfileMode>
-    <Timeout>0</Timeout>
-    <Requests>
-      <CandidateKeyProfileRequest ID="KeyReq">
-        <DataSourceID>{0A26C242-D293-436A-832A-C4616B43CC4B}</DataSourceID>
-        <Table Schema="dbo" Table="Vehicle Table" />
-        <KeyColumns>
-          <Column IsWildCard="true" />
-        </KeyColumns>
-        <ThresholdSetting>Specified</ThresholdSetting>
-        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
-        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
-        <MaxNumberOfViolations>100</MaxNumberOfViolations>
-      </CandidateKeyProfileRequest>
-      <ColumnNullRatioProfileRequest ID="NullRatioReq">
-        <DataSourceID>{0A26C242-D293-436A-832A-C4616B43CC4B}</DataSourceID>
-        <Table Schema="dbo" Table="Vehicle Table" />
-        <Column IsWildCard="true" />
-      </ColumnNullRatioProfileRequest>
-      <ColumnValueDistributionProfileRequest ID="ValueDistReq">
-        <DataSourceID>{0A26C242-D293-436A-832A-C4616B43CC4B}</DataSourceID>
-        <Table Schema="dbo" Table="Vehicle Table" />
-        <Column IsWildCard="true" />
-        <Option>FrequentValues</Option>
-        <FrequentValueThreshold>0.001</FrequentValueThreshold>
-      </ColumnValueDistributionProfileRequest>
-      <ColumnStatisticsProfileRequest ID="StatisticsReq">
-        <DataSourceID>{0A26C242-D293-436A-832A-C4616B43CC4B}</DataSourceID>
-        <Table Schema="dbo" Table="Vehicle Table" />
-        <Column IsWildCard="true" />
-      </ColumnStatisticsProfileRequest>
-    </Requests>
-  </DataProfileInput>
-  <DataProfileOutput>
-    <Profiles />
-  </DataProfileOutput>
-</DataProfile>]]></ProfileInput>
-        </DataProfilingTaskData>
-      </DTS:ObjectData>
-    </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\ExcelVehicles--&gt; SQL SourceBI"
       DTS:CreationName="Microsoft.Pipeline"
@@ -193,8 +146,8 @@
               <connections>
                 <connection
                   refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager 1]"
-                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager 1]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager 2]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager 2]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -645,7 +598,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[Vehicle Table]</property>
+                  name="OpenRowset">[dbo].[Vehicle Table]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -667,7 +620,7 @@
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">3</property>
+                  typeConverter="AccessMode">0</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -688,8 +641,8 @@
               <connections>
                 <connection
                   refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[NHANLANG\NHANLANG.SourceBI]"
-                  connectionManagerRefId="Package.ConnectionManagers[NHANLANG\NHANLANG.SourceBI]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.SourceBI]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.SourceBI]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -979,10 +932,6 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="167.2,41.6"
-          Id="Package\Data Profiling Task"
-          TopLeft="397.14286390616,29.8235298300284" />
-        <NodeLayout
           Size="224,41.6"
           Id="Package\ExcelVehicles--&gt; SQL SourceBI"
           TopLeft="107.142858967489,20.6470591130966" />
@@ -1040,7 +989,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table">
+    design-time-name="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1053,7 +1002,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle">
+    design-time-name="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
