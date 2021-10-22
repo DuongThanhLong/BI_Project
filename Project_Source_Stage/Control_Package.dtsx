@@ -11,12 +11,29 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{A254B599-C48B-4E97-8E4D-C371A0ADCEAB}">
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{22421DAF-BF1C-45F0-988E-D488D621C096}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
   <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Execute Package Source Casualties"
+      DTS:CreationName="Microsoft.ExecutePackageTask"
+      DTS:Description="Execute Package Task"
+      DTS:DTSID="{2162B327-74DF-4937-B4AB-2D6E269026B5}"
+      DTS:ExecutableType="Microsoft.ExecutePackageTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute Package Source Casualties"
+      DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecutePackageTask>
+          <UseProjectReference>True</UseProjectReference>
+          <PackageName>Phat_SourceCasualities_Stage_Package.dtsx</PackageName>
+        </ExecutePackageTask>
+      </DTS:ObjectData>
+    </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Execute Package Source PostCodes"
       DTS:CreationName="Microsoft.ExecutePackageTask"
@@ -48,9 +65,13 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="244.8,41.6"
+          Size="244.666666666667,41.3333333333334"
           Id="Package\Execute Package Source PostCodes"
           TopLeft="87.1428586268915,30.5882357231061" />
+        <NodeLayout
+          Size="244,42.6666666666667"
+          Id="Package\Execute Package Source Casualties"
+          TopLeft="96.87499855645,123.499997791648" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
