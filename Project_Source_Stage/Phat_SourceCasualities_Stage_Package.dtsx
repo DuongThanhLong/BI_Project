@@ -11,16 +11,16 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{4BFADA88-6BF2-436F-93F6-D6EAF5486F11}">
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{7CED61F9-8528-4210-8960-27C18DD6CF34}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:refId="Package.ConnectionManagers[Casualitites File]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{611F8524-F67F-4632-86DF-AB7539A467E5}"
-      DTS:ObjectName="Flat File Connection Manager">
+      DTS:DTSID="{F3C0DF21-B0D6-49C9-B6F1-CFE978CF110C}"
+      DTS:ObjectName="Casualitites File">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -30,7 +30,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="D:\college\senior\BI\Practice\Casualties1114.csv">
+          DTS:ConnectionString="D:\Documents\Năm học 2021-2022\Hệ thống thông tin phục vụ trí tuệ kinh doanh\UK Accidents Data 2011-2014 v2\Casualties1114.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -39,7 +39,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Accident_Index"
-              DTS:DTSID="{FD77950A-C133-4549-BE6C-FF68525031DB}"
+              DTS:DTSID="{BC3B2D48-0838-4DBA-9BD9-17501EEA9BA0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -48,7 +48,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Vehicle_Reference"
-              DTS:DTSID="{E5C25B68-1038-4970-8CA2-C274510480DD}"
+              DTS:DTSID="{2BD70686-E882-49AA-A7F2-1AC24E69FCC2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -57,7 +57,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Casualty_Reference"
-              DTS:DTSID="{3ED1D9D9-6D84-41D6-B579-D28C65F48B68}"
+              DTS:DTSID="{3B236AFC-316F-4563-8592-1D5E3374F9FC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -66,7 +66,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Casualty_Class"
-              DTS:DTSID="{31F8017B-5D18-4347-AC66-146EBCB3CE4E}"
+              DTS:DTSID="{239DB3DD-D466-48A4-8B13-B598D3ECB357}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -75,7 +75,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Sex_of_Casualty"
-              DTS:DTSID="{FC7DFA93-AFA7-44E5-A305-6FD9677ED5AD}"
+              DTS:DTSID="{D7B9B42B-CB8E-4DC1-9709-0464C4A640EE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -84,7 +84,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Age_of_Casualty"
-              DTS:DTSID="{685B14E0-B8FF-4574-A2AD-01186D1D38E1}"
+              DTS:DTSID="{451B1C09-9E7A-4885-906D-5102EE5B9166}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -93,7 +93,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Age_Band_of_Casualty"
-              DTS:DTSID="{4AC45E70-EE7F-4BB0-A976-F7005C401C71}"
+              DTS:DTSID="{3FC1903A-40F6-4186-8FF1-F511CE7540CA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -102,7 +102,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Casualty_Severity"
-              DTS:DTSID="{A9B402F4-9D2A-4D39-BF1A-4AB9334AF34A}"
+              DTS:DTSID="{3A5DF34D-0BFA-41E6-94E9-0989788F40B1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -111,7 +111,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Pedestrian_Location"
-              DTS:DTSID="{5A3CDD9C-AD60-4707-B78B-A9245953E141}"
+              DTS:DTSID="{CA446D00-7902-47A9-93B2-3391255D7CE0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -120,7 +120,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Pedestrian_Movement"
-              DTS:DTSID="{E93C82CF-9742-4AFC-9A63-0150FD0BA46A}"
+              DTS:DTSID="{7741D951-9A62-4A9E-BDE7-F3E5D632C302}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -129,7 +129,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Car_Passenger"
-              DTS:DTSID="{F3199B50-AB23-4E3A-8CBD-48FCD13D3FA2}"
+              DTS:DTSID="{306BCD93-4AAC-43AE-85D7-68B6CC520805}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -138,7 +138,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Bus_or_Coach_Passenger"
-              DTS:DTSID="{5162A4CA-B7C6-401F-8F01-A8FEE32EB3E8}"
+              DTS:DTSID="{AE1DF86F-BC4B-4D46-982E-7CB045AD727B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -147,7 +147,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Pedestrian_Road_Maintenance_Worker"
-              DTS:DTSID="{DFC63755-6F93-4D90-86D0-E35B7BAA9EE4}"
+              DTS:DTSID="{C2278B4C-8390-4DDC-BD40-D4F92C63ACB7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -156,198 +156,31 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Casualty_Type"
-              DTS:DTSID="{0C888B9F-977C-4D0D-BF84-139D29C01C67}"
+              DTS:DTSID="{984EA2ED-5EBD-4683-832E-EACFA6F508C6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:ColumnDelimiter="_x000A_"
               DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Casualty_Home_Area_Type"
-              DTS:DTSID="{68D5BF6D-0A6C-47B9-9B32-2D406AB24D44}"
+              DTS:DTSID="{34B7CE22-81DF-43B8-ABFB-3B3F23033431}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
-      DTS:CreationName="FLATFILE"
-      DTS:DTSID="{5609F9F1-DE75-48B0-8E4F-E6E35E219F33}"
-      DTS:ObjectName="Flat File Connection Manager 1">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:Format="Delimited"
-          DTS:LocaleID="1033"
-          DTS:HeaderRowDelimiter="_x000D__x000A_"
-          DTS:ColumnNamesInFirstDataRow="True"
-          DTS:RowDelimiter=""
-          DTS:TextQualifier="_x003C_none_x003E_"
-          DTS:CodePage="1252"
-          DTS:ConnectionString="D:\Documents\Năm học 2021-2022\Hệ thống thông tin phục vụ trí tuệ kinh doanh\Labs\Labs\2021-2022 - BI Project - UK Accidents\Data\UK Accidents Data 2011-2014\Casualties1114.csv">
-          <DTS:FlatFileColumns>
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Accident_Index"
-              DTS:DTSID="{F772233A-11DE-4D5C-8256-8A2F8E8750AB}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Vehicle_Reference"
-              DTS:DTSID="{733DE7CA-1AA6-4058-BADA-A033B822C5F1}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Casualty_Reference"
-              DTS:DTSID="{168EED84-87D5-435C-83A1-0D2DFA6A99F3}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Casualty_Class"
-              DTS:DTSID="{B29ED4FF-81E1-4188-AA5D-06626243EA98}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Sex_of_Casualty"
-              DTS:DTSID="{4AB2F858-795E-4A0C-8B3A-FBEB0F23BF3F}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Age_of_Casualty"
-              DTS:DTSID="{F83B7B36-0778-456D-9433-0A8B8451F376}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Age_Band_of_Casualty"
-              DTS:DTSID="{6252FBFA-F0CA-470E-9F23-6CD0F17C5E0C}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Casualty_Severity"
-              DTS:DTSID="{E5BB3689-BF48-4809-81F8-08EA8CB8AA9F}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Pedestrian_Location"
-              DTS:DTSID="{D8C577E2-5CA0-4834-892C-268AEE721342}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Pedestrian_Movement"
-              DTS:DTSID="{36D8ACB5-6610-4C12-B493-73E7EF9F26DB}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Car_Passenger"
-              DTS:DTSID="{2F177804-4B14-437F-AE16-E9A72ECE5E83}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Bus_or_Coach_Passenger"
-              DTS:DTSID="{8715CEBC-4AA6-4383-85BC-7760F977FFFE}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Pedestrian_Road_Maintenance_Worker"
-              DTS:DTSID="{1E812349-E64F-44D2-896F-05163CFE4A16}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Casualty_Type"
-              DTS:DTSID="{75A466C6-8C5B-40CF-87DF-759DBE3A7D92}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Casualty_Home_Area_Type"
-              DTS:DTSID="{E9C6758E-ACB4-46FF-9B91-A44EB2712164}"
-              DTS:CreationName="" />
-          </DTS:FlatFileColumns>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[LocalHost.SourceBI]"
+      DTS:refId="Package.ConnectionManagers[DESKTOP-UML28IP.BI_Source]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{6AD39218-C8D6-4E13-98C6-ADD22770FD28}"
-      DTS:ObjectName="LocalHost.SourceBI">
+      DTS:DTSID="{6772632E-E163-409F-837D-C31AF4D8F1B7}"
+      DTS:ObjectName="DESKTOP-UML28IP.BI_Source">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=.;Initial Catalog=SourceBI;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[MIRINDACOCA.SourceBI]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{233DBD16-1E4B-42DD-BECF-86C5AF636E71}"
-      DTS:ObjectName="MIRINDACOCA.SourceBI">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=MIRINDACOCA;Initial Catalog=SourceBI;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=DESKTOP-UML28IP;Initial Catalog=BI_Source;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -383,7 +216,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[Casualties Table]</property>
+                  name="OpenRowset">[Casualties Table]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -426,8 +259,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task - Casualties\Casualties Table.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LocalHost.SourceBI]"
-                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.SourceBI]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-UML28IP.BI_Source]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-UML28IP.BI_Source]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -590,8 +423,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task - Casualties\Source Casualties.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 1]"
-                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  connectionManagerID="Package.ConnectionManagers[Casualitites File]"
+                  connectionManagerRefId="Package.ConnectionManagers[Casualitites File]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
@@ -912,9 +745,9 @@
     design-time-name="Package\Data Flow Task - Casualties">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="162.4,42.4"
+          Size="160.8,41.6"
           Id="Package\Data Flow Task - Casualties\Source Casualties"
           TopLeft="91.249998640269,10.3999998140335" />
         <NodeLayout
@@ -923,36 +756,38 @@
           TopLeft="319.107145218141,43.1529385732611" />
         <EdgeLayout
           Id="Package\Data Flow Task - Casualties.Paths[Flat File Source Output]"
-          TopLeft="253.649998640269,31.5999998140335">
+          TopLeft="252.049998640269,31.1999998140335">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="65.4571465778717,32.7529387592276"
+              EndConnector="67.057146577872,33.1529387592276"
               Start="0,0"
-              End="57.9571465778717,32.7529387592276">
+              End="59.557146577872,33.1529387592276">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="28.7285732889358,0" />
+                    End="29.528573288936,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="28.7285732889358,0"
-                    Point2="32.7285732889358,0"
-                    Point3="32.7285732889358,4" />
+                    Point1="29.528573288936,0"
+                    Point2="33.528573288936,0"
+                    Point3="33.528573288936,4" />
                   <mssgle:LineSegment
-                    End="32.7285732889358,28.7529387592276" />
+                    End="33.528573288936,29.1529387592276" />
                   <mssgle:CubicBezierSegment
-                    Point1="32.7285732889358,28.7529387592276"
-                    Point2="32.7285732889358,32.7529387592276"
-                    Point3="36.7285732889358,32.7529387592276" />
+                    Point1="33.528573288936,29.1529387592276"
+                    Point2="33.528573288936,33.1529387592276"
+                    Point3="37.528573288936,33.1529387592276" />
                   <mssgle:LineSegment
-                    End="57.9571465778717,32.7529387592276" />
+                    End="59.557146577872,33.1529387592276" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="2.94415922643598,-17.228515625,61.168828125,11.228515625"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

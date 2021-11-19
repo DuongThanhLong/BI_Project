@@ -11,16 +11,28 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{54E2AD56-7CEA-4FAC-9F91-9ED1F1F19205}">
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{AB5A7C25-C468-48C2-BE3A-30FFC4EFC3C9}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:refId="Package.ConnectionManagers[DESKTOP-UML28IP.BI_Source]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{8E91D1C7-5926-40C2-BF31-54AEDDEDCC88}"
+      DTS:ObjectName="DESKTOP-UML28IP.BI_Source">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-UML28IP;Initial Catalog=BI_Source;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[PCD File]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{E8A89EEA-019E-4B45-B9BE-EFDDE587CE1C}"
-      DTS:ObjectName="Flat File Connection Manager">
+      DTS:DTSID="{0C5AFCD9-28CA-42BB-831A-10B09674B00E}"
+      DTS:ObjectName="PCD File">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -39,7 +51,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="pcd7"
-              DTS:DTSID="{BB77B11F-D388-4DD8-8340-4359D9BF2AF7}"
+              DTS:DTSID="{8A40F36D-6F47-4368-AEF2-2DF98CBC2B3A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -48,7 +60,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="pcd8"
-              DTS:DTSID="{64ED9DCE-9124-473C-B0ED-1EA705F23ECF}"
+              DTS:DTSID="{017C208B-1742-4E74-BD9C-4AFEE4F05EE0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -57,7 +69,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="pcds"
-              DTS:DTSID="{8277567F-BDA1-4781-BACE-8B19B81FBB8D}"
+              DTS:DTSID="{33F2B552-AE55-4765-8B23-EB483811E23F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -66,7 +78,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="dointr"
-              DTS:DTSID="{64E97C45-1961-4DD1-A9F4-567FB4C2ACF2}"
+              DTS:DTSID="{00A7E6F4-5960-483A-87CA-5B0B3C8DC042}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -75,7 +87,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="doterm"
-              DTS:DTSID="{7C15BFE7-DDB6-4B2B-A5EE-1694848402DF}"
+              DTS:DTSID="{3A4F8B89-71B6-4166-AFD5-17B00140DD82}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -84,7 +96,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="usertype"
-              DTS:DTSID="{DB3997A7-29B4-4C4B-83FE-C792ADBBFD4F}"
+              DTS:DTSID="{3EDF59E9-544F-46EC-B5B4-5E07CA544873}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -93,7 +105,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="oa11cd"
-              DTS:DTSID="{885B5AC2-C57A-46F6-A275-3F14C3EBE5F0}"
+              DTS:DTSID="{7C04D4E7-E74A-4650-B0B3-85588C42FA05}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -102,7 +114,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="lsoa11cd"
-              DTS:DTSID="{EE2A2D84-60D3-494C-9F80-16A58675967F}"
+              DTS:DTSID="{E134BFFE-C0CF-422B-936D-C21BC55DFDFC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -111,7 +123,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="msoa11cd"
-              DTS:DTSID="{0C16855B-36E5-40FB-80DA-83E4308B8E93}"
+              DTS:DTSID="{80E6CA0B-6A14-4745-9345-63496513E71D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -120,7 +132,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ladcd"
-              DTS:DTSID="{058B4941-80AC-4C3E-A1CE-1B0FA95A3674}"
+              DTS:DTSID="{B84E948A-D54D-4792-B014-008EE71C10F2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -129,7 +141,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="lsoa11nm"
-              DTS:DTSID="{037C0DCC-A73B-41B9-ABB9-CF75C26D7C12}"
+              DTS:DTSID="{323AF3D1-C2D8-4FE4-AC20-EA1AB00BA3FA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -138,7 +150,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="msoa11nm"
-              DTS:DTSID="{9202F536-402E-4CE3-A712-66A879255A51}"
+              DTS:DTSID="{F3675E9E-D9ED-4050-A038-D11725060207}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -147,7 +159,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ladnm"
-              DTS:DTSID="{21727247-8718-4535-ABB7-3882DD40FDE5}"
+              DTS:DTSID="{104AF50D-D588-423E-82EC-A93147453351}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -156,22 +168,10 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ladnmw"
-              DTS:DTSID="{084039B3-AE51-4B2C-A1E4-F073DA00CE3C}"
+              DTS:DTSID="{E0619F3D-F225-4B07-BE31-D145EC98EFD5}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[LocalHost.SourceBI]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{3758B857-ED2E-45B2-A165-6D5FC1E82DD1}"
-      DTS:ObjectName="LocalHost.SourceBI">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=.;Initial Catalog=SourceBI;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -250,8 +250,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task_PCD\PCD Table.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LocalHost.SourceBI]"
-                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.SourceBI]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-UML28IP.BI_Source]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-UML28IP.BI_Source]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -512,8 +512,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task_PCD\Source PCD File.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
-                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerID="Package.ConnectionManagers[PCD File]"
+                  connectionManagerRefId="Package.ConnectionManagers[PCD File]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
@@ -974,7 +974,7 @@
         <NodeLayout
           Size="176,41.6"
           Id="Package\Data Flow Task_PCD"
-          TopLeft="142.142859563535,47.4117653708145" />
+          TopLeft="127.142859308087,92.529413062396" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
