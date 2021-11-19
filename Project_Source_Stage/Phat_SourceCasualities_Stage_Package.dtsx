@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{816E0F05-A8B9-456D-84ED-0AB8A3FEE185}">
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{D8B8D3EB-D30C-48AA-A54C-8D7D82B8A996}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -328,6 +328,22 @@
                       cachedName="Casualty_Type"
                       externalMetadataColumnId="Package\Data Flow Task - Casualties\Casualties Table.Inputs[OLE DB Destination Input].ExternalColumns[Casualty_Type]"
                       lineageId="Package\Data Flow Task - Casualties\Source Casualties.Outputs[Flat File Source Output].Columns[Casualty_Type]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Casualties\Casualties Table.Inputs[OLE DB Destination Input].Columns[Casualty_Reference]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Casualty_Reference"
+                      externalMetadataColumnId="Package\Data Flow Task - Casualties\Casualties Table.Inputs[OLE DB Destination Input].ExternalColumns[Casualty_Reference]"
+                      lineageId="Package\Data Flow Task - Casualties\Source Casualties.Outputs[Flat File Source Output].Columns[Casualty_Reference]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Casualties\Casualties Table.Inputs[OLE DB Destination Input].Columns[Vehicle_Reference]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Vehicle_Reference"
+                      externalMetadataColumnId="Package\Data Flow Task - Casualties\Casualties Table.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Reference]"
+                      lineageId="Package\Data Flow Task - Casualties\Source Casualties.Outputs[Flat File Source Output].Columns[Vehicle_Reference]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -373,6 +389,18 @@
                       dataType="str"
                       length="50"
                       name="Casualty_Type" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Casualties\Casualties Table.Inputs[OLE DB Destination Input].ExternalColumns[Casualty_Reference]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Casualty_Reference" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Casualties\Casualties Table.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Reference]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Vehicle_Reference" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -586,6 +614,50 @@
                           name="UseBinaryFormat">false</property>
                       </properties>
                     </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Casualties\Source Casualties.Outputs[Flat File Source Output].Columns[Casualty_Reference]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Casualties\Source Casualties.Outputs[Flat File Source Output].ExternalColumns[Casualty_Reference]"
+                      length="50"
+                      lineageId="Package\Data Flow Task - Casualties\Source Casualties.Outputs[Flat File Source Output].Columns[Casualty_Reference]"
+                      name="Casualty_Reference"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Casualties\Source Casualties.Outputs[Flat File Source Output].Columns[Vehicle_Reference]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Casualties\Source Casualties.Outputs[Flat File Source Output].ExternalColumns[Vehicle_Reference]"
+                      length="50"
+                      lineageId="Package\Data Flow Task - Casualties\Source Casualties.Outputs[Flat File Source Output].Columns[Vehicle_Reference]"
+                      name="Vehicle_Reference"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -737,7 +809,7 @@
         <NodeLayout
           Size="209.6,42.4"
           Id="Package\Data Flow Task - Casualties"
-          TopLeft="78.3035701477177,45.3852932816961" />
+          TopLeft="117.589285102464,69.0911759671033" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
