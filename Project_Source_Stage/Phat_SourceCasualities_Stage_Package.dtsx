@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="6"
-  DTS:VersionGUID="{7CED61F9-8528-4210-8960-27C18DD6CF34}">
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{816E0F05-A8B9-456D-84ED-0AB8A3FEE185}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -172,15 +172,15 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DESKTOP-UML28IP.BI_Source]"
+      DTS:refId="Package.ConnectionManagers[DESKTOP-UML28IP.BI_Stage]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{6772632E-E163-409F-837D-C31AF4D8F1B7}"
-      DTS:ObjectName="DESKTOP-UML28IP.BI_Source">
+      DTS:DTSID="{B2BD75DA-F302-4A49-81DC-DD34D6C6CADD}"
+      DTS:ObjectName="DESKTOP-UML28IP.BI_Stage">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-UML28IP;Initial Catalog=BI_Source;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=DESKTOP-UML28IP;Initial Catalog=BI_Stage;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -259,8 +259,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task - Casualties\Casualties Table.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-UML28IP.BI_Source]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-UML28IP.BI_Source]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-UML28IP.BI_Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-UML28IP.BI_Stage]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -737,7 +737,7 @@
         <NodeLayout
           Size="209.6,42.4"
           Id="Package\Data Flow Task - Casualties"
-          TopLeft="81.8749987799674,46.1499991747737" />
+          TopLeft="78.3035701477177,45.3852932816961" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -745,7 +745,7 @@
     design-time-name="Package\Data Flow Task - Casualties">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="160.8,41.6"
           Id="Package\Data Flow Task - Casualties\Source Casualties"
@@ -785,9 +785,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="2.94415922643598,-17.228515625,61.168828125,11.228515625"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

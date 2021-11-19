@@ -11,11 +11,21 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package_Vehicles"
   DTS:PackageType="5"
-  DTS:VersionBuild="2"
-  DTS:VersionGUID="{96601E49-3295-4A57-9B2F-033431E57DED}">
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{ADBDF143-3ECE-423C-9100-54FB51391FEE}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-UML28IP.BI_Stage]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{69BC44C7-8FEB-4445-A9A4-3EF8A4181B43}"
+      DTS:ObjectName="DESKTOP-UML28IP.BI_Stage">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DESKTOP-UML28IP;Initial Catalog=BI_Stage;Integrated Security=True;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[LocalHost.SourceBI]"
       DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
@@ -64,33 +74,45 @@
     <Timeout>0</Timeout>
     <Requests>
       <ColumnNullRatioProfileRequest ID="NullRatioReq">
-        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <DataSourceID>{69BC44C7-8FEB-4445-A9A4-3EF8A4181B43}</DataSourceID>
         <Table Schema="dbo" Table="Vehicle Table" />
         <Column IsWildCard="true" />
       </ColumnNullRatioProfileRequest>
       <ColumnStatisticsProfileRequest ID="StatisticsReq">
-        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <DataSourceID>{69BC44C7-8FEB-4445-A9A4-3EF8A4181B43}</DataSourceID>
         <Table Schema="dbo" Table="Vehicle Table" />
         <Column IsWildCard="true" />
       </ColumnStatisticsProfileRequest>
       <ColumnLengthDistributionProfileRequest ID="LengthDistReq">
-        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <DataSourceID>{69BC44C7-8FEB-4445-A9A4-3EF8A4181B43}</DataSourceID>
         <Table Schema="dbo" Table="Vehicle Table" />
         <Column IsWildCard="true" />
         <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
         <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
       </ColumnLengthDistributionProfileRequest>
       <ColumnValueDistributionProfileRequest ID="ValueDistReq">
-        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <DataSourceID>{69BC44C7-8FEB-4445-A9A4-3EF8A4181B43}</DataSourceID>
         <Table Schema="dbo" Table="Vehicle Table" />
         <Column IsWildCard="true" />
         <Option>FrequentValues</Option>
         <FrequentValueThreshold>0.001</FrequentValueThreshold>
       </ColumnValueDistributionProfileRequest>
+      <ColumnPatternProfileRequest ID="PatternReq">
+        <DataSourceID>{69BC44C7-8FEB-4445-A9A4-3EF8A4181B43}</DataSourceID>
+        <Table Schema="dbo" Table="Vehicle Table" />
+        <Column IsWildCard="true" />
+        <MaxNumberOfPatterns>10</MaxNumberOfPatterns>
+        <PercentageDataCoverageDesired>95</PercentageDataCoverageDesired>
+        <CaseSensitive>false</CaseSensitive>
+        <Delimiters> \t\r\n</Delimiters>
+        <Symbols>,.;:-"'`~=&amp;/\\@!?()&lt;&gt;[]{}|#*^%</Symbols>
+        <TagTableName />
+      </ColumnPatternProfileRequest>
       <CandidateKeyProfileRequest ID="KeyReq">
-        <DataSourceID>{2A9E38B5-5751-48F9-9E10-E724598CC32B}</DataSourceID>
+        <DataSourceID>{69BC44C7-8FEB-4445-A9A4-3EF8A4181B43}</DataSourceID>
         <Table Schema="dbo" Table="Vehicle Table" />
         <KeyColumns>
+          <Column IsWildCard="true" />
           <Column IsWildCard="true" />
         </KeyColumns>
         <ThresholdSetting>Specified</ThresholdSetting>
@@ -98,6 +120,18 @@
         <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
         <MaxNumberOfViolations>100</MaxNumberOfViolations>
       </CandidateKeyProfileRequest>
+      <FunctionalDependencyProfileRequest ID="FDReq">
+        <DataSourceID>{69BC44C7-8FEB-4445-A9A4-3EF8A4181B43}</DataSourceID>
+        <Table Schema="dbo" Table="Vehicle Table" />
+        <DeterminantColumns>
+          <Column IsWildCard="true" />
+        </DeterminantColumns>
+        <DependentColumn IsWildCard="true" />
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <FDStrengthThreshold>0.95</FDStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </FunctionalDependencyProfileRequest>
     </Requests>
   </DataProfileInput>
   <DataProfileOutput>
