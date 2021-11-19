@@ -11,21 +11,21 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="10"
-  DTS:VersionGUID="{E24668E4-FF1E-42A6-A935-144A0012BAE9}">
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{37FD79FC-4802-4472-AD1C-2B111563DC10}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DESKTOP-UML28IP.BI_Source]"
+      DTS:refId="Package.ConnectionManagers[DESKTOP-UML28IP.BI_Stage]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{3315D9BF-0A27-4130-831B-63BC140E53C6}"
-      DTS:ObjectName="DESKTOP-UML28IP.BI_Source">
+      DTS:DTSID="{1EEEA3E3-FF8F-4A6F-9114-BB3B3C9A83FF}"
+      DTS:ObjectName="DESKTOP-UML28IP.BI_Stage">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-UML28IP;Initial Catalog=BI_Source;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=DESKTOP-UML28IP;Initial Catalog=BI_Stage;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -232,8 +232,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task_PostCodes\PostCodes Table.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-UML28IP.BI_Source]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-UML28IP.BI_Source]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-UML28IP.BI_Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-UML28IP.BI_Stage]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>

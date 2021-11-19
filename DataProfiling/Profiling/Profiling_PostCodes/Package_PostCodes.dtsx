@@ -11,11 +11,21 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package_PostCodes"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{6DC3EFC6-CBD1-428E-98FC-222E10C60CD0}">
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{B5D0958A-7843-49AF-9EA1-E224193A145F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-UML28IP.BI_Stage]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{DE38D5DA-9CD7-42C6-AD19-C9D72534A5A4}"
+      DTS:ObjectName="DESKTOP-UML28IP.BI_Stage">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DESKTOP-UML28IP;Initial Catalog=BI_Stage;Integrated Security=True;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[LocalHost.SourceBI]"
       DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
@@ -64,31 +74,31 @@
     <Timeout>0</Timeout>
     <Requests>
       <ColumnNullRatioProfileRequest ID="NullRatioReq">
-        <DataSourceID>{81C8C8F6-B5CF-48B1-BB3F-A7D70EBC4DC8}</DataSourceID>
+        <DataSourceID>{DE38D5DA-9CD7-42C6-AD19-C9D72534A5A4}</DataSourceID>
         <Table Schema="dbo" Table="PostCodes Table" />
         <Column IsWildCard="true" />
       </ColumnNullRatioProfileRequest>
       <ColumnStatisticsProfileRequest ID="StatisticsReq">
-        <DataSourceID>{81C8C8F6-B5CF-48B1-BB3F-A7D70EBC4DC8}</DataSourceID>
+        <DataSourceID>{DE38D5DA-9CD7-42C6-AD19-C9D72534A5A4}</DataSourceID>
         <Table Schema="dbo" Table="PostCodes Table" />
         <Column IsWildCard="true" />
       </ColumnStatisticsProfileRequest>
       <ColumnLengthDistributionProfileRequest ID="LengthDistReq">
-        <DataSourceID>{81C8C8F6-B5CF-48B1-BB3F-A7D70EBC4DC8}</DataSourceID>
+        <DataSourceID>{DE38D5DA-9CD7-42C6-AD19-C9D72534A5A4}</DataSourceID>
         <Table Schema="dbo" Table="PostCodes Table" />
         <Column IsWildCard="true" />
         <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
         <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
       </ColumnLengthDistributionProfileRequest>
       <ColumnValueDistributionProfileRequest ID="ValueDistReq">
-        <DataSourceID>{81C8C8F6-B5CF-48B1-BB3F-A7D70EBC4DC8}</DataSourceID>
+        <DataSourceID>{DE38D5DA-9CD7-42C6-AD19-C9D72534A5A4}</DataSourceID>
         <Table Schema="dbo" Table="PostCodes Table" />
         <Column IsWildCard="true" />
         <Option>FrequentValues</Option>
         <FrequentValueThreshold>0.001</FrequentValueThreshold>
       </ColumnValueDistributionProfileRequest>
       <CandidateKeyProfileRequest ID="KeyReq">
-        <DataSourceID>{81C8C8F6-B5CF-48B1-BB3F-A7D70EBC4DC8}</DataSourceID>
+        <DataSourceID>{DE38D5DA-9CD7-42C6-AD19-C9D72534A5A4}</DataSourceID>
         <Table Schema="dbo" Table="PostCodes Table" />
         <KeyColumns>
           <Column IsWildCard="true" />
@@ -98,6 +108,18 @@
         <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
         <MaxNumberOfViolations>100</MaxNumberOfViolations>
       </CandidateKeyProfileRequest>
+      <FunctionalDependencyProfileRequest ID="FDReq">
+        <DataSourceID>{DE38D5DA-9CD7-42C6-AD19-C9D72534A5A4}</DataSourceID>
+        <Table Schema="dbo" Table="PostCodes Table" />
+        <DeterminantColumns>
+          <Column IsWildCard="true" />
+        </DeterminantColumns>
+        <DependentColumn IsWildCard="true" />
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <FDStrengthThreshold>0.95</FDStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </FunctionalDependencyProfileRequest>
     </Requests>
   </DataProfileInput>
   <DataProfileOutput>
