@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="10"
-  DTS:VersionGUID="{E7F96A6A-481F-426E-89DC-6C394D4C0180}">
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{69197B41-F4B5-4DFF-AD05-2E82CA6D2FF8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -150,9 +150,17 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="240.8,41.6"
+          Id="Package\Execute Package Source Accidents"
+          TopLeft="455.000007748604,29.0588239369509" />
+        <NodeLayout
           Size="243.2,41.6"
           Id="Package\Execute Package Source Casualties"
           TopLeft="453.303576054964,120.441174219338" />
+        <NodeLayout
+          Size="216,41.6"
+          Id="Package\Execute Package Source PCD"
+          TopLeft="110.714287599739,210.435297024044" />
         <NodeLayout
           Size="244.8,41.6"
           Id="Package\Execute Package Source PostCodes"
@@ -161,10 +169,6 @@
           Size="229.6,41.6"
           Id="Package\Execute Package Source Vehicle"
           TopLeft="105.714287514589,121.588236999347" />
-        <NodeLayout
-          Size="240.8,41.6"
-          Id="Package\Execute Package Source Accidents"
-          TopLeft="455.000007748604,29.0588239369509" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="344.08571597654,49.8588239369508">
@@ -231,10 +235,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="216,41.6"
-          Id="Package\Execute Package Source PCD"
-          TopLeft="110.714287599739,210.435297024044" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
           TopLeft="219.614287557164,163.188236999347">
