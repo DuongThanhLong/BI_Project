@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="14"
-  DTS:VersionGUID="{111AD20C-CDDE-4DE8-9AF3-B05F9101800B}">
+  DTS:VersionBuild="16"
+  DTS:VersionGUID="{011E31E6-5ED4-4912-99AD-7C25440E38C7}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -47,6 +47,7 @@
       DTS:refId="Package\Long_PCD_Stage --&gt; NDS"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{C954D59E-0AA4-4D01-A137-058B4E96195B}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -1555,6 +1556,7 @@ WHERE pcd7 = ?
       DTS:refId="Package\Long_PostCodes_Stage --&gt; NDS"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{850DF0A9-30EF-43BA-B801-6D8531EA27C3}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -2943,6 +2945,7 @@ WHERE postcode = ?
       DTS:refId="Package\Nhan_Vehicles_Stage --&gt; NDS"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{2AE64BB5-CF73-4B1A-82E6-B1F5FDADE0B1}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -7533,6 +7536,7 @@ WHERE Accident_Index = ?
       DTS:refId="Package\Phat_Casualities_Stage --&gt; NDS"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{8D43699B-048D-43EA-9B06-602753DE8AD4}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -8782,7 +8786,7 @@ WHERE [Accident_Index] = ? and [Casualty_Reference]=?
         <NodeLayout
           Size="234.4,41.6"
           Id="Package\Nuong_Accidents_Stage --&gt; NDS"
-          TopLeft="202.14286058533,44.3529417985037" />
+          TopLeft="191.428574688581,48.9411771569696" />
         <NodeLayout
           Size="229.6,41.6"
           Id="Package\Phat_Casualities_Stage --&gt; NDS"
@@ -8796,29 +8800,29 @@ WHERE [Accident_Index] = ? and [Casualty_Reference]=?
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="137.6,41.6"
-          Id="Package\Long_PCD_Stage --&gt; NDS\Update Data"
-          TopLeft="242.666666666667,262.666666666667" />
-        <NodeLayout
           Size="139.2,41.6"
           Id="Package\Long_PCD_Stage --&gt; NDS\Insert record"
           TopLeft="542.904761904762,258.685714285714" />
-        <NodeLayout
-          Size="140.8,41.6"
-          Id="Package\Long_PCD_Stage --&gt; NDS\Lookup PCD7"
-          TopLeft="341.809523809524,104.095238095238" />
         <NodeLayout
           Size="198.4,41.6"
           Id="Package\Long_PCD_Stage --&gt; NDS\Load PCD_Stage --&gt; NDS"
           TopLeft="313.333333333333,12.3333333333333" />
         <NodeLayout
+          Size="176.8,41.6"
+          Id="Package\Long_PCD_Stage --&gt; NDS\Update UpdatedDate"
+          TopLeft="219.333333333333,182.666666666667" />
+        <NodeLayout
+          Size="137.6,41.6"
+          Id="Package\Long_PCD_Stage --&gt; NDS\Update Data"
+          TopLeft="242.666666666667,262.666666666667" />
+        <NodeLayout
           Size="239.2,41.6"
           Id="Package\Long_PCD_Stage --&gt; NDS\Create CreatedDate, UpdatedDate"
           TopLeft="484.761904761904,182.047619047619" />
         <NodeLayout
-          Size="176.8,41.6"
-          Id="Package\Long_PCD_Stage --&gt; NDS\Update UpdatedDate"
-          TopLeft="219.333333333333,182.666666666667" />
+          Size="140.8,41.6"
+          Id="Package\Long_PCD_Stage --&gt; NDS\Lookup PCD7"
+          TopLeft="341.809523809524,104.095238095238" />
         <EdgeLayout
           Id="Package\Long_PCD_Stage --&gt; NDS.Paths[OLE DB Source Output]"
           TopLeft="412.371428571429,53.9333333333333">
@@ -8838,7 +8842,9 @@ WHERE [Accident_Index] = ? and [Casualty_Reference]=?
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -8914,28 +8920,6 @@ WHERE [Accident_Index] = ? and [Casualty_Reference]=?
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Long_PCD_Stage --&gt; NDS.Paths[Derived Column Output]"
-          TopLeft="309.6,224.266666666667">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,38.4"
-              Start="0,0"
-              End="0,30.9">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,30.9" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\Long_PCD_Stage --&gt; NDS.Paths[Derived Column Output1]"
           TopLeft="604.361904761904,223.647619047619">
           <EdgeLayout.Curve>
@@ -8966,7 +8950,33 @@ WHERE [Accident_Index] = ? and [Casualty_Reference]=?
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Long_PCD_Stage --&gt; NDS.Paths[Derived Column Output]"
+          TopLeft="309.6,224.266666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,38.4"
+              Start="0,0"
+              End="0,30.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -8986,29 +8996,6 @@ WHERE [Accident_Index] = ? and [Casualty_Reference]=?
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Long_PCD_Stage --&gt; NDS\Lookup PCD7">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Long_PCD_Stage --&gt; NDS\Load PCD_Stage --&gt; NDS">
     <Properties>
       <Property>
@@ -9021,35 +9008,58 @@ WHERE [Accident_Index] = ? and [Casualty_Reference]=?
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Long_PCD_Stage --&gt; NDS\Lookup PCD7">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Long_PostCodes_Stage --&gt; NDS">
     <LayoutInfo>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="136,41.6"
-          Id="Package\Long_PostCodes_Stage --&gt; NDS\Update data"
-          TopLeft="260.076923076923,284.076923076923" />
+          Size="188,41.6"
+          Id="Package\Long_PostCodes_Stage --&gt; NDS\Lookup PostCodes (PK)"
+          TopLeft="383.153846153846,112.538461538461" />
         <NodeLayout
           Size="139.2,41.6"
           Id="Package\Long_PostCodes_Stage --&gt; NDS\Insert record"
           TopLeft="588.538461538461,280.076923076923" />
         <NodeLayout
-          Size="188,41.6"
-          Id="Package\Long_PostCodes_Stage --&gt; NDS\Lookup PostCodes (PK)"
-          TopLeft="383.153846153846,112.538461538461" />
+          Size="176.8,41.6"
+          Id="Package\Long_PostCodes_Stage --&gt; NDS\Update UpdatedDate"
+          TopLeft="238.538461538462,200.230769230769" />
         <NodeLayout
           Size="228,41.6"
           Id="Package\Long_PostCodes_Stage --&gt; NDS\Load PostCodes_Stage --&gt; NDS"
           TopLeft="364.076923076923,18.4615384615385" />
         <NodeLayout
+          Size="136,41.6"
+          Id="Package\Long_PostCodes_Stage --&gt; NDS\Update data"
+          TopLeft="260.076923076923,284.076923076923" />
+        <NodeLayout
           Size="239.2,41.6"
           Id="Package\Long_PostCodes_Stage --&gt; NDS\Create CreatedDate, UpdatedDate"
           TopLeft="541.615384615385,201" />
-        <NodeLayout
-          Size="176.8,41.6"
-          Id="Package\Long_PostCodes_Stage --&gt; NDS\Update UpdatedDate"
-          TopLeft="238.538461538462,200.230769230769" />
         <EdgeLayout
           Id="Package\Long_PostCodes_Stage --&gt; NDS.Paths[OLE DB Source Output]"
           TopLeft="477.615384615385,60.0615384615385">
@@ -9069,7 +9079,9 @@ WHERE [Accident_Index] = ? and [Casualty_Reference]=?
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9145,28 +9157,6 @@ WHERE [Accident_Index] = ? and [Casualty_Reference]=?
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Long_PostCodes_Stage --&gt; NDS.Paths[Derived Column Output]"
-          TopLeft="327.507692307692,241.830769230769">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,42.2461538461541"
-              Start="0,0"
-              End="0,34.7461538461541">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,34.7461538461541" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\Long_PostCodes_Stage --&gt; NDS.Paths[Derived Column Output1]"
           TopLeft="659.676923076923,242.6">
           <EdgeLayout.Curve>
@@ -9185,12 +9175,61 @@ WHERE [Accident_Index] = ? and [Casualty_Reference]=?
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Long_PostCodes_Stage --&gt; NDS.Paths[Derived Column Output]"
+          TopLeft="327.507692307692,241.830769230769">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,42.2461538461541"
+              Start="0,0"
+              End="0,34.7461538461541">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.7461538461541" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Long_PostCodes_Stage --&gt; NDS\Lookup PostCodes (PK)">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Long_PostCodes_Stage --&gt; NDS\Insert record">
     <Properties>
@@ -9201,29 +9240,6 @@ WHERE [Accident_Index] = ? and [Casualty_Reference]=?
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Long_PostCodes_Stage --&gt; NDS\Lookup PostCodes (PK)">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -9254,21 +9270,21 @@ WHERE [Accident_Index] = ? and [Casualty_Reference]=?
           Id="Package\Nhan_Vehicles_Stage --&gt; NDS\Insert record"
           TopLeft="626.923076923077,285.692307692308" />
         <NodeLayout
-          Size="285.6,41.6"
-          Id="Package\Nhan_Vehicles_Stage --&gt; NDS\Lookup Accidents_Index, Vehicle_Reference"
-          TopLeft="336.153846153846,116.153846153846" />
-        <NodeLayout
           Size="217.6,41.6"
           Id="Package\Nhan_Vehicles_Stage --&gt; NDS\Load Vehicles_Stage --&gt; NDS"
           TopLeft="369.461538461538,15.0769230769231" />
         <NodeLayout
-          Size="239.2,41.6"
-          Id="Package\Nhan_Vehicles_Stage --&gt; NDS\Create CreatedDate, UpdatedDate"
-          TopLeft="577.692307692308,199.230769230769" />
-        <NodeLayout
           Size="176.8,41.6"
           Id="Package\Nhan_Vehicles_Stage --&gt; NDS\Update UpdatedDate"
           TopLeft="243.846153846153,208.461538461539" />
+        <NodeLayout
+          Size="285.6,41.6"
+          Id="Package\Nhan_Vehicles_Stage --&gt; NDS\Lookup Accidents_Index, Vehicle_Reference"
+          TopLeft="336.153846153846,116.153846153846" />
+        <NodeLayout
+          Size="239.2,41.6"
+          Id="Package\Nhan_Vehicles_Stage --&gt; NDS\Create CreatedDate, UpdatedDate"
+          TopLeft="577.692307692308,199.230769230769" />
         <EdgeLayout
           Id="Package\Nhan_Vehicles_Stage --&gt; NDS.Paths[OLE DB Source Output]"
           TopLeft="478.607692307692,56.6769230769231">
@@ -9288,42 +9304,8 @@ WHERE [Accident_Index] = ? and [Casualty_Reference]=?
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Nhan_Vehicles_Stage --&gt; NDS.Paths[Lookup Error Output]"
-          TopLeft="478.953846153846,157.753846153846">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="218.338461538461,41.476923076923"
-              Start="0,0"
-              End="218.338461538461,33.976923076923">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.7384615384615" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.7384615384615"
-                    Point2="0,20.7384615384615"
-                    Point3="4,20.7384615384615" />
-                  <mssgle:LineSegment
-                    End="214.338461538461,20.7384615384615" />
-                  <mssgle:CubicBezierSegment
-                    Point1="214.338461538461,20.7384615384615"
-                    Point2="218.338461538461,20.7384615384615"
-                    Point3="218.338461538461,24.7384615384615" />
-                  <mssgle:LineSegment
-                    End="218.338461538461,33.976923076923" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="63.3028440504805,25.7384615384615,91.7327734375,11.609375"
+              BoundingBox="0,0,0,0"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -9364,25 +9346,39 @@ WHERE [Accident_Index] = ? and [Casualty_Reference]=?
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Nhan_Vehicles_Stage --&gt; NDS.Paths[Derived Column Output]"
-          TopLeft="329.353846153846,250.061538461539">
+          Id="Package\Nhan_Vehicles_Stage --&gt; NDS.Paths[Lookup Error Output]"
+          TopLeft="478.953846153846,157.753846153846">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,36.8615384615379"
+              EndConnector="218.338461538461,41.476923076923"
               Start="0,0"
-              End="0,29.3615384615379">
+              End="218.338461538461,33.976923076923">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,29.3615384615379" />
+                    End="0,16.7384615384615" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.7384615384615"
+                    Point2="0,20.7384615384615"
+                    Point3="4,20.7384615384615" />
+                  <mssgle:LineSegment
+                    End="214.338461538461,20.7384615384615" />
+                  <mssgle:CubicBezierSegment
+                    Point1="214.338461538461,20.7384615384615"
+                    Point2="218.338461538461,20.7384615384615"
+                    Point3="218.338461538461,24.7384615384615" />
+                  <mssgle:LineSegment
+                    End="218.338461538461,33.976923076923" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="63.3028440504805,25.7384615384615,91.7327734375,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9404,7 +9400,33 @@ WHERE [Accident_Index] = ? and [Casualty_Reference]=?
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Nhan_Vehicles_Stage --&gt; NDS.Paths[Derived Column Output]"
+          TopLeft="329.353846153846,250.061538461539">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,36.8615384615379"
+              Start="0,0"
+              End="0,29.3615384615379">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.3615384615379" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -9424,29 +9446,6 @@ WHERE [Accident_Index] = ? and [Casualty_Reference]=?
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Nhan_Vehicles_Stage --&gt; NDS\Lookup Accidents_Index, Vehicle_Reference">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Nhan_Vehicles_Stage --&gt; NDS\Load Vehicles_Stage --&gt; NDS">
     <Properties>
       <Property>
@@ -9456,6 +9455,29 @@ WHERE [Accident_Index] = ? and [Casualty_Reference]=?
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Nhan_Vehicles_Stage --&gt; NDS\Lookup Accidents_Index, Vehicle_Reference">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -9488,6 +9510,28 @@ WHERE [Accident_Index] = ? and [Casualty_Reference]=?
           Size="176.8,41.6"
           Id="Package\Nuong_Accidents_Stage --&gt; NDS\Update UpdatedDate"
           TopLeft="179.285717338932,210.294120596354" />
+        <EdgeLayout
+          Id="Package\Nuong_Accidents_Stage --&gt; NDS.Paths[OLE DB Source Output]"
+          TopLeft="435.142862799217,55.3647060753978">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,55.5176484208622"
+              Start="0,0"
+              End="0,48.0176484208622">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,48.0176484208622" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Nuong_Accidents_Stage --&gt; NDS.Paths[Lookup Match Output]"
           TopLeft="433.542862884366,152.48235449626">
@@ -9604,28 +9648,6 @@ WHERE [Accident_Index] = ? and [Casualty_Reference]=?
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Nuong_Accidents_Stage --&gt; NDS.Paths[OLE DB Source Output]"
-          TopLeft="435.142862799217,55.3647060753978">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,55.5176484208622"
-              Start="0,0"
-              End="0,48.0176484208622">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,48.0176484208622" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -9661,7 +9683,7 @@ WHERE [Accident_Index] = ? and [Casualty_Reference]=?
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -9671,7 +9693,7 @@ WHERE [Accident_Index] = ? and [Casualty_Reference]=?
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -9684,29 +9706,29 @@ WHERE [Accident_Index] = ? and [Casualty_Reference]=?
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="136,41.6"
-          Id="Package\Phat_Casualities_Stage --&gt; NDS\Update data"
-          TopLeft="201.538461538461,271.610256410257" />
-        <NodeLayout
           Size="139.2,41.6"
           Id="Package\Phat_Casualities_Stage --&gt; NDS\Insert record"
           TopLeft="561.538461538461,270" />
-        <NodeLayout
-          Size="298.4,41.6"
-          Id="Package\Phat_Casualities_Stage --&gt; NDS\Lookup Accident_Index, Casualitites Reference"
-          TopLeft="290.820512820513,109.589743589744" />
-        <NodeLayout
-          Size="232,41.6"
-          Id="Package\Phat_Casualities_Stage --&gt; NDS\Load Casualitites_Stage --&gt; NDS"
-          TopLeft="319,12.3333333333333" />
         <NodeLayout
           Size="239.2,41.6"
           Id="Package\Phat_Casualities_Stage --&gt; NDS\Create CreatedDate, UpdatedDate"
           TopLeft="507.48717948718,189.015384615384" />
         <NodeLayout
+          Size="232,41.6"
+          Id="Package\Phat_Casualities_Stage --&gt; NDS\Load Casualitites_Stage --&gt; NDS"
+          TopLeft="319,12.3333333333333" />
+        <NodeLayout
+          Size="298.4,41.6"
+          Id="Package\Phat_Casualities_Stage --&gt; NDS\Lookup Accident_Index, Casualitites Reference"
+          TopLeft="290.820512820513,109.589743589744" />
+        <NodeLayout
           Size="176.8,41.6"
           Id="Package\Phat_Casualities_Stage --&gt; NDS\Update UpdatedDate"
           TopLeft="175.641025641026,190.974358974359" />
+        <NodeLayout
+          Size="136,41.6"
+          Id="Package\Phat_Casualities_Stage --&gt; NDS\Update data"
+          TopLeft="201.538461538461,271.610256410257" />
         <EdgeLayout
           Id="Package\Phat_Casualities_Stage --&gt; NDS.Paths[OLE DB Source Output]"
           TopLeft="437.510256410256,53.9333333333333">
@@ -9726,7 +9748,9 @@ WHERE [Accident_Index] = ? and [Casualty_Reference]=?
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9802,28 +9826,6 @@ WHERE [Accident_Index] = ? and [Casualty_Reference]=?
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Phat_Casualities_Stage --&gt; NDS.Paths[Derived Column Output]"
-          TopLeft="266.789743589744,232.574358974359">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,39.0358974358976"
-              Start="0,0"
-              End="0,31.5358974358976">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.5358974358976" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\Phat_Casualities_Stage --&gt; NDS.Paths[Derived Column Output1]"
           TopLeft="629.11282051282,230.615384615384">
           <EdgeLayout.Curve>
@@ -9842,7 +9844,33 @@ WHERE [Accident_Index] = ? and [Casualty_Reference]=?
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Phat_Casualities_Stage --&gt; NDS.Paths[Derived Column Output]"
+          TopLeft="266.789743589744,232.574358974359">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39.0358974358976"
+              Start="0,0"
+              End="0,31.5358974358976">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.5358974358976" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -9862,29 +9890,6 @@ WHERE [Accident_Index] = ? and [Casualty_Reference]=?
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Phat_Casualities_Stage --&gt; NDS\Lookup Accident_Index, Casualitites Reference">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Phat_Casualities_Stage --&gt; NDS\Load Casualitites_Stage --&gt; NDS">
     <Properties>
       <Property>
@@ -9894,6 +9899,29 @@ WHERE [Accident_Index] = ? and [Casualty_Reference]=?
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Phat_Casualities_Stage --&gt; NDS\Lookup Accident_Index, Casualitites Reference">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

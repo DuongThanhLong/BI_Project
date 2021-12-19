@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="12"
-  DTS:VersionGUID="{D8B8D3EB-D30C-48AA-A54C-8D7D82B8A996}">
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{F86145F1-C2BD-4FC4-A242-FFB2C7301FC4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -172,15 +172,15 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DESKTOP-UML28IP.BI_Stage]"
+      DTS:refId="Package.ConnectionManagers[DESKTOP-UML28IP.DATH_BI_Stage]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{B2BD75DA-F302-4A49-81DC-DD34D6C6CADD}"
-      DTS:ObjectName="DESKTOP-UML28IP.BI_Stage">
+      DTS:DTSID="{77D06EC0-31B7-4BAF-9BDF-DAE542BA8D74}"
+      DTS:ObjectName="DESKTOP-UML28IP.DATH_BI_Stage">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-UML28IP;Initial Catalog=BI_Stage;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=DESKTOP-UML28IP;Initial Catalog=DATH_BI_Stage;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -259,8 +259,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task - Casualties\Casualties Table.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-UML28IP.BI_Stage]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-UML28IP.BI_Stage]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-UML28IP.DATH_BI_Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-UML28IP.DATH_BI_Stage]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -825,33 +825,21 @@
         <NodeLayout
           Size="156,42.4"
           Id="Package\Data Flow Task - Casualties\Casualties Table"
-          TopLeft="319.107145218141,43.1529385732611" />
+          TopLeft="99.8214271980133,106.623527698706" />
         <EdgeLayout
           Id="Package\Data Flow Task - Casualties.Paths[Flat File Source Output]"
-          TopLeft="252.049998640269,31.1999998140335">
+          TopLeft="174.735712919141,51.9999998140335">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="67.057146577872,33.1529387592276"
+              EndConnector="0,54.6235278846728"
               Start="0,0"
-              End="59.557146577872,33.1529387592276">
+              End="0,47.1235278846728">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="29.528573288936,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="29.528573288936,0"
-                    Point2="33.528573288936,0"
-                    Point3="33.528573288936,4" />
-                  <mssgle:LineSegment
-                    End="33.528573288936,29.1529387592276" />
-                  <mssgle:CubicBezierSegment
-                    Point1="33.528573288936,29.1529387592276"
-                    Point2="33.528573288936,33.1529387592276"
-                    Point3="37.528573288936,33.1529387592276" />
-                  <mssgle:LineSegment
-                    End="59.557146577872,33.1529387592276" />
+                    End="0,47.1235278846728" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
