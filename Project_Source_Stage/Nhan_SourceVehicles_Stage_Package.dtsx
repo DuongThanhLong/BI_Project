@@ -11,21 +11,21 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="15"
-  DTS:VersionGUID="{801267EA-E5C3-4393-B07A-56ED9E3AB281}">
+  DTS:VersionBuild="16"
+  DTS:VersionGUID="{977533EF-3010-401F-87AE-F49FEB1339FB}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DESKTOP-UML28IP.BI_Stage]"
+      DTS:refId="Package.ConnectionManagers[DESKTOP-UML28IP.DATH_BI_Stage]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{A62EEB74-A416-45EE-A7BF-01B2777AC08E}"
-      DTS:ObjectName="DESKTOP-UML28IP.BI_Stage">
+      DTS:DTSID="{FD0433C7-5D68-4814-AD08-85441F8E6764}"
+      DTS:ObjectName="DESKTOP-UML28IP.DATH_BI_Stage">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-UML28IP;Initial Catalog=BI_Stage;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=DESKTOP-UML28IP;Initial Catalog=DATH_BI_Stage;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -1003,8 +1003,8 @@
               <connections>
                 <connection
                   refId="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-UML28IP.BI_Stage]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-UML28IP.BI_Stage]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-UML28IP.DATH_BI_Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-UML28IP.DATH_BI_Stage]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1398,33 +1398,21 @@
         <NodeLayout
           Size="140.8,41.6"
           Id="Package\ExcelVehicles--&gt; SQL SourceBI\Vehicle Table"
-          TopLeft="330.714291346317,130.764707716278" />
+          TopLeft="160.714288451234,132.294119502433" />
         <EdgeLayout
           Id="Package\ExcelVehicles--&gt; SQL SourceBI.Paths[Flat File Source Output]"
-          TopLeft="238.142859904134,82.1294123331156">
+          TopLeft="234.628574177684,82.1294123331156">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="162.971431442183,48.6352953831627"
+              EndConnector="0,50.1647071693177"
               Start="0,0"
-              End="162.971431442183,41.1352953831627">
+              End="0,42.6647071693177">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20.3176476915814" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.3176476915814"
-                    Point2="0,24.3176476915814"
-                    Point3="4,24.3176476915814" />
-                  <mssgle:LineSegment
-                    End="158.971431442183,24.3176476915814" />
-                  <mssgle:CubicBezierSegment
-                    Point1="158.971431442183,24.3176476915814"
-                    Point2="162.971431442183,24.3176476915814"
-                    Point3="162.971431442183,28.3176476915814" />
-                  <mssgle:LineSegment
-                    End="162.971431442183,41.1352953831627" />
+                    End="0,42.6647071693177" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

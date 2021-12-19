@@ -11,21 +11,21 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="15"
-  DTS:VersionGUID="{AD6E07E2-EE6C-4FF3-9C5C-746D89DBD5F5}">
+  DTS:VersionBuild="16"
+  DTS:VersionGUID="{DF750CC3-54D2-416D-862F-C08378BDE050}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DESKTOP-UML28IP.BI_Stage]"
+      DTS:refId="Package.ConnectionManagers[DESKTOP-UML28IP.DATH_BI_Stage]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{1EEEA3E3-FF8F-4A6F-9114-BB3B3C9A83FF}"
-      DTS:ObjectName="DESKTOP-UML28IP.BI_Stage">
+      DTS:DTSID="{BEC57621-CA65-4DCA-87CA-20CC476DB692}"
+      DTS:ObjectName="DESKTOP-UML28IP.DATH_BI_Stage">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-UML28IP;Initial Catalog=BI_Stage;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=DESKTOP-UML28IP;Initial Catalog=DATH_BI_Stage;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -232,8 +232,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task_PostCodes\PostCodes Table.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-UML28IP.BI_Stage]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-UML28IP.BI_Stage]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-UML28IP.DATH_BI_Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-UML28IP.DATH_BI_Stage]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>

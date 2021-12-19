@@ -11,21 +11,21 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="12"
-  DTS:VersionGUID="{64DABA7E-3F92-4E26-9E9B-9C6D4A08667A}">
+  DTS:VersionBuild="13"
+  DTS:VersionGUID="{5C9A3C51-7461-4E39-BD5F-704DC1E68EF8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DESKTOP-UML28IP.BI_Stage]"
+      DTS:refId="Package.ConnectionManagers[DESKTOP-UML28IP.DATH_BI_Stage]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{5322B468-65FF-47EC-9C0A-46010403438A}"
-      DTS:ObjectName="DESKTOP-UML28IP.BI_Stage">
+      DTS:DTSID="{99671997-D8C0-481E-96E8-82D6A7712624}"
+      DTS:ObjectName="DESKTOP-UML28IP.DATH_BI_Stage">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-UML28IP;Initial Catalog=BI_Stage;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=DESKTOP-UML28IP;Initial Catalog=DATH_BI_Stage;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -229,7 +229,7 @@
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -241,7 +241,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -250,8 +250,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task_PCD\PCD Table.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-UML28IP.BI_Stage]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-UML28IP.BI_Stage]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-UML28IP.DATH_BI_Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-UML28IP.DATH_BI_Stage]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -271,30 +271,6 @@
                       cachedName="pcd7"
                       externalMetadataColumnId="Package\Data Flow Task_PCD\PCD Table.Inputs[OLE DB Destination Input].ExternalColumns[pcd7]"
                       lineageId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[pcd7]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task_PCD\PCD Table.Inputs[OLE DB Destination Input].Columns[pcd8]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="pcd8"
-                      externalMetadataColumnId="Package\Data Flow Task_PCD\PCD Table.Inputs[OLE DB Destination Input].ExternalColumns[pcd8]"
-                      lineageId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[pcd8]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task_PCD\PCD Table.Inputs[OLE DB Destination Input].Columns[pcds]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="pcds"
-                      externalMetadataColumnId="Package\Data Flow Task_PCD\PCD Table.Inputs[OLE DB Destination Input].ExternalColumns[pcds]"
-                      lineageId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[pcds]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task_PCD\PCD Table.Inputs[OLE DB Destination Input].Columns[dointr]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="dointr"
-                      externalMetadataColumnId="Package\Data Flow Task_PCD\PCD Table.Inputs[OLE DB Destination Input].ExternalColumns[dointr]"
-                      lineageId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[dointr]" />
                     <inputColumn
                       refId="Package\Data Flow Task_PCD\PCD Table.Inputs[OLE DB Destination Input].Columns[doterm]"
                       cachedCodepage="1252"
@@ -375,6 +351,14 @@
                       cachedName="ladnmw"
                       externalMetadataColumnId="Package\Data Flow Task_PCD\PCD Table.Inputs[OLE DB Destination Input].ExternalColumns[ladnmw]"
                       lineageId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[ladnmw]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task_PCD\PCD Table.Inputs[OLE DB Destination Input].Columns[dointr]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="dointr"
+                      externalMetadataColumnId="Package\Data Flow Task_PCD\PCD Table.Inputs[OLE DB Destination Input].ExternalColumns[dointr]"
+                      lineageId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[dointr]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -384,24 +368,6 @@
                       dataType="str"
                       length="50"
                       name="pcd7" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task_PCD\PCD Table.Inputs[OLE DB Destination Input].ExternalColumns[pcd8]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="pcd8" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task_PCD\PCD Table.Inputs[OLE DB Destination Input].ExternalColumns[pcds]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="pcds" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task_PCD\PCD Table.Inputs[OLE DB Destination Input].ExternalColumns[dointr]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="dointr" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task_PCD\PCD Table.Inputs[OLE DB Destination Input].ExternalColumns[doterm]"
                       codePage="1252"
@@ -462,6 +428,12 @@
                       dataType="str"
                       length="50"
                       name="ladnmw" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_PCD\PCD Table.Inputs[OLE DB Destination Input].ExternalColumns[dointr]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="dointr" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -531,72 +503,6 @@
                       length="50"
                       lineageId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[pcd7]"
                       name="pcd7"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[pcd8]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].ExternalColumns[pcd8]"
-                      length="50"
-                      lineageId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[pcd8]"
-                      name="pcd8"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[pcds]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].ExternalColumns[pcds]"
-                      length="50"
-                      lineageId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[pcds]"
-                      name="pcds"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[dointr]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].ExternalColumns[dointr]"
-                      length="50"
-                      lineageId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[dointr]"
-                      name="dointr"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -829,6 +735,28 @@
                           name="UseBinaryFormat">false</property>
                       </properties>
                     </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[dointr]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].ExternalColumns[dointr]"
+                      length="50"
+                      lineageId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[dointr]"
+                      name="dointr"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -986,37 +914,25 @@
         <NodeLayout
           Size="152.8,41.6"
           Id="Package\Data Flow Task_PCD\Source PCD File"
-          TopLeft="122.857144949388,20.6470591130966" />
+          TopLeft="116.428573411339,58.1176478739016" />
         <NodeLayout
           Size="127.2,41.6"
           Id="Package\Data Flow Task_PCD\PCD Table"
-          TopLeft="422.857150058357,45.8823535846592" />
+          TopLeft="130.000002213887,172.058825942472" />
         <EdgeLayout
           Id="Package\Data Flow Task_PCD.Paths[Flat File Source Output]"
-          TopLeft="275.657144949388,41.4470591130966">
+          TopLeft="193.214287812613,99.7176478739016">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="147.20000510897,25.2352944715625"
+              EndConnector="0,72.3411780685703"
               Start="0,0"
-              End="139.70000510897,25.2352944715625">
+              End="0,64.8411780685703">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="69.6000025544849,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="69.6000025544849,0"
-                    Point2="73.6000025544849,0"
-                    Point3="73.6000025544849,4" />
-                  <mssgle:LineSegment
-                    End="73.6000025544849,21.2352944715625" />
-                  <mssgle:CubicBezierSegment
-                    Point1="73.6000025544849,21.2352944715625"
-                    Point2="73.6000025544849,25.2352944715625"
-                    Point3="77.6000025544849,25.2352944715625" />
-                  <mssgle:LineSegment
-                    End="139.70000510897,25.2352944715625" />
+                    End="0,64.8411780685703" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
