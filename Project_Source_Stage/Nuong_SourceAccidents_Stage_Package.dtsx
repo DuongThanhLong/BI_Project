@@ -11,16 +11,16 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="43"
-  DTS:VersionGUID="{8D90695B-7CB2-470A-8DA9-4CF422B4834A}">
+  DTS:VersionBuild="50"
+  DTS:VersionGUID="{4C327C1E-75A5-4AEA-B56F-9457F3CE4D53}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Accidents File]"
+      DTS:refId="Package.ConnectionManagers[Accident File]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{36B2B926-A570-4860-A404-798720F073ED}"
-      DTS:ObjectName="Accidents File">
+      DTS:DTSID="{91ACA259-D396-441E-B3D5-0F64523EB97A}"
+      DTS:ObjectName="Accident File">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -39,7 +39,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Accident_Index"
-              DTS:DTSID="{E89ECCDA-BA50-471A-8CD1-F5557A08B03E}"
+              DTS:DTSID="{7188BD25-60EB-4CF4-BE7B-8E26D1C7BADA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -48,7 +48,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Location_Easting_OSGR"
-              DTS:DTSID="{5CDE3DE4-5B14-4F39-A801-454F727E91BD}"
+              DTS:DTSID="{48B99D12-E1C9-48A8-9264-00C0EF33E8AF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -57,7 +57,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Location_Northing_OSGR"
-              DTS:DTSID="{CC2B4E76-683D-4BF6-A8F6-DE8760BFEE78}"
+              DTS:DTSID="{90485608-1BAF-44DE-A53F-B365453B0528}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -66,7 +66,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Longitude"
-              DTS:DTSID="{02708485-4D72-44E8-B580-88F709080E56}"
+              DTS:DTSID="{40A38EAA-436E-430F-BD0B-22AD090E93E6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -75,7 +75,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Latitude"
-              DTS:DTSID="{85E32311-4C3E-4288-B549-2C36737D55D9}"
+              DTS:DTSID="{05B1A9D7-6139-49CA-9A48-1E4D3BE451C3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -84,7 +84,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Police_Force"
-              DTS:DTSID="{1F8E2580-95FA-4534-84D7-C4504E2E61BE}"
+              DTS:DTSID="{4AF7A067-DFE8-49D1-AF33-944774DA9F23}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -93,7 +93,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Accident_Severity"
-              DTS:DTSID="{34DA96AB-86F4-46E9-BF1A-7EF08EB50DB7}"
+              DTS:DTSID="{BDA457AC-FBD8-4CEC-927E-0ABA2362FE3F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -102,7 +102,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Number_of_Vehicles"
-              DTS:DTSID="{435182D0-2346-4D57-B64E-4CAD91152865}"
+              DTS:DTSID="{77AF9A85-0E11-43E5-9E8B-3F302C5E1CEF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -111,7 +111,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Number_of_Casualties"
-              DTS:DTSID="{A6805959-8DF2-48FC-91F7-23D457510D5B}"
+              DTS:DTSID="{3A30ADF7-C7F2-4A3B-BE6C-5634D29590B5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -120,7 +120,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Date"
-              DTS:DTSID="{0380475D-BC9F-49D1-8FCD-470EB1022452}"
+              DTS:DTSID="{E8F511E7-D4DC-4A57-9D56-EF28BA9093BE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -129,7 +129,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Day_of_Week"
-              DTS:DTSID="{48599E14-04DF-4B33-9BCD-003BBD5051A6}"
+              DTS:DTSID="{E069DD2D-E2A3-4E4B-B2BD-4E1E3D0166F2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -138,7 +138,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Time"
-              DTS:DTSID="{CD87E10B-3745-436B-91DA-47E6FB03FA6E}"
+              DTS:DTSID="{3A57033A-35E4-4486-ABF9-99CFDDEF2C8D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -147,7 +147,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Local_Authority_(District)"
-              DTS:DTSID="{D0626829-7A82-44D0-A312-3B3C2B7F09E9}"
+              DTS:DTSID="{4D9C9DEE-D5F0-42C0-B26F-F58C690D4CD4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -156,7 +156,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Local_Authority_(Highway)"
-              DTS:DTSID="{F2F1805C-8DE1-4391-8BD6-9E3AD08AF7DB}"
+              DTS:DTSID="{9CDB9801-BBFB-484F-B2F8-30FA1D00E7CC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -165,7 +165,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="1st_Road_Class"
-              DTS:DTSID="{564AF57A-A54B-4F31-A525-6F84B5AA5767}"
+              DTS:DTSID="{99BB411F-48B5-448B-97A7-27FDD11ED0E4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -174,7 +174,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="1st_Road_Number"
-              DTS:DTSID="{4DAE541F-E335-4C0E-A8E3-8D2B84D5F704}"
+              DTS:DTSID="{1A16DC93-8B27-4A63-8935-D608A9918EA6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -183,7 +183,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Road_Type"
-              DTS:DTSID="{91A44AEE-59FA-49C9-B20C-1F735B359164}"
+              DTS:DTSID="{A6C8FEB9-958B-4C61-9692-8C5D67111C87}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -192,7 +192,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Speed_limit"
-              DTS:DTSID="{C37AA71F-F692-4E57-A9F2-144718885B44}"
+              DTS:DTSID="{85CAE041-B9B0-460D-A847-44568ABD93C2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -201,7 +201,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Junction_Detail"
-              DTS:DTSID="{13E65B3C-2149-4090-9E97-E0DAC674B9AC}"
+              DTS:DTSID="{B3C73416-D35D-4FDB-8B66-8D6B3AE8A0D1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -210,7 +210,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Junction_Control"
-              DTS:DTSID="{DC98DC71-6455-4EE1-A4AF-7C94448450D0}"
+              DTS:DTSID="{B8CC9F80-6C81-466C-AE5B-25E5CFB6BA20}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -219,7 +219,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="2nd_Road_Class"
-              DTS:DTSID="{3CD29F4E-4254-4C08-8879-5422DA06BA82}"
+              DTS:DTSID="{D17E7CE2-32CD-403E-B1EB-F5D2DEB6313A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -228,7 +228,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="2nd_Road_Number"
-              DTS:DTSID="{B80B7C21-1C4E-4791-9B15-3D719BFAB76E}"
+              DTS:DTSID="{6956C2E1-9078-49AF-82E8-A92214A816D3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -237,7 +237,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Pedestrian_Crossing-Human_Control"
-              DTS:DTSID="{F9759774-B70E-4832-8CB6-873951BFAA25}"
+              DTS:DTSID="{7F4465CA-D727-4A47-BFE6-A8EA74F69002}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -246,7 +246,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Pedestrian_Crossing-Physical_Facilities"
-              DTS:DTSID="{5859D359-EBC8-4AA0-97AE-A9ADCF5B8B2B}"
+              DTS:DTSID="{850E10B5-C35C-491D-A87D-9FBB586850E1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -255,7 +255,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Light_Conditions"
-              DTS:DTSID="{041CA999-6523-450C-B7B7-0DCCE866EF39}"
+              DTS:DTSID="{3516A4EF-4EAA-4E54-AFB5-39D0C5323C39}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -264,7 +264,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Weather_Conditions"
-              DTS:DTSID="{2E82DACE-C1BE-4423-9875-ECC778183A54}"
+              DTS:DTSID="{EDF83401-60A7-4E0C-9488-778D8B86EBE7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -273,7 +273,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Road_Surface_Conditions"
-              DTS:DTSID="{9917547A-E2F3-42B1-AC40-7403D1353582}"
+              DTS:DTSID="{685817E9-EC8E-4A62-82A5-F2916352AC1A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -282,7 +282,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Special_Conditions_at_Site"
-              DTS:DTSID="{9AFE0768-0617-4063-BB58-140805606E02}"
+              DTS:DTSID="{CD551A71-7DBE-4895-81BA-1B70840F9E65}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -291,7 +291,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Carriageway_Hazards"
-              DTS:DTSID="{B7E6E4C2-8DC7-4A74-A906-F11A983C35DD}"
+              DTS:DTSID="{4D5E2EEF-F7BE-47E3-A4B6-5665291B8023}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -300,7 +300,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Urban_or_Rural_Area"
-              DTS:DTSID="{0F972186-E67B-4711-834F-6F0D39D294DF}"
+              DTS:DTSID="{74DC56EC-E421-49F9-B3F7-E3D2DC74CAFB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -309,7 +309,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Did_Police_Officer_Attend_Scene_of_Accident"
-              DTS:DTSID="{BF37AF82-25D6-4B23-BA51-68BC99C49C7B}"
+              DTS:DTSID="{EB739C64-3453-46A8-80F4-5CB8CE62D9AD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -318,7 +318,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="LSOA_of_Accident_Location"
-              DTS:DTSID="{51F47554-2113-46A6-892F-C701017669F5}"
+              DTS:DTSID="{563F9949-D23F-48D3-9724-9B996816401D}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -369,7 +369,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[Accidents Table 1]</property>
+                  name="OpenRowset">[Accidents Table]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -681,6 +681,139 @@
                       cachedName="LSOA_of_Accident_Location"
                       externalMetadataColumnId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].ExternalColumns[LSOA_of_Accident_Location]"
                       lineageId="Package\Data Flow Task_Accidents\Reading Accidents.Outputs[Flat File Source Output].Columns[LSOA_of_Accident_Location]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].Columns[label]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="label"
+                      externalMetadataColumnId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].ExternalColumns[Lookup 1stRoadClass_Name.label]"
+                      lineageId="Package\Data Flow Task_Accidents\Lookup 1stRoadClass_Name.Outputs[Lookup Match Output].Columns[label]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].Columns[label1]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="label"
+                      externalMetadataColumnId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].ExternalColumns[Lookup 2ndRoadClass_Name.label]"
+                      lineageId="Package\Data Flow Task_Accidents\Lookup 2ndRoadClass_Name.Outputs[Lookup Match Output].Columns[label]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].Columns[label2]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="label"
+                      externalMetadataColumnId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].ExternalColumns[Lookup Accident Severity.label]"
+                      lineageId="Package\Data Flow Task_Accidents\Lookup Accident Severity.Outputs[Lookup Match Output].Columns[label]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].Columns[label3]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="label"
+                      externalMetadataColumnId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].ExternalColumns[Lookup Day of Week.label]"
+                      lineageId="Package\Data Flow Task_Accidents\Lookup Day of Week.Outputs[Lookup Match Output].Columns[label]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].Columns[label4]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="label"
+                      externalMetadataColumnId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].ExternalColumns[Lookup Police Force.label]"
+                      lineageId="Package\Data Flow Task_Accidents\Lookup Police Force.Outputs[Lookup Match Output].Columns[label]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].Columns[label5]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="label"
+                      externalMetadataColumnId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].ExternalColumns[Lookup Locai Authority District.label]"
+                      lineageId="Package\Data Flow Task_Accidents\Lookup Locai Authority District.Outputs[Lookup Match Output].Columns[label]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].Columns[label6]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="label"
+                      externalMetadataColumnId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].ExternalColumns[Lookup Light Condition.label]"
+                      lineageId="Package\Data Flow Task_Accidents\Lookup Light Condition.Outputs[Lookup Match Output].Columns[label]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].Columns[label7]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="label"
+                      externalMetadataColumnId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].ExternalColumns[Lookup Weather Condition.label]"
+                      lineageId="Package\Data Flow Task_Accidents\Lookup Weather Condition.Outputs[Lookup Match Output].Columns[label]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].Columns[label8]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="label"
+                      externalMetadataColumnId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].ExternalColumns[Lookup Road Surface.label]"
+                      lineageId="Package\Data Flow Task_Accidents\Lookup Road Surface.Outputs[Lookup Match Output].Columns[label]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].Columns[label9]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="label"
+                      externalMetadataColumnId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].ExternalColumns[Lookup Police Officer Attend.label]"
+                      lineageId="Package\Data Flow Task_Accidents\Lookup Police Officer Attend.Outputs[Lookup Match Output].Columns[label]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].Columns[Label]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Label"
+                      externalMetadataColumnId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].ExternalColumns[Label]"
+                      lineageId="Package\Data Flow Task_Accidents\Lookup Local Authority Highway.Outputs[Lookup Match Output].Columns[Label]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].Columns[label10]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="label"
+                      externalMetadataColumnId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].ExternalColumns[Lookup Road Type.label]"
+                      lineageId="Package\Data Flow Task_Accidents\Lookup Road Type.Outputs[Lookup Match Output].Columns[label]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].Columns[label11]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="label"
+                      externalMetadataColumnId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].ExternalColumns[Lookup Junction Details.label]"
+                      lineageId="Package\Data Flow Task_Accidents\Lookup Junction Details.Outputs[Lookup Match Output].Columns[label]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].Columns[label12]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="label"
+                      externalMetadataColumnId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].ExternalColumns[Lookup Junction Control.label]"
+                      lineageId="Package\Data Flow Task_Accidents\Lookup Junction Control.Outputs[Lookup Match Output].Columns[label]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].Columns[label13]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="label"
+                      externalMetadataColumnId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].ExternalColumns[Lookup Ped Cross Human.label]"
+                      lineageId="Package\Data Flow Task_Accidents\Lookup Ped Cross Human.Outputs[Lookup Match Output].Columns[label]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].Columns[label14]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="label"
+                      externalMetadataColumnId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].ExternalColumns[Lookup Ped Cross Physical.label]"
+                      lineageId="Package\Data Flow Task_Accidents\Lookup Ped Cross Physical.Outputs[Lookup Match Output].Columns[label]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].Columns[label15]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="label"
+                      externalMetadataColumnId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].ExternalColumns[Lookup Special Condition at Site.label]"
+                      lineageId="Package\Data Flow Task_Accidents\Lookup Special Condition at Site.Outputs[Lookup Match Output].Columns[label]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].Columns[label16]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="label"
+                      externalMetadataColumnId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].ExternalColumns[Lookup Carriageway Hazards.label]"
+                      lineageId="Package\Data Flow Task_Accidents\Lookup Carriageway Hazards.Outputs[Lookup Match Output].Columns[label]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].Columns[label17]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="label"
+                      externalMetadataColumnId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].ExternalColumns[Lookup Urban Rural.label]"
+                      lineageId="Package\Data Flow Task_Accidents\Lookup Urban Rural.Outputs[Lookup Match Output].Columns[label]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -764,8 +897,9 @@
                       name="Local_Authority_(District)" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].ExternalColumns[Local_Authority_(Highway)]"
-                      dataType="wstr"
-                      length="255"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Local_Authority_(Highway)" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].ExternalColumns[1st_Road_Class]"
@@ -876,10 +1010,100 @@
                       length="50"
                       name="LSOA_of_Accident_Location" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].ExternalColumns[label]"
+                      refId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].ExternalColumns[Lookup 1stRoadClass_Name.label]"
                       dataType="wstr"
                       length="255"
-                      name="label" />
+                      name="Lookup 1stRoadClass_Name.label" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].ExternalColumns[Lookup 2ndRoadClass_Name.label]"
+                      dataType="wstr"
+                      length="255"
+                      name="Lookup 2ndRoadClass_Name.label" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].ExternalColumns[Lookup Accident Severity.label]"
+                      dataType="wstr"
+                      length="255"
+                      name="Lookup Accident Severity.label" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].ExternalColumns[Lookup Day of Week.label]"
+                      dataType="wstr"
+                      length="255"
+                      name="Lookup Day of Week.label" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].ExternalColumns[Lookup Police Force.label]"
+                      dataType="wstr"
+                      length="255"
+                      name="Lookup Police Force.label" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].ExternalColumns[Lookup Locai Authority District.label]"
+                      dataType="wstr"
+                      length="255"
+                      name="Lookup Locai Authority District.label" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].ExternalColumns[Lookup Light Condition.label]"
+                      dataType="wstr"
+                      length="255"
+                      name="Lookup Light Condition.label" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].ExternalColumns[Lookup Weather Condition.label]"
+                      dataType="wstr"
+                      length="255"
+                      name="Lookup Weather Condition.label" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].ExternalColumns[Lookup Road Surface.label]"
+                      dataType="wstr"
+                      length="255"
+                      name="Lookup Road Surface.label" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].ExternalColumns[Lookup Police Officer Attend.label]"
+                      dataType="wstr"
+                      length="255"
+                      name="Lookup Police Officer Attend.label" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].ExternalColumns[Label]"
+                      dataType="wstr"
+                      length="255"
+                      name="Label" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].ExternalColumns[Lookup Road Type.label]"
+                      dataType="wstr"
+                      length="255"
+                      name="Lookup Road Type.label" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].ExternalColumns[Lookup Junction Details.label]"
+                      dataType="wstr"
+                      length="255"
+                      name="Lookup Junction Details.label" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].ExternalColumns[Lookup Junction Control.label]"
+                      dataType="wstr"
+                      length="255"
+                      name="Lookup Junction Control.label" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].ExternalColumns[Lookup Ped Cross Human.label]"
+                      dataType="wstr"
+                      length="255"
+                      name="Lookup Ped Cross Human.label" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].ExternalColumns[Lookup Ped Cross Physical.label]"
+                      dataType="wstr"
+                      length="255"
+                      name="Lookup Ped Cross Physical.label" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].ExternalColumns[Lookup Special Condition at Site.label]"
+                      dataType="wstr"
+                      length="255"
+                      name="Lookup Special Condition at Site.label" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].ExternalColumns[Lookup Carriageway Hazards.label]"
+                      dataType="wstr"
+                      length="255"
+                      name="Lookup Carriageway Hazards.label" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input].ExternalColumns[Lookup Urban Rural.label]"
+                      dataType="wstr"
+                      length="255"
+                      name="Lookup Urban Rural.label" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1244,13 +1468,13 @@ where [refTable].[code] = ?</property>
                   description="Specifies the SQL statement that generates the lookup table."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Accident_AccidentSeverity]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Acc_AccidentSeverity]</property>
                 <property
                   dataType="System.String"
                   description="Specifies a SQL statement that uses parameters to generate the lookup table."
                   expressionType="Notify"
                   name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Accident_AccidentSeverity]) [refTable]
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Acc_AccidentSeverity]) [refTable]
 where [refTable].[code] = ?</property>
                 <property
                   dataType="System.Int32"
@@ -1405,13 +1629,13 @@ where [refTable].[code] = ?</property>
                   description="Specifies the SQL statement that generates the lookup table."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Accident_1stRoadClass]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Accident_Carriageway Hazards]</property>
                 <property
                   dataType="System.String"
                   description="Specifies a SQL statement that uses parameters to generate the lookup table."
                   expressionType="Notify"
                   name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Accident_1stRoadClass]) [refTable]
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Accident_Carriageway Hazards]) [refTable]
 where [refTable].[code] = ?</property>
                 <property
                   dataType="System.Int32"
@@ -1448,7 +1672,7 @@ where [refTable].[code] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Data Flow Task_Accidents\Reading Accidents.Outputs[Flat File Source Output].Columns[1st_Road_Class]};</property>
+                  name="ParameterMap">#{Package\Data Flow Task_Accidents\Reading Accidents.Outputs[Flat File Source Output].Columns[Carriageway_Hazards]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1472,12 +1696,12 @@ where [refTable].[code] = ?</property>
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task_Accidents\Lookup Carriageway Hazards.Inputs[Lookup Input].Columns[1st_Road_Class]"
+                      refId="Package\Data Flow Task_Accidents\Lookup Carriageway Hazards.Inputs[Lookup Input].Columns[Carriageway_Hazards]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="1st_Road_Class"
-                      lineageId="Package\Data Flow Task_Accidents\Reading Accidents.Outputs[Flat File Source Output].Columns[1st_Road_Class]">
+                      cachedName="Carriageway_Hazards"
+                      lineageId="Package\Data Flow Task_Accidents\Reading Accidents.Outputs[Flat File Source Output].Columns[Carriageway_Hazards]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -1727,13 +1951,13 @@ where [refTable].[code] = ?</property>
                   description="Specifies the SQL statement that generates the lookup table."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Accident_1stRoadClass]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Accident_Junction Control]</property>
                 <property
                   dataType="System.String"
                   description="Specifies a SQL statement that uses parameters to generate the lookup table."
                   expressionType="Notify"
                   name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Accident_1stRoadClass]) [refTable]
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Accident_Junction Control]) [refTable]
 where [refTable].[code] = ?</property>
                 <property
                   dataType="System.Int32"
@@ -1770,7 +1994,7 @@ where [refTable].[code] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Data Flow Task_Accidents\Reading Accidents.Outputs[Flat File Source Output].Columns[1st_Road_Class]};</property>
+                  name="ParameterMap">#{Package\Data Flow Task_Accidents\Reading Accidents.Outputs[Flat File Source Output].Columns[Junction_Control]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1794,12 +2018,12 @@ where [refTable].[code] = ?</property>
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task_Accidents\Lookup Junction Control.Inputs[Lookup Input].Columns[1st_Road_Class]"
+                      refId="Package\Data Flow Task_Accidents\Lookup Junction Control.Inputs[Lookup Input].Columns[Junction_Control]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="1st_Road_Class"
-                      lineageId="Package\Data Flow Task_Accidents\Reading Accidents.Outputs[Flat File Source Output].Columns[1st_Road_Class]">
+                      cachedName="Junction_Control"
+                      lineageId="Package\Data Flow Task_Accidents\Reading Accidents.Outputs[Flat File Source Output].Columns[Junction_Control]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -1888,13 +2112,13 @@ where [refTable].[code] = ?</property>
                   description="Specifies the SQL statement that generates the lookup table."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Accident_1stRoadClass]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Accident_Junction Details]</property>
                 <property
                   dataType="System.String"
                   description="Specifies a SQL statement that uses parameters to generate the lookup table."
                   expressionType="Notify"
                   name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Accident_1stRoadClass]) [refTable]
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Accident_Junction Details]) [refTable]
 where [refTable].[code] = ?</property>
                 <property
                   dataType="System.Int32"
@@ -1931,7 +2155,7 @@ where [refTable].[code] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Data Flow Task_Accidents\Reading Accidents.Outputs[Flat File Source Output].Columns[1st_Road_Class]};</property>
+                  name="ParameterMap">#{Package\Data Flow Task_Accidents\Reading Accidents.Outputs[Flat File Source Output].Columns[Junction_Detail]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1955,12 +2179,12 @@ where [refTable].[code] = ?</property>
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task_Accidents\Lookup Junction Details.Inputs[Lookup Input].Columns[1st_Road_Class]"
+                      refId="Package\Data Flow Task_Accidents\Lookup Junction Details.Inputs[Lookup Input].Columns[Junction_Detail]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="1st_Road_Class"
-                      lineageId="Package\Data Flow Task_Accidents\Reading Accidents.Outputs[Flat File Source Output].Columns[1st_Road_Class]">
+                      cachedName="Junction_Detail"
+                      lineageId="Package\Data Flow Task_Accidents\Reading Accidents.Outputs[Flat File Source Output].Columns[Junction_Detail]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -2409,7 +2633,7 @@ where [refTable].[code] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="code" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="label" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Label" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="code" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -2469,18 +2693,18 @@ where [refTable].[code] = ?</property>
                   synchronousInputId="Package\Data Flow Task_Accidents\Lookup Local Authority Highway.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task_Accidents\Lookup Local Authority Highway.Outputs[Lookup Match Output].Columns[label]"
+                      refId="Package\Data Flow Task_Accidents\Lookup Local Authority Highway.Outputs[Lookup Match Output].Columns[Label]"
                       dataType="wstr"
                       errorOrTruncationOperation="Copy Column"
                       length="255"
-                      lineageId="Package\Data Flow Task_Accidents\Lookup Local Authority Highway.Outputs[Lookup Match Output].Columns[label]"
-                      name="label"
+                      lineageId="Package\Data Flow Task_Accidents\Lookup Local Authority Highway.Outputs[Lookup Match Output].Columns[Label]"
+                      name="Label"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           dataType="System.String"
                           description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn">label</property>
+                          name="CopyFromReferenceColumn">Label</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -2532,13 +2756,13 @@ where [refTable].[code] = ?</property>
                   description="Specifies the SQL statement that generates the lookup table."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Accident_1stRoadClass]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Accident_Ped Cross Human]</property>
                 <property
                   dataType="System.String"
                   description="Specifies a SQL statement that uses parameters to generate the lookup table."
                   expressionType="Notify"
                   name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Accident_1stRoadClass]) [refTable]
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Accident_Ped Cross Human]) [refTable]
 where [refTable].[code] = ?</property>
                 <property
                   dataType="System.Int32"
@@ -2575,7 +2799,7 @@ where [refTable].[code] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Data Flow Task_Accidents\Reading Accidents.Outputs[Flat File Source Output].Columns[1st_Road_Class]};</property>
+                  name="ParameterMap">#{Package\Data Flow Task_Accidents\Reading Accidents.Outputs[Flat File Source Output].Columns[Pedestrian_Crossing-Human_Control]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -2599,12 +2823,12 @@ where [refTable].[code] = ?</property>
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task_Accidents\Lookup Ped Cross Human.Inputs[Lookup Input].Columns[1st_Road_Class]"
+                      refId="Package\Data Flow Task_Accidents\Lookup Ped Cross Human.Inputs[Lookup Input].Columns[Pedestrian_Crossing-Human_Control]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="1st_Road_Class"
-                      lineageId="Package\Data Flow Task_Accidents\Reading Accidents.Outputs[Flat File Source Output].Columns[1st_Road_Class]">
+                      cachedName="Pedestrian_Crossing-Human_Control"
+                      lineageId="Package\Data Flow Task_Accidents\Reading Accidents.Outputs[Flat File Source Output].Columns[Pedestrian_Crossing-Human_Control]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -2693,13 +2917,13 @@ where [refTable].[code] = ?</property>
                   description="Specifies the SQL statement that generates the lookup table."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Accident_1stRoadClass]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Accident_Ped Cross Physical]</property>
                 <property
                   dataType="System.String"
                   description="Specifies a SQL statement that uses parameters to generate the lookup table."
                   expressionType="Notify"
                   name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Accident_1stRoadClass]) [refTable]
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Accident_Ped Cross Physical]) [refTable]
 where [refTable].[code] = ?</property>
                 <property
                   dataType="System.Int32"
@@ -2736,7 +2960,7 @@ where [refTable].[code] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Data Flow Task_Accidents\Reading Accidents.Outputs[Flat File Source Output].Columns[1st_Road_Class]};</property>
+                  name="ParameterMap">#{Package\Data Flow Task_Accidents\Reading Accidents.Outputs[Flat File Source Output].Columns[Pedestrian_Crossing-Physical_Facilities]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -2760,12 +2984,12 @@ where [refTable].[code] = ?</property>
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task_Accidents\Lookup Ped Cross Physical.Inputs[Lookup Input].Columns[1st_Road_Class]"
+                      refId="Package\Data Flow Task_Accidents\Lookup Ped Cross Physical.Inputs[Lookup Input].Columns[Pedestrian_Crossing-Physical_Facilities]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="1st_Road_Class"
-                      lineageId="Package\Data Flow Task_Accidents\Reading Accidents.Outputs[Flat File Source Output].Columns[1st_Road_Class]">
+                      cachedName="Pedestrian_Crossing-Physical_Facilities"
+                      lineageId="Package\Data Flow Task_Accidents\Reading Accidents.Outputs[Flat File Source Output].Columns[Pedestrian_Crossing-Physical_Facilities]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -3337,13 +3561,13 @@ where [refTable].[code] = ?</property>
                   description="Specifies the SQL statement that generates the lookup table."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Accident_1stRoadClass]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Accident_Road Type]</property>
                 <property
                   dataType="System.String"
                   description="Specifies a SQL statement that uses parameters to generate the lookup table."
                   expressionType="Notify"
                   name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Accident_1stRoadClass]) [refTable]
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Accident_Road Type]) [refTable]
 where [refTable].[code] = ?</property>
                 <property
                   dataType="System.Int32"
@@ -3380,7 +3604,7 @@ where [refTable].[code] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Data Flow Task_Accidents\Reading Accidents.Outputs[Flat File Source Output].Columns[1st_Road_Class]};</property>
+                  name="ParameterMap">#{Package\Data Flow Task_Accidents\Reading Accidents.Outputs[Flat File Source Output].Columns[Road_Type]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -3404,12 +3628,12 @@ where [refTable].[code] = ?</property>
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task_Accidents\Lookup Road Type.Inputs[Lookup Input].Columns[1st_Road_Class]"
+                      refId="Package\Data Flow Task_Accidents\Lookup Road Type.Inputs[Lookup Input].Columns[Road_Type]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="1st_Road_Class"
-                      lineageId="Package\Data Flow Task_Accidents\Reading Accidents.Outputs[Flat File Source Output].Columns[1st_Road_Class]">
+                      cachedName="Road_Type"
+                      lineageId="Package\Data Flow Task_Accidents\Reading Accidents.Outputs[Flat File Source Output].Columns[Road_Type]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -3498,13 +3722,13 @@ where [refTable].[code] = ?</property>
                   description="Specifies the SQL statement that generates the lookup table."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Accident_1stRoadClass]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Accident_Special Condition at Site]</property>
                 <property
                   dataType="System.String"
                   description="Specifies a SQL statement that uses parameters to generate the lookup table."
                   expressionType="Notify"
                   name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Accident_1stRoadClass]) [refTable]
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Accident_Special Condition at Site]) [refTable]
 where [refTable].[code] = ?</property>
                 <property
                   dataType="System.Int32"
@@ -3541,7 +3765,7 @@ where [refTable].[code] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Data Flow Task_Accidents\Reading Accidents.Outputs[Flat File Source Output].Columns[1st_Road_Class]};</property>
+                  name="ParameterMap">#{Package\Data Flow Task_Accidents\Reading Accidents.Outputs[Flat File Source Output].Columns[Special_Conditions_at_Site]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -3565,12 +3789,12 @@ where [refTable].[code] = ?</property>
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task_Accidents\Lookup Special Condition at Site.Inputs[Lookup Input].Columns[1st_Road_Class]"
+                      refId="Package\Data Flow Task_Accidents\Lookup Special Condition at Site.Inputs[Lookup Input].Columns[Special_Conditions_at_Site]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="1st_Road_Class"
-                      lineageId="Package\Data Flow Task_Accidents\Reading Accidents.Outputs[Flat File Source Output].Columns[1st_Road_Class]">
+                      cachedName="Special_Conditions_at_Site"
+                      lineageId="Package\Data Flow Task_Accidents\Reading Accidents.Outputs[Flat File Source Output].Columns[Special_Conditions_at_Site]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -3659,13 +3883,13 @@ where [refTable].[code] = ?</property>
                   description="Specifies the SQL statement that generates the lookup table."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Accident_1stRoadClass]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Accident_Urban Rural]</property>
                 <property
                   dataType="System.String"
                   description="Specifies a SQL statement that uses parameters to generate the lookup table."
                   expressionType="Notify"
                   name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Accident_1stRoadClass]) [refTable]
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Accident_Urban Rural]) [refTable]
 where [refTable].[code] = ?</property>
                 <property
                   dataType="System.Int32"
@@ -3702,7 +3926,7 @@ where [refTable].[code] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Data Flow Task_Accidents\Reading Accidents.Outputs[Flat File Source Output].Columns[1st_Road_Class]};</property>
+                  name="ParameterMap">#{Package\Data Flow Task_Accidents\Reading Accidents.Outputs[Flat File Source Output].Columns[Urban_or_Rural_Area]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -3726,12 +3950,12 @@ where [refTable].[code] = ?</property>
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task_Accidents\Lookup Urban Rural.Inputs[Lookup Input].Columns[1st_Road_Class]"
+                      refId="Package\Data Flow Task_Accidents\Lookup Urban Rural.Inputs[Lookup Input].Columns[Urban_or_Rural_Area]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="1st_Road_Class"
-                      lineageId="Package\Data Flow Task_Accidents\Reading Accidents.Outputs[Flat File Source Output].Columns[1st_Road_Class]">
+                      cachedName="Urban_or_Rural_Area"
+                      lineageId="Package\Data Flow Task_Accidents\Reading Accidents.Outputs[Flat File Source Output].Columns[Urban_or_Rural_Area]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -3989,8 +4213,8 @@ where [refTable].[code] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task_Accidents\Reading Accidents.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Accidents File]"
-                  connectionManagerRefId="Package.ConnectionManagers[Accidents File]"
+                  connectionManagerID="Package.ConnectionManagers[Accident File]"
+                  connectionManagerRefId="Package.ConnectionManagers[Accident File]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
@@ -4936,42 +5160,42 @@ where [refTable].[code] = ?</property>
               name="Flat File Source Output"
               startId="Package\Data Flow Task_Accidents\Reading Accidents.Outputs[Flat File Source Output]" />
             <path
-              refId="Package\Data Flow Task_Accidents.Paths[Lookup Match Output]"
+              refId="Package\Data Flow Task_Accidents.Paths[Lookup Match Output16]"
               endId="Package\Data Flow Task_Accidents\Lookup 2ndRoadClass_Name.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\Data Flow Task_Accidents\Lookup 1stRoadClass_Name.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Data Flow Task_Accidents.Paths[Lookup Match Output1]"
+              refId="Package\Data Flow Task_Accidents.Paths[Lookup Match Output15]"
               endId="Package\Data Flow Task_Accidents\Lookup Accident Severity.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\Data Flow Task_Accidents\Lookup 2ndRoadClass_Name.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Data Flow Task_Accidents.Paths[Lookup Match Output2]"
+              refId="Package\Data Flow Task_Accidents.Paths[Lookup Match Output14]"
               endId="Package\Data Flow Task_Accidents\Lookup Day of Week.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\Data Flow Task_Accidents\Lookup Accident Severity.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Data Flow Task_Accidents.Paths[Lookup Match Output3]"
+              refId="Package\Data Flow Task_Accidents.Paths[Lookup Match Output13]"
               endId="Package\Data Flow Task_Accidents\Lookup Police Force.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\Data Flow Task_Accidents\Lookup Day of Week.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Data Flow Task_Accidents.Paths[Lookup Match Output4]"
+              refId="Package\Data Flow Task_Accidents.Paths[Lookup Match Output12]"
               endId="Package\Data Flow Task_Accidents\Lookup Locai Authority District.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\Data Flow Task_Accidents\Lookup Police Force.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Data Flow Task_Accidents.Paths[Lookup Match Output5]"
+              refId="Package\Data Flow Task_Accidents.Paths[Lookup Match Output11]"
               endId="Package\Data Flow Task_Accidents\Lookup Light Condition.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\Data Flow Task_Accidents\Lookup Locai Authority District.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Data Flow Task_Accidents.Paths[Lookup Match Output6]"
+              refId="Package\Data Flow Task_Accidents.Paths[Lookup Match Output10]"
               endId="Package\Data Flow Task_Accidents\Lookup Weather Condition.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\Data Flow Task_Accidents\Lookup Light Condition.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Data Flow Task_Accidents.Paths[Lookup Match Output7]"
+              refId="Package\Data Flow Task_Accidents.Paths[Lookup Match Output9]"
               endId="Package\Data Flow Task_Accidents\Lookup Road Surface.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\Data Flow Task_Accidents\Lookup Weather Condition.Outputs[Lookup Match Output]" />
@@ -4981,10 +5205,55 @@ where [refTable].[code] = ?</property>
               name="Lookup Match Output"
               startId="Package\Data Flow Task_Accidents\Lookup Road Surface.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Data Flow Task_Accidents.Paths[Lookup Match Output9]"
+              refId="Package\Data Flow Task_Accidents.Paths[Lookup Match Output7]"
               endId="Package\Data Flow Task_Accidents\Lookup Local Authority Highway.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\Data Flow Task_Accidents\Lookup Police Officer Attend.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Data Flow Task_Accidents.Paths[Lookup Match Output6]"
+              endId="Package\Data Flow Task_Accidents\Lookup Road Type.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Data Flow Task_Accidents\Lookup Local Authority Highway.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Data Flow Task_Accidents.Paths[Lookup Match Output5]"
+              endId="Package\Data Flow Task_Accidents\Lookup Junction Details.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Data Flow Task_Accidents\Lookup Road Type.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Data Flow Task_Accidents.Paths[Lookup Match Output4]"
+              endId="Package\Data Flow Task_Accidents\Lookup Junction Control.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Data Flow Task_Accidents\Lookup Junction Details.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Data Flow Task_Accidents.Paths[Lookup Match Output3]"
+              endId="Package\Data Flow Task_Accidents\Lookup Ped Cross Human.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Data Flow Task_Accidents\Lookup Junction Control.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Data Flow Task_Accidents.Paths[Lookup Match Output2]"
+              endId="Package\Data Flow Task_Accidents\Lookup Ped Cross Physical.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Data Flow Task_Accidents\Lookup Ped Cross Human.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Data Flow Task_Accidents.Paths[Lookup Match Output1]"
+              endId="Package\Data Flow Task_Accidents\Lookup Special Condition at Site.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Data Flow Task_Accidents\Lookup Ped Cross Physical.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Data Flow Task_Accidents.Paths[Lookup Match Output]"
+              endId="Package\Data Flow Task_Accidents\Lookup Carriageway Hazards.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Data Flow Task_Accidents\Lookup Special Condition at Site.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Data Flow Task_Accidents.Paths[Lookup Match Output17]"
+              endId="Package\Data Flow Task_Accidents\Lookup Urban Rural.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Data Flow Task_Accidents\Lookup Carriageway Hazards.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Data Flow Task_Accidents.Paths[Lookup Match Output18]"
+              endId="Package\Data Flow Task_Accidents\Accidents Table.Inputs[OLE DB Destination Input]"
+              name="Lookup Match Output"
+              startId="Package\Data Flow Task_Accidents\Lookup Urban Rural.Outputs[Lookup Match Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -5013,19 +5282,235 @@ where [refTable].[code] = ?</property>
     design-time-name="Package\Data Flow Task_Accidents">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="176,41.6"
+          Id="Package\Data Flow Task_Accidents\Lookup Day of Week"
+          TopLeft="818.214299648392,133.038234310125" />
+        <NodeLayout
+          Size="214.4,41.6"
+          Id="Package\Data Flow Task_Accidents\Lookup 2ndRoadClass_Name"
+          TopLeft="544.107152123232,43.8647050726368" />
+        <NodeLayout
+          Size="172,41.6"
+          Id="Package\Data Flow Task_Accidents\Lookup Urban Rural"
+          TopLeft="847.678585864452,427.773511187798" />
+        <NodeLayout
+          Size="178.4,41.6"
+          Id="Package\Data Flow Task_Accidents\Lookup Road Surface"
+          TopLeft="303.928576604444,232.876463879928" />
+        <NodeLayout
+          Size="202.4,41.6"
+          Id="Package\Data Flow Task_Accidents\Lookup Ped Cross Physical"
+          TopLeft="36.0714291857212,429.811750785206" />
+        <NodeLayout
+          Size="222.4,41.6"
+          Id="Package\Data Flow Task_Accidents\Lookup Locai Authority District"
+          TopLeft="273.571433230322,129.767643179158" />
+        <NodeLayout
+          Size="192,41.6"
+          Id="Package\Data Flow Task_Accidents\Lookup Junction Control"
+          TopLeft="295.00000502382,331.758811083383" />
+        <NodeLayout
+          Size="196.8,41.6"
+          Id="Package\Data Flow Task_Accidents\Lookup Accident Severity"
+          TopLeft="808.035728046481,43.970588851965" />
+        <NodeLayout
+          Size="203.2,41.6"
+          Id="Package\Data Flow Task_Accidents\Lookup Weather Condition"
+          TopLeft="32.5000005534717,230.688229980022" />
+        <NodeLayout
+          Size="166.4,41.6"
+          Id="Package\Data Flow Task_Accidents\Lookup Road Type"
+          TopLeft="837.857157125765,326.426460917226" />
+        <NodeLayout
+          Size="172,41.6"
+          Id="Package\Data Flow Task_Accidents\Lookup Police Force"
+          TopLeft="553.928580861919,135.22646821003" />
+        <NodeLayout
+          Size="229.6,41.6"
+          Id="Package\Data Flow Task_Accidents\Lookup Local Authority Highway"
+          TopLeft="802.142870803269,232.473519848004" />
+        <NodeLayout
+          Size="189.6,41.6"
+          Id="Package\Data Flow Task_Accidents\Lookup Junction Details"
+          TopLeft="559.285723810293,328.614694817131" />
+        <NodeLayout
+          Size="215.2,41.6"
+          Id="Package\Data Flow Task_Accidents\Lookup Carriageway Hazards"
+          TopLeft="567.321438232855,427.497042020587" />
+        <NodeLayout
+          Size="211.2,41.6"
+          Id="Package\Data Flow Task_Accidents\Lookup 1stRoadClass_Name"
+          TopLeft="284.285719127071,41.1029417529239" />
+        <NodeLayout
+          Size="212,41.6"
+          Id="Package\Data Flow Task_Accidents\Lookup Police Officer Attend"
+          TopLeft="543.21429496517,234.108815413487" />
         <NodeLayout
           Size="164,41.6"
           Id="Package\Data Flow Task_Accidents\Reading Accidents"
           TopLeft="49.1071436934322,40.720588806385" />
         <NodeLayout
+          Size="229.6,41.6"
+          Id="Package\Data Flow Task_Accidents\Lookup Special Condition at Site"
+          TopLeft="288.750004917383,433.911749417805" />
+        <NodeLayout
           Size="152,41.6"
           Id="Package\Data Flow Task_Accidents\Accidents Table"
-          TopLeft="851.964300223151,534.132360376082" />
+          TopLeft="852.857157381213,520.750007247223" />
         <NodeLayout
-          Size="211.2,41.6"
-          Id="Package\Data Flow Task_Accidents\Lookup 1stRoadClass_Name"
-          TopLeft="284.285719127071,41.1029417529239" />
+          Size="199.2,41.6"
+          Id="Package\Data Flow Task_Accidents\Lookup Ped Cross Human"
+          TopLeft="30.7142862373468,324.388221319818" />
+        <NodeLayout
+          Size="186.4,41.6"
+          Id="Package\Data Flow Task_Accidents\Lookup Light Condition"
+          TopLeft="37.8571435018463,130.044112346369" />
+        <EdgeLayout
+          Id="Package\Data Flow Task_Accidents.Paths[Lookup Match Output5]"
+          TopLeft="837.857157125765,348.320577867178">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-88.9714333154723,0"
+              Start="0,0"
+              End="-81.4714333154723,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-81.4714333154723,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-88.9271033764861,5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task_Accidents.Paths[Lookup Match Output4]"
+          TopLeft="559.285723810293,350.986752950257">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-72.285718786473,0"
+              Start="0,0"
+              End="-64.785718786473,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-64.785718786473,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-80.5842461119865,5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task_Accidents.Paths[Lookup Match Output3]"
+          TopLeft="295.00000502382,348.873516201601">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-65.0857187864732,0"
+              Start="0,0"
+              End="-57.5857187864732,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-57.5857187864732,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-76.9842461119866,5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task_Accidents.Paths[Lookup Match Output2]"
+          TopLeft="133.792857711534,365.988221319818">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,63.823529465388"
+              Start="0,0"
+              End="0,56.323529465388">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,56.323529465388" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,22.357077232694,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task_Accidents.Paths[Lookup Match Output1]"
+          TopLeft="238.471429185721,452.661750101506">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="50.2785757316618,0"
+              Start="0,0"
+              End="42.7785757316618,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="42.7785757316618,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-26.8020988529191,5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task_Accidents.Paths[Lookup Match Output]"
+          TopLeft="518.350004917383,451.504395719196">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="48.971433315472,0"
+              Start="0,0"
+              End="41.471433315472,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="41.471433315472,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-27.455670061014,5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task_Accidents.Paths[Flat File Source Output]"
           TopLeft="213.107143693432,61.7117652796544">
@@ -5048,80 +5533,56 @@ where [refTable].[code] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="196.8,41.6"
-          Id="Package\Data Flow Task_Accidents\Lookup Accident Severity"
-          TopLeft="808.035728046481,43.970588851965" />
-        <NodeLayout
-          Size="214.4,41.6"
-          Id="Package\Data Flow Task_Accidents\Lookup 2ndRoadClass_Name"
-          TopLeft="544.107152123232,43.8647050726368" />
-        <NodeLayout
-          Size="176,41.6"
-          Id="Package\Data Flow Task_Accidents\Lookup Day of Week"
-          TopLeft="818.214299648392,133.038234310125" />
-        <NodeLayout
-          Size="172,41.6"
-          Id="Package\Data Flow Task_Accidents\Lookup Police Force"
-          TopLeft="553.928580861919,135.22646821003" />
-        <NodeLayout
-          Size="222.4,41.6"
-          Id="Package\Data Flow Task_Accidents\Lookup Locai Authority District"
-          TopLeft="273.571433230322,129.767643179158" />
-        <NodeLayout
-          Size="186.4,41.6"
-          Id="Package\Data Flow Task_Accidents\Lookup Light Condition"
-          TopLeft="37.8571435018463,130.044112346369" />
-        <NodeLayout
-          Size="203.2,41.6"
-          Id="Package\Data Flow Task_Accidents\Lookup Weather Condition"
-          TopLeft="32.5000005534717,230.688229980022" />
-        <NodeLayout
-          Size="178.4,41.6"
-          Id="Package\Data Flow Task_Accidents\Lookup Road Surface"
-          TopLeft="303.928576604444,232.876463879928" />
-        <NodeLayout
-          Size="212,41.6"
-          Id="Package\Data Flow Task_Accidents\Lookup Police Officer Attend"
-          TopLeft="543.21429496517,234.108815413487" />
-        <NodeLayout
-          Size="229.6,41.6"
-          Id="Package\Data Flow Task_Accidents\Lookup Local Authority Highway"
-          TopLeft="802.142870803269,232.473519848004" />
-        <NodeLayout
-          Size="166.4,41.6"
-          Id="Package\Data Flow Task_Accidents\Lookup Road Type"
-          TopLeft="845.892871548327,327.382343283573" />
-        <NodeLayout
-          Size="189.6,41.6"
-          Id="Package\Data Flow Task_Accidents\Lookup Junction Details"
-          TopLeft="559.285723810293,328.614694817131" />
-        <NodeLayout
-          Size="192,41.6"
-          Id="Package\Data Flow Task_Accidents\Lookup Junction Control"
-          TopLeft="295.00000502382,331.758811083383" />
-        <NodeLayout
-          Size="199.2,41.6"
-          Id="Package\Data Flow Task_Accidents\Lookup Ped Cross Human"
-          TopLeft="30.7142862373468,324.388221319818" />
-        <NodeLayout
-          Size="202.4,41.6"
-          Id="Package\Data Flow Task_Accidents\Lookup Ped Cross Physical"
-          TopLeft="36.0714291857212,429.811750785206" />
-        <NodeLayout
-          Size="229.6,41.6"
-          Id="Package\Data Flow Task_Accidents\Lookup Special Condition at Site"
-          TopLeft="288.750004917383,433.911749417805" />
-        <NodeLayout
-          Size="215.2,41.6"
-          Id="Package\Data Flow Task_Accidents\Lookup Carriageway Hazards"
-          TopLeft="567.321438232855,427.497042020587" />
-        <NodeLayout
-          Size="172,41.6"
-          Id="Package\Data Flow Task_Accidents\Lookup Urban Rural"
-          TopLeft="847.678585864452,427.773511187798" />
         <EdgeLayout
-          Id="Package\Data Flow Task_Accidents.Paths[Lookup Match Output]"
+          Id="Package\Data Flow Task_Accidents.Paths[Lookup Match Output18]"
+          TopLeft="931.267871622833,469.373511187798">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51.3764960594251"
+              Start="0,0"
+              End="0,43.8764960594251">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.8764960594251" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,16.1335605297126,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task_Accidents.Paths[Lookup Match Output17]"
+          TopLeft="782.521438232855,448.435276604193">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="65.157147631597,0"
+              Start="0,0"
+              End="57.657147631597,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="57.657147631597,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-19.3628129029515,5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task_Accidents.Paths[Lookup Match Output16]"
           TopLeft="495.485719127071,63.2838234127803">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5145,7 +5606,7 @@ where [refTable].[code] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task_Accidents.Paths[Lookup Match Output1]"
+          Id="Package\Data Flow Task_Accidents.Paths[Lookup Match Output15]"
           TopLeft="758.507152123232,64.7176469623009">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5169,7 +5630,7 @@ where [refTable].[code] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task_Accidents.Paths[Lookup Match Output2]"
+          Id="Package\Data Flow Task_Accidents.Paths[Lookup Match Output14]"
           TopLeft="906.325013847436,85.570588851965">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5193,7 +5654,7 @@ where [refTable].[code] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task_Accidents.Paths[Lookup Match Output3]"
+          Id="Package\Data Flow Task_Accidents.Paths[Lookup Match Output13]"
           TopLeft="818.214299648392,154.932351260077">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5217,7 +5678,7 @@ where [refTable].[code] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task_Accidents.Paths[Lookup Match Output4]"
+          Id="Package\Data Flow Task_Accidents.Paths[Lookup Match Output12]"
           TopLeft="553.928580861919,153.297055694594">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5241,7 +5702,7 @@ where [refTable].[code] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task_Accidents.Paths[Lookup Match Output5]"
+          Id="Package\Data Flow Task_Accidents.Paths[Lookup Match Output11]"
           TopLeft="273.571433230322,150.705877762764">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5265,7 +5726,7 @@ where [refTable].[code] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task_Accidents.Paths[Lookup Match Output6]"
+          Id="Package\Data Flow Task_Accidents.Paths[Lookup Match Output10]"
           TopLeft="132.578572027659,171.644112346369">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5284,12 +5745,12 @@ where [refTable].[code] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,19.9673713168264,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,19.9673713168265,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task_Accidents.Paths[Lookup Match Output7]"
+          Id="Package\Data Flow Task_Accidents.Paths[Lookup Match Output9]"
           TopLeft="235.700000553472,252.582346929975">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5308,7 +5769,7 @@ where [refTable].[code] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-17.8270986932637,5,96.3827734375,11.609375"
+              BoundingBox="-17.8270986932638,5,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -5332,12 +5793,12 @@ where [refTable].[code] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-21.4985275383871,5,96.3827734375,11.609375"
+              BoundingBox="-21.4985275383872,5,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task_Accidents.Paths[Lookup Match Output9]"
+          Id="Package\Data Flow Task_Accidents.Paths[Lookup Match Output7]"
           TopLeft="755.21429496517,254.091167630745">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5360,9 +5821,424 @@ where [refTable].[code] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task_Accidents.Paths[Lookup Match Output6]"
+          TopLeft="919.000013964517,274.073519848004">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,52.3529410692219"
+              Start="0,0"
+              End="0,44.8529410692219">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.8529410692219" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,16.6217830346109,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task_Accidents\Lookup Day of Week">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Accident_DayOfWeek]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task_Accidents\Lookup 2ndRoadClass_Name">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Accident_2ndRoadClass]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task_Accidents\Lookup Urban Rural">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Accident_Urban Rural]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task_Accidents\Lookup Road Surface">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Accident_Road Surface]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task_Accidents\Lookup Ped Cross Physical">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Accident_Ped Cross Physical]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task_Accidents\Lookup Locai Authority District">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Accident_Locai Authority District]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task_Accidents\Lookup Junction Control">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Accident_Junction Control]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task_Accidents\Lookup Accident Severity">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Acc_AccidentSeverity]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task_Accidents\Lookup Weather Condition">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Accident_Weather Condition]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task_Accidents\Lookup Road Type">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Accident_Road Type]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task_Accidents\Lookup Police Force">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Accident_Police Force]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task_Accidents\Lookup Local Authority Highway">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Accident_Local Authority Highway]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task_Accidents\Lookup Junction Details">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Accident_Junction Details]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task_Accidents\Lookup Carriageway Hazards">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Accident_Carriageway Hazards]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task_Accidents\Lookup 1stRoadClass_Name">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Accident_1stRoadClass]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task_Accidents\Lookup Police Officer Attend">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Accident_Police Officer Attend]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task_Accidents\Lookup Special Condition at Site">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Accident_Special Condition at Site]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task_Accidents\Accidents Table">
     <Properties>
@@ -5377,137 +6253,22 @@ where [refTable].[code] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task_Accidents\Lookup 1stRoadClass_Name">
+    design-time-name="Package\Data Flow Task_Accidents\Lookup Ped Cross Human">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[Accident_1stRoadClass]</Value>
+          type="q3:string">[dbo].[Accident_Ped Cross Human]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task_Accidents\Lookup Accident Severity">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Accident_AccidentSeverity]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task_Accidents\Lookup 2ndRoadClass_Name">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Accident_2ndRoadClass]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task_Accidents\Lookup Day of Week">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Accident_DayOfWeek]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task_Accidents\Lookup Police Force">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Accident_Police Force]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task_Accidents\Lookup Locai Authority District">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Accident_Locai Authority District]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5520,7 +6281,7 @@ where [refTable].[code] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -5530,99 +6291,7 @@ where [refTable].[code] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task_Accidents\Lookup Weather Condition">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Accident_Weather Condition]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task_Accidents\Lookup Road Surface">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Accident_Road Surface]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task_Accidents\Lookup Police Officer Attend">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Accident_Police Officer Attend]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task_Accidents\Lookup Local Authority Highway">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Accident_Local Authority Highway]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>

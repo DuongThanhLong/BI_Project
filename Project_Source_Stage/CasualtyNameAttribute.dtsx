@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{7B591F15-C424-44D9-B4E0-6BB2FD81C1CE}">
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{A321642E-4135-405E-9B14-0400EAFEE833}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -37,7 +37,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="0"
           DTS:ConnectRetryInterval="0"
-          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\PC\OneDrive\Desktop\UKAccidentsCodebook.xls;Extended Properties=&quot;Excel 8.0;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\PC\OneDrive\Desktop\UKAccidentsCodebook.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -3101,239 +3101,115 @@
       <GraphLayout
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="145.6,42.4"
-          Id="Package\Data Flow Task\Casualty Class"
-          TopLeft="34.2857148695965,16.8235296477084" />
-        <NodeLayout
-          Size="190.4,41.6"
-          Id="Package\Data Flow Task\Casualty_Casualty Class"
-          TopLeft="255.000004342624,15.2941178615531" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Excel Source Output]"
-          TopLeft="179.885714869597,37.0588237546307">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="75.1142894730276,0"
-              Start="0,0"
-              End="67.6142894730276,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="67.6142894730276,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="150.4,41.6"
-          Id="Package\Data Flow Task\Sex of Casualty"
-          TopLeft="38.5714292282961,104.694117679233" />
-        <NodeLayout
-          Size="196,41.6"
-          Id="Package\Data Flow Task\Casualty_Sex of Casualty"
-          TopLeft="261.428575880674,103.164705893078" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Excel Source Output1]"
-          TopLeft="188.971429228296,124.729411786155">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="72.4571466523778,0"
-              Start="0,0"
-              End="64.9571466523778,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="64.9571466523778,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="152,41.6"
-          Id="Package\Data Flow Task\Age of Casualty"
-          TopLeft="34.2857148695965,207.823529465388" />
-        <NodeLayout
-          Size="197.6,41.6"
-          Id="Package\Data Flow Task\Casualty_Age of Casualty"
-          TopLeft="255.000004342625,206.294117679233" />
-        <NodeLayout
-          Size="123.2,41.6"
-          Id="Package\Data Flow Task\Age Band"
-          TopLeft="38.5714292282961,295.694117496913" />
-        <NodeLayout
-          Size="168.8,41.6"
-          Id="Package\Data Flow Task\Casualty_Age Band"
-          TopLeft="261.428575880674,294.164705710758" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Excel Source Output2]"
-          TopLeft="186.285714869597,227.858823572311">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="68.714289473028,0"
-              Start="0,0"
-              End="61.214289473028,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="61.214289473028,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Excel Source Output3]"
-          TopLeft="161.771429228296,315.729411603835">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="99.6571466523774,0"
-              Start="0,0"
-              End="92.1571466523774,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="92.1571466523774,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="159.2,41.6"
-          Id="Package\Data Flow Task\Casualty Severity"
-          TopLeft="34.2857148695965,398.823529283068" />
-        <NodeLayout
-          Size="204.8,41.6"
-          Id="Package\Data Flow Task\Casualty_Casualty Severity"
-          TopLeft="255.000004342625,397.294117496913" />
-        <NodeLayout
           Size="138.4,41.6"
           Id="Package\Data Flow Task\Ped Location"
           TopLeft="38.5714292282961,486.694117314593" />
         <NodeLayout
-          Size="184,41.6"
-          Id="Package\Data Flow Task\Casualty_Ped Location"
-          TopLeft="261.428575880674,485.164705528437" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Excel Source Output4]"
-          TopLeft="193.485714869597,418.858823389991">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="61.5142894730281,0"
-              Start="0,0"
-              End="54.0142894730281,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="54.0142894730281,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Excel Source Output5]"
-          TopLeft="176.971429228296,506.729411421515">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="84.4571466523774,0"
-              Start="0,0"
-              End="76.9571466523774,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="76.9571466523774,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="190.4,41.6"
+          Id="Package\Data Flow Task\Casualty_Casualty Class"
+          TopLeft="255.000004342624,15.2941178615531" />
+        <NodeLayout
+          Size="196,41.6"
+          Id="Package\Data Flow Task\Casualty_Sex of Casualty"
+          TopLeft="261.428575880674,103.164705893078" />
         <NodeLayout
           Size="148,41.6"
           Id="Package\Data Flow Task\Ped Movement"
           TopLeft="519.800004342625,16.8235296477084" />
         <NodeLayout
-          Size="193.6,41.6"
-          Id="Package\Data Flow Task\Casualty_Ped Movement"
-          TopLeft="740.514293815653,15.2941178615531" />
-        <NodeLayout
-          Size="145.6,41.6"
-          Id="Package\Data Flow Task\Car Passenger"
-          TopLeft="524.085718701324,104.694117679233" />
-        <NodeLayout
-          Size="191.2,41.6"
-          Id="Package\Data Flow Task\Casualty_Car Passenger"
-          TopLeft="746.942865353702,103.164705893078" />
-        <NodeLayout
-          Size="146.4,41.6"
-          Id="Package\Data Flow Task\Bus Passenger"
-          TopLeft="519.800004342625,207.823529465388" />
+          Size="202.4,41.6"
+          Id="Package\Data Flow Task\Casualty_Home Area Type"
+          TopLeft="756.25001287886,490.794115947192" />
         <NodeLayout
           Size="192,41.6"
           Id="Package\Data Flow Task\Casualty_Bus Passenger"
           TopLeft="740.514293815653,206.294117679233" />
         <NodeLayout
-          Size="223.2,41.6"
-          Id="Package\Data Flow Task\Ped Road Maintenance Worker"
-          TopLeft="524.085718701324,295.694117496913" />
+          Size="193.6,41.6"
+          Id="Package\Data Flow Task\Casualty_Ped Movement"
+          TopLeft="740.514293815653,15.2941178615531" />
+        <NodeLayout
+          Size="168.8,41.6"
+          Id="Package\Data Flow Task\Casualty_Age Band"
+          TopLeft="261.428575880674,294.164705710758" />
+        <NodeLayout
+          Size="159.2,41.6"
+          Id="Package\Data Flow Task\Casualty Severity"
+          TopLeft="34.2857148695965,398.823529283068" />
+        <NodeLayout
+          Size="145.6,41.6"
+          Id="Package\Data Flow Task\Car Passenger"
+          TopLeft="524.085718701324,104.694117679233" />
+        <NodeLayout
+          Size="152,41.6"
+          Id="Package\Data Flow Task\Age of Casualty"
+          TopLeft="34.2857148695965,207.823529465388" />
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Data Flow Task\Sex of Casualty"
+          TopLeft="38.5714292282961,104.694117679233" />
+        <NodeLayout
+          Size="204.8,41.6"
+          Id="Package\Data Flow Task\Casualty_Casualty Severity"
+          TopLeft="255.000004342625,397.294117496913" />
+        <NodeLayout
+          Size="156.8,41.6"
+          Id="Package\Data Flow Task\Home Area Type"
+          TopLeft="533.392866226484,492.323527733348" />
+        <NodeLayout
+          Size="191.2,41.6"
+          Id="Package\Data Flow Task\Casualty_Car Passenger"
+          TopLeft="746.942865353702,103.164705893078" />
+        <NodeLayout
+          Size="189.6,41.6"
+          Id="Package\Data Flow Task\Casualty_Casualty Type"
+          TopLeft="740.514293815653,397.294117496913" />
         <NodeLayout
           Size="268.8,41.6"
           Id="Package\Data Flow Task\Casualty_Ped Road Maintenance Worker"
           TopLeft="829.085723895443,294.164705710757" />
         <NodeLayout
+          Size="197.6,41.6"
+          Id="Package\Data Flow Task\Casualty_Age of Casualty"
+          TopLeft="255.000004342625,206.294117679233" />
+        <NodeLayout
+          Size="184,41.6"
+          Id="Package\Data Flow Task\Casualty_Ped Location"
+          TopLeft="261.428575880674,485.164705528437" />
+        <NodeLayout
           Size="144.8,41.6"
           Id="Package\Data Flow Task\Casualty Type"
           TopLeft="519.800004342625,398.823529283068" />
         <NodeLayout
-          Size="189.6,41.6"
-          Id="Package\Data Flow Task\Casualty_Casualty Type"
-          TopLeft="740.514293815653,397.294117496913" />
+          Size="145.6,42.4"
+          Id="Package\Data Flow Task\Casualty Class"
+          TopLeft="34.2857148695965,16.8235296477084" />
+        <NodeLayout
+          Size="146.4,41.6"
+          Id="Package\Data Flow Task\Bus Passenger"
+          TopLeft="519.800004342625,207.823529465388" />
+        <NodeLayout
+          Size="123.2,41.6"
+          Id="Package\Data Flow Task\Age Band"
+          TopLeft="38.5714292282961,295.694117496913" />
+        <NodeLayout
+          Size="223.2,41.6"
+          Id="Package\Data Flow Task\Ped Road Maintenance Worker"
+          TopLeft="524.085718701324,295.694117496913" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Excel Source Output6]"
-          TopLeft="667.800004342625,36.8588237546307">
+          Id="Package\Data Flow Task.Paths[Excel Source Output11]"
+          TopLeft="690.192866226484,512.35882184027">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="72.714289473028,0"
+              EndConnector="66.057146652377,0"
               Start="0,0"
-              End="65.214289473028,0">
+              End="58.557146652377,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="65.214289473028,0" />
+                    End="58.557146652377,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3343,19 +3219,41 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Excel Source Output7]"
-          TopLeft="669.685718701324,124.729411786155">
+          Id="Package\Data Flow Task.Paths[Excel Source Output10]"
+          TopLeft="664.600004342625,418.858823389991">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="77.2571466523774,0"
+              EndConnector="75.914289473028,0"
               Start="0,0"
-              End="69.7571466523774,0">
+              End="68.414289473028,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="69.7571466523774,0" />
+                    End="68.414289473028,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Excel Source Output9]"
+          TopLeft="747.285718701324,315.729411603835">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="81.8000051941191,0"
+              Start="0,0"
+              End="74.3000051941191,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="74.3000051941191,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3387,19 +3285,19 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Excel Source Output9]"
-          TopLeft="747.285718701324,315.729411603835">
+          Id="Package\Data Flow Task.Paths[Excel Source Output7]"
+          TopLeft="669.685718701324,124.729411786155">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="81.8000051941192,0"
+              EndConnector="77.2571466523774,0"
               Start="0,0"
-              End="74.3000051941192,0">
+              End="69.7571466523774,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="74.3000051941192,0" />
+                    End="69.7571466523774,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3409,19 +3307,19 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Excel Source Output10]"
-          TopLeft="664.600004342625,418.858823389991">
+          Id="Package\Data Flow Task.Paths[Excel Source Output6]"
+          TopLeft="667.800004342625,36.8588237546307">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="75.914289473028,0"
+              EndConnector="72.714289473028,0"
               Start="0,0"
-              End="68.414289473028,0">
+              End="65.214289473028,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="68.414289473028,0" />
+                    End="65.214289473028,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3430,28 +3328,130 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="156.8,41.6"
-          Id="Package\Data Flow Task\Home Area Type"
-          TopLeft="34.2857148695965,589.823529100749" />
-        <NodeLayout
-          Size="202.4,41.6"
-          Id="Package\Data Flow Task\Casualty_Home Area Type"
-          TopLeft="257.142861521973,588.294117314593" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Excel Source Output11]"
-          TopLeft="191.085714869597,609.858823207671">
+          Id="Package\Data Flow Task.Paths[Excel Source Output5]"
+          TopLeft="176.971429228296,506.729411421515">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="66.057146652377,0"
+              EndConnector="84.4571466523774,0"
               Start="0,0"
-              End="58.557146652377,0">
+              End="76.9571466523774,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="58.557146652377,0" />
+                    End="76.9571466523774,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Excel Source Output4]"
+          TopLeft="193.485714869597,418.858823389991">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="61.5142894730281,0"
+              Start="0,0"
+              End="54.0142894730281,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="54.0142894730281,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Excel Source Output3]"
+          TopLeft="161.771429228296,315.729411603835">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="99.6571466523774,0"
+              Start="0,0"
+              End="92.1571466523774,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="92.1571466523774,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Excel Source Output2]"
+          TopLeft="186.285714869597,227.858823572311">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="68.714289473028,0"
+              Start="0,0"
+              End="61.214289473028,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="61.214289473028,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Excel Source Output1]"
+          TopLeft="188.971429228296,124.729411786155">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="72.4571466523778,0"
+              Start="0,0"
+              End="64.9571466523778,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="64.9571466523778,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Excel Source Output]"
+          TopLeft="179.885714869597,37.0588237546307">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="75.1142894730276,0"
+              Start="0,0"
+              End="67.6142894730276,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="67.6142894730276,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3464,7 +3464,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Casualty Class">
+    design-time-name="Package\Data Flow Task\Ped Location">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -3490,19 +3490,6 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Sex of Casualty">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\Casualty_Sex of Casualty">
     <Properties>
       <Property>
@@ -3516,7 +3503,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Age of Casualty">
+    design-time-name="Package\Data Flow Task\Ped Movement">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -3529,7 +3516,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Casualty_Age of Casualty">
+    design-time-name="Package\Data Flow Task\Casualty_Home Area Type">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -3542,7 +3529,20 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Age Band">
+    design-time-name="Package\Data Flow Task\Casualty_Bus Passenger">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Casualty_Ped Movement">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -3581,71 +3581,6 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Casualty_Casualty Severity">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Ped Location">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Casualty_Ped Location">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Ped Movement">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Casualty_Ped Movement">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\Car Passenger">
     <Properties>
       <Property>
@@ -3659,7 +3594,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Casualty_Car Passenger">
+    design-time-name="Package\Data Flow Task\Age of Casualty">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -3672,7 +3607,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Bus Passenger">
+    design-time-name="Package\Data Flow Task\Sex of Casualty">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -3685,59 +3620,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Casualty_Bus Passenger">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Ped Road Maintenance Worker">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Casualty_Ped Road Maintenance Worker">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Casualty Type">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Casualty_Casualty Type">
+    design-time-name="Package\Data Flow Task\Casualty_Casualty Severity">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -3763,7 +3646,124 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Casualty_Home Area Type">
+    design-time-name="Package\Data Flow Task\Casualty_Car Passenger">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Casualty_Casualty Type">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Casualty_Ped Road Maintenance Worker">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Casualty_Age of Casualty">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Casualty_Ped Location">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Casualty Type">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Casualty Class">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Bus Passenger">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Age Band">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Ped Road Maintenance Worker">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
