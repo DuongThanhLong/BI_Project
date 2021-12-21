@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="48"
-  DTS:VersionGUID="{EDE4FD23-182D-4283-A59D-B51F9F332ED1}">
+  DTS:VersionBuild="52"
+  DTS:VersionGUID="{BFF53FAB-C7DC-48FC-B72D-C7ECD8803B47}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -408,6 +408,260 @@
                       refId="Package\Data Flow Task\Accident Severity.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\Data Flow Task\Accident Severity.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Accident_1stRoadClass"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Accident_1stRoadClass"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Accident_1stRoadClass]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Accident_1stRoadClass.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-UML28IP.DATH_BI_Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-UML28IP.DATH_BI_Stage]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Accident_1stRoadClass.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Accident_1stRoadClass.Inputs[OLE DB Destination Input].Columns[code]"
+                      cachedDataType="r8"
+                      cachedName="code"
+                      externalMetadataColumnId="Package\Data Flow Task\Accident_1stRoadClass.Inputs[OLE DB Destination Input].ExternalColumns[code]"
+                      lineageId="Package\Data Flow Task\1st Road Class.Outputs[Excel Source Output].Columns[code]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Accident_1stRoadClass.Inputs[OLE DB Destination Input].Columns[label]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="label"
+                      externalMetadataColumnId="Package\Data Flow Task\Accident_1stRoadClass.Inputs[OLE DB Destination Input].ExternalColumns[label]"
+                      lineageId="Package\Data Flow Task\1st Road Class.Outputs[Excel Source Output].Columns[label]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Accident_1stRoadClass.Inputs[OLE DB Destination Input].ExternalColumns[code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="code" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Accident_1stRoadClass.Inputs[OLE DB Destination Input].ExternalColumns[label]"
+                      dataType="wstr"
+                      length="255"
+                      name="label" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Accident_1stRoadClass.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\Accident_1stRoadClass.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Accident_1stRoadClass.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Accident_1stRoadClass.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Accident_1stRoadClass.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Accident_1stRoadClass.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Accident_2ndRoadClass"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Accident_2ndRoadClass"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Accident_2ndRoadClass]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Accident_2ndRoadClass.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-UML28IP.DATH_BI_Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-UML28IP.DATH_BI_Stage]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Accident_2ndRoadClass.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Accident_2ndRoadClass.Inputs[OLE DB Destination Input].Columns[code]"
+                      cachedDataType="r8"
+                      cachedName="code"
+                      externalMetadataColumnId="Package\Data Flow Task\Accident_2ndRoadClass.Inputs[OLE DB Destination Input].ExternalColumns[code]"
+                      lineageId="Package\Data Flow Task\2nd Road Class.Outputs[Excel Source Output].Columns[code]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Accident_2ndRoadClass.Inputs[OLE DB Destination Input].Columns[label]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="label"
+                      externalMetadataColumnId="Package\Data Flow Task\Accident_2ndRoadClass.Inputs[OLE DB Destination Input].ExternalColumns[label]"
+                      lineageId="Package\Data Flow Task\2nd Road Class.Outputs[Excel Source Output].Columns[label]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Accident_2ndRoadClass.Inputs[OLE DB Destination Input].ExternalColumns[code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="code" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Accident_2ndRoadClass.Inputs[OLE DB Destination Input].ExternalColumns[label]"
+                      dataType="wstr"
+                      length="255"
+                      name="label" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Accident_2ndRoadClass.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\Accident_2ndRoadClass.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Accident_2ndRoadClass.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Accident_2ndRoadClass.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Accident_2ndRoadClass.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Accident_2ndRoadClass.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1193,7 +1447,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[Accident_Local Authority Highway 1]</property>
+                  name="OpenRowset">[Accident_Local Authority Highway]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -1250,19 +1504,20 @@
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Accident_Local Authority Highway.Inputs[OLE DB Destination Input].Columns[Code]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Code"
-                      externalMetadataColumnId="Package\Data Flow Task\Accident_Local Authority Highway.Inputs[OLE DB Destination Input].ExternalColumns[Code]"
-                      lineageId="Package\Data Flow Task\Local Authority Highway.Outputs[Excel Source Output].Columns[Code]" />
-                    <inputColumn
                       refId="Package\Data Flow Task\Accident_Local Authority Highway.Inputs[OLE DB Destination Input].Columns[Label]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Label"
                       externalMetadataColumnId="Package\Data Flow Task\Accident_Local Authority Highway.Inputs[OLE DB Destination Input].ExternalColumns[Label]"
                       lineageId="Package\Data Flow Task\Local Authority Highway.Outputs[Excel Source Output].Columns[Label]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Accident_Local Authority Highway.Inputs[OLE DB Destination Input].Columns[code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="code"
+                      externalMetadataColumnId="Package\Data Flow Task\Accident_Local Authority Highway.Inputs[OLE DB Destination Input].ExternalColumns[code]"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[code]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1272,11 +1527,11 @@
                       length="255"
                       name="Label" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Accident_Local Authority Highway.Inputs[OLE DB Destination Input].ExternalColumns[Code]"
+                      refId="Package\Data Flow Task\Accident_Local Authority Highway.Inputs[OLE DB Destination Input].ExternalColumns[code]"
                       codePage="1252"
                       dataType="str"
-                      length="255"
-                      name="Code" />
+                      length="50"
+                      name="code" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -2464,7 +2719,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[Accident_AccidentSeverity]</property>
+                  name="OpenRowset">[Acc_AccidentSeverity]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -2687,6 +2942,84 @@
                       refId="Package\Data Flow Task\Carriageway Hazards.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\Data Flow Task\Carriageway Hazards.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Code]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Code"
+                      lineageId="Package\Data Flow Task\Local Authority Highway.Outputs[Excel Source Output].Columns[Code]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[code]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[code]"
+                      name="code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Local Authority Highway.Outputs[Excel Source Output].Columns[Code]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -3888,260 +4221,6 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Road Class 2nd"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="OLE DB Destination"
-              name="Road Class 2nd"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[Accident_2ndRoadClass]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">3</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Data Flow Task\Road Class 2nd.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-UML28IP.DATH_BI_Stage]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-UML28IP.DATH_BI_Stage]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task\Road Class 2nd.Inputs[OLE DB Destination Input]"
-                  errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Road Class 2nd.Inputs[OLE DB Destination Input].Columns[code]"
-                      cachedDataType="r8"
-                      cachedName="code"
-                      externalMetadataColumnId="Package\Data Flow Task\Road Class 2nd.Inputs[OLE DB Destination Input].ExternalColumns[code]"
-                      lineageId="Package\Data Flow Task\2nd Road Class.Outputs[Excel Source Output].Columns[code]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Road Class 2nd.Inputs[OLE DB Destination Input].Columns[label]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="label"
-                      externalMetadataColumnId="Package\Data Flow Task\Road Class 2nd.Inputs[OLE DB Destination Input].ExternalColumns[label]"
-                      lineageId="Package\Data Flow Task\2nd Road Class.Outputs[Excel Source Output].Columns[label]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Road Class 2nd.Inputs[OLE DB Destination Input].ExternalColumns[code]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="code" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Road Class 2nd.Inputs[OLE DB Destination Input].ExternalColumns[label]"
-                      dataType="wstr"
-                      length="255"
-                      name="label" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task\Road Class 2nd.Outputs[OLE DB Destination Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Data Flow Task\Road Class 2nd.Inputs[OLE DB Destination Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Road Class 2nd.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\Road Class 2nd.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Road Class 2nd.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\Road Class 2nd.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Data Flow Task\Road Class_1st"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="OLE DB Destination"
-              name="Road Class_1st"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[Accident_1stRoadClass]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">0</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Data Flow Task\Road Class_1st.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-UML28IP.DATH_BI_Stage]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-UML28IP.DATH_BI_Stage]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task\Road Class_1st.Inputs[OLE DB Destination Input]"
-                  errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Road Class_1st.Inputs[OLE DB Destination Input].Columns[code]"
-                      cachedDataType="r8"
-                      cachedName="code"
-                      externalMetadataColumnId="Package\Data Flow Task\Road Class_1st.Inputs[OLE DB Destination Input].ExternalColumns[code]"
-                      lineageId="Package\Data Flow Task\1st Road Class.Outputs[Excel Source Output].Columns[code]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Road Class_1st.Inputs[OLE DB Destination Input].Columns[label]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="label"
-                      externalMetadataColumnId="Package\Data Flow Task\Road Class_1st.Inputs[OLE DB Destination Input].ExternalColumns[label]"
-                      lineageId="Package\Data Flow Task\1st Road Class.Outputs[Excel Source Output].Columns[label]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Road Class_1st.Inputs[OLE DB Destination Input].ExternalColumns[code]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="code" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Road Class_1st.Inputs[OLE DB Destination Input].ExternalColumns[label]"
-                      dataType="wstr"
-                      length="255"
-                      name="label" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task\Road Class_1st.Outputs[OLE DB Destination Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Data Flow Task\Road Class_1st.Inputs[OLE DB Destination Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Road Class_1st.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\Road Class_1st.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Road Class_1st.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\Road Class_1st.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
               refId="Package\Data Flow Task\Road Surface"
               componentClassID="Microsoft.ExcelSource"
               contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
@@ -4739,100 +4818,105 @@
           </components>
           <paths>
             <path
-              refId="Package\Data Flow Task.Paths[Excel Source Output]"
-              endId="Package\Data Flow Task\Road Class_1st.Inputs[OLE DB Destination Input]"
-              name="Excel Source Output"
-              startId="Package\Data Flow Task\1st Road Class.Outputs[Excel Source Output]" />
+              refId="Package\Data Flow Task.Paths[Data Conversion Output]"
+              endId="Package\Data Flow Task\Accident_Local Authority Highway.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Excel Source Output16]"
-              endId="Package\Data Flow Task\Accident_Junction Details.Inputs[OLE DB Destination Input]"
+              endId="Package\Data Flow Task\Accident_Carriageway Hazards.Inputs[OLE DB Destination Input]"
               name="Excel Source Output"
-              startId="Package\Data Flow Task\Junction Details.Outputs[Excel Source Output]" />
+              startId="Package\Data Flow Task\Carriageway Hazards.Outputs[Excel Source Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Excel Source Output15]"
-              endId="Package\Data Flow Task\Road Class 2nd.Inputs[OLE DB Destination Input]"
+              endId="Package\Data Flow Task\Accident_Special Condition at Site.Inputs[OLE DB Destination Input]"
               name="Excel Source Output"
-              startId="Package\Data Flow Task\2nd Road Class.Outputs[Excel Source Output]" />
+              startId="Package\Data Flow Task\Special Condition at Site.Outputs[Excel Source Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Excel Source Output14]"
-              endId="Package\Data Flow Task\Acc_AccidentSeverity.Inputs[OLE DB Destination Input]"
+              endId="Package\Data Flow Task\Accident_Road Surface.Inputs[OLE DB Destination Input]"
               name="Excel Source Output"
-              startId="Package\Data Flow Task\Accident Severity.Outputs[Excel Source Output]" />
+              startId="Package\Data Flow Task\Road Surface.Outputs[Excel Source Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Excel Source Output13]"
-              endId="Package\Data Flow Task\Accident_DayOfWeek.Inputs[OLE DB Destination Input]"
+              endId="Package\Data Flow Task\Accident_Weather Condition.Inputs[OLE DB Destination Input]"
               name="Excel Source Output"
-              startId="Package\Data Flow Task\Day of Week.Outputs[Excel Source Output]" />
+              startId="Package\Data Flow Task\Weather Condition.Outputs[Excel Source Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Excel Source Output12]"
-              endId="Package\Data Flow Task\Accident_Police Force.Inputs[OLE DB Destination Input]"
+              endId="Package\Data Flow Task\Accident_Light Condition.Inputs[OLE DB Destination Input]"
               name="Excel Source Output"
-              startId="Package\Data Flow Task\Police Force.Outputs[Excel Source Output]" />
+              startId="Package\Data Flow Task\Light Condition.Outputs[Excel Source Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Excel Source Output11]"
-              endId="Package\Data Flow Task\Accident_Locai Authority District.Inputs[OLE DB Destination Input]"
+              endId="Package\Data Flow Task\Accident_Ped Cross Physical.Inputs[OLE DB Destination Input]"
               name="Excel Source Output"
-              startId="Package\Data Flow Task\Locai Authority District.Outputs[Excel Source Output]" />
+              startId="Package\Data Flow Task\Ped Cross Physical.Outputs[Excel Source Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Excel Source Output10]"
-              endId="Package\Data Flow Task\Accident_Road Type.Inputs[OLE DB Destination Input]"
+              endId="Package\Data Flow Task\Accident_Ped Cross Human.Inputs[OLE DB Destination Input]"
               name="Excel Source Output"
-              startId="Package\Data Flow Task\Road Type.Outputs[Excel Source Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Excel Source Output17]"
-              endId="Package\Data Flow Task\Accident_Police Officer Attend.Inputs[OLE DB Destination Input]"
-              name="Excel Source Output"
-              startId="Package\Data Flow Task\Police Officer Attend.Outputs[Excel Source Output]" />
+              startId="Package\Data Flow Task\Ped Cross Human.Outputs[Excel Source Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Excel Source Output9]"
+              endId="Package\Data Flow Task\Accident_Urban Rural.Inputs[OLE DB Destination Input]"
+              name="Excel Source Output"
+              startId="Package\Data Flow Task\Urban Rural.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Excel Source Output8]"
               endId="Package\Data Flow Task\Accident_Junction Control.Inputs[OLE DB Destination Input]"
               name="Excel Source Output"
               startId="Package\Data Flow Task\Junction Control.Outputs[Excel Source Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Excel Source Output7]"
-              endId="Package\Data Flow Task\Accident_Ped Cross Human.Inputs[OLE DB Destination Input]"
+              endId="Package\Data Flow Task\Accident_Road Type.Inputs[OLE DB Destination Input]"
               name="Excel Source Output"
-              startId="Package\Data Flow Task\Ped Cross Human.Outputs[Excel Source Output]" />
+              startId="Package\Data Flow Task\Road Type.Outputs[Excel Source Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Excel Source Output6]"
-              endId="Package\Data Flow Task\Accident_Ped Cross Physical.Inputs[OLE DB Destination Input]"
+              endId="Package\Data Flow Task\Accident_Locai Authority District.Inputs[OLE DB Destination Input]"
               name="Excel Source Output"
-              startId="Package\Data Flow Task\Ped Cross Physical.Outputs[Excel Source Output]" />
+              startId="Package\Data Flow Task\Locai Authority District.Outputs[Excel Source Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Excel Source Output5]"
-              endId="Package\Data Flow Task\Accident_Light Condition.Inputs[OLE DB Destination Input]"
+              endId="Package\Data Flow Task\Accident_Police Force.Inputs[OLE DB Destination Input]"
               name="Excel Source Output"
-              startId="Package\Data Flow Task\Light Condition.Outputs[Excel Source Output]" />
+              startId="Package\Data Flow Task\Police Force.Outputs[Excel Source Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Excel Source Output4]"
-              endId="Package\Data Flow Task\Accident_Weather Condition.Inputs[OLE DB Destination Input]"
+              endId="Package\Data Flow Task\Accident_DayOfWeek.Inputs[OLE DB Destination Input]"
               name="Excel Source Output"
-              startId="Package\Data Flow Task\Weather Condition.Outputs[Excel Source Output]" />
+              startId="Package\Data Flow Task\Day of Week.Outputs[Excel Source Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Excel Source Output3]"
-              endId="Package\Data Flow Task\Accident_Road Surface.Inputs[OLE DB Destination Input]"
+              endId="Package\Data Flow Task\Acc_AccidentSeverity.Inputs[OLE DB Destination Input]"
               name="Excel Source Output"
-              startId="Package\Data Flow Task\Road Surface.Outputs[Excel Source Output]" />
+              startId="Package\Data Flow Task\Accident Severity.Outputs[Excel Source Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Excel Source Output2]"
-              endId="Package\Data Flow Task\Accident_Special Condition at Site.Inputs[OLE DB Destination Input]"
+              endId="Package\Data Flow Task\Accident_2ndRoadClass.Inputs[OLE DB Destination Input]"
               name="Excel Source Output"
-              startId="Package\Data Flow Task\Special Condition at Site.Outputs[Excel Source Output]" />
+              startId="Package\Data Flow Task\2nd Road Class.Outputs[Excel Source Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Excel Source Output1]"
-              endId="Package\Data Flow Task\Accident_Carriageway Hazards.Inputs[OLE DB Destination Input]"
+              endId="Package\Data Flow Task\Accident_Junction Details.Inputs[OLE DB Destination Input]"
               name="Excel Source Output"
-              startId="Package\Data Flow Task\Carriageway Hazards.Outputs[Excel Source Output]" />
+              startId="Package\Data Flow Task\Junction Details.Outputs[Excel Source Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Excel Source Output8]"
-              endId="Package\Data Flow Task\Accident_Urban Rural.Inputs[OLE DB Destination Input]"
+              refId="Package\Data Flow Task.Paths[Excel Source Output]"
+              endId="Package\Data Flow Task\Accident_Police Officer Attend.Inputs[OLE DB Destination Input]"
               name="Excel Source Output"
-              startId="Package\Data Flow Task\Urban Rural.Outputs[Excel Source Output]" />
+              startId="Package\Data Flow Task\Police Officer Attend.Outputs[Excel Source Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Excel Source Output18]"
-              endId="Package\Data Flow Task\Accident_Local Authority Highway.Inputs[OLE DB Destination Input]"
+              refId="Package\Data Flow Task.Paths[Excel Source Output17]"
+              endId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
               name="Excel Source Output"
               startId="Package\Data Flow Task\Local Authority Highway.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Excel Source Output18]"
+              endId="Package\Data Flow Task\Accident_1stRoadClass.Inputs[OLE DB Destination Input]"
+              name="Excel Source Output"
+              startId="Package\Data Flow Task\1st Road Class.Outputs[Excel Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -4865,31 +4949,39 @@
         <NodeLayout
           Size="180,41.6"
           Id="Package\Data Flow Task\Accident_Urban Rural"
-          TopLeft="446.734701485397,1387.96191604839" />
+          TopLeft="455.306130202796,662.510925482059" />
         <NodeLayout
-          Size="192,41.6"
-          Id="Package\Data Flow Task\Local Authority Highway"
-          TopLeft="728.800009536744,12.9176460507013" />
+          Size="165.6,41.6"
+          Id="Package\Data Flow Task\Weather Condition"
+          TopLeft="167.619050473583,576.886279750614" />
         <NodeLayout
-          Size="192,41.6"
-          Id="Package\Data Flow Task\Special Condition at Site"
-          TopLeft="171.734696802176,1228.90309028824" />
+          Size="189.6,41.6"
+          Id="Package\Data Flow Task\Accident_2ndRoadClass"
+          TopLeft="414.285721340958,92.529413062396" />
+        <NodeLayout
+          Size="174.4,41.6"
+          Id="Package\Data Flow Task\Police Officer Attend"
+          TopLeft="808.571442341319,99.6676441819217" />
         <NodeLayout
           Size="179.2,41.6"
           Id="Package\Data Flow Task\Accident_DayOfWeek"
           TopLeft="423.571435784807,256.941180074091" />
         <NodeLayout
-          Size="138.4,41.6"
-          Id="Package\Data Flow Task\Day of Week"
-          TopLeft="145.000002469335,256.176474181014" />
+          Size="155.2,41.6"
+          Id="Package\Data Flow Task\Data Conversion"
+          TopLeft="389.650800165406,748.588241192709" />
+        <NodeLayout
+          Size="184.8,41.6"
+          Id="Package\Data Flow Task\Locai Authority District"
+          TopLeft="148.571431101585,411.411770475777" />
         <NodeLayout
           Size="230.4,41.6"
           Id="Package\Data Flow Task\Accident_Locai Authority District"
           TopLeft="420.000007152557,415.235299941166" />
         <NodeLayout
-          Size="174.4,41.6"
-          Id="Package\Data Flow Task\Police Officer Attend"
-          TopLeft="165.714288536384,731.824515792781" />
+          Size="128.8,41.6"
+          Id="Package\Data Flow Task\Road Type"
+          TopLeft="805.942867993336,194.454899594199" />
         <NodeLayout
           Size="180,41.6"
           Id="Package\Data Flow Task\Accident_Police Force"
@@ -4897,51 +4989,47 @@
         <NodeLayout
           Size="220,41.6"
           Id="Package\Data Flow Task\Accident_Police Officer Attend"
-          TopLeft="442.142864672505,730.295104006625" />
-        <NodeLayout
-          Size="184.8,41.6"
-          Id="Package\Data Flow Task\Locai Authority District"
-          TopLeft="148.571431101585,411.411770475777" />
+          TopLeft="1085.00001847744,98.1382323957657" />
         <NodeLayout
           Size="237.6,41.6"
           Id="Package\Data Flow Task\Accident_Special Condition at Site"
-          TopLeft="450.306130117647,1229.66779618131" />
-        <NodeLayout
-          Size="128.8,41.6"
-          Id="Package\Data Flow Task\Road Type"
-          TopLeft="163.085714188401,826.611771205058" />
-        <NodeLayout
-          Size="149.6,41.6"
-          Id="Package\Data Flow Task\Road Class_1st"
-          TopLeft="411.428578435159,15.294117861553" />
-        <NodeLayout
-          Size="177.6,41.6"
-          Id="Package\Data Flow Task\Carriageway Hazards"
-          TopLeft="176.020411160876,1308.43250316831" />
-        <NodeLayout
-          Size="223.2,41.6"
-          Id="Package\Data Flow Task\Accident_Carriageway Hazards"
-          TopLeft="452.448987296997,1306.90309138216" />
-        <NodeLayout
-          Size="194.4,41.6"
-          Id="Package\Data Flow Task\Accident_Light Condition"
-          TopLeft="441.904769430356,498.121572763615" />
+          TopLeft="1093.16328392258,597.510924570452" />
         <NodeLayout
           Size="134.4,41.6"
           Id="Package\Data Flow Task\Police Force"
           TopLeft="149.285716828035,335.705887061089" />
         <NodeLayout
-          Size="211.2,41.6"
-          Id="Package\Data Flow Task\Accident_Ped Cross Physical"
-          TopLeft="439.028576221277,1155.41177558074" />
+          Size="177.6,41.6"
+          Id="Package\Data Flow Task\Carriageway Hazards"
+          TopLeft="818.877564965811,676.275631557452" />
+        <NodeLayout
+          Size="223.2,41.6"
+          Id="Package\Data Flow Task\Accident_Carriageway Hazards"
+          TopLeft="1095.30614110193,674.746219771302" />
         <NodeLayout
           Size="148.8,41.6"
           Id="Package\Data Flow Task\Light Condition"
           TopLeft="163.333336114884,497.356866870538" />
         <NodeLayout
+          Size="140.8,41.6"
+          Id="Package\Data Flow Task\Road Surface"
+          TopLeft="810.782326732711,20.4352915544417" />
+        <NodeLayout
+          Size="194.4,41.6"
+          Id="Package\Data Flow Task\Accident_Light Condition"
+          TopLeft="441.904769430356,498.121572763615" />
+        <NodeLayout
+          Size="211.2,41.6"
+          Id="Package\Data Flow Task\Accident_Ped Cross Physical"
+          TopLeft="1081.88573002621,523.254903969881" />
+        <NodeLayout
           Size="174.4,41.6"
           Id="Package\Data Flow Task\Accident_Road Type"
-          TopLeft="439.514290324518,825.082359418903" />
+          TopLeft="1082.37144412945,192.925487808044" />
+        <NodeLayout
+          Size="165.6,41.6"
+          Id="Package\Data Flow Task\Ped Cross Physical"
+          TopLeft="810.457153975235,519.431374504491" />
         <NodeLayout
           Size="159.2,41.6"
           Id="Package\Data Flow Task\Accident Severity"
@@ -4951,299 +5039,83 @@
           Id="Package\Data Flow Task\Acc_AccidentSeverity"
           TopLeft="408.571435529359,173.588237728627" />
         <NodeLayout
-          Size="165.6,41.6"
-          Id="Package\Data Flow Task\Ped Cross Physical"
-          TopLeft="167.6000001703,1151.58824611535" />
+          Size="152,41.6"
+          Id="Package\Data Flow Task\Junction Details"
+          TopLeft="805.228582266886,270.160783008887" />
         <NodeLayout
           Size="197.6,41.6"
           Id="Package\Data Flow Task\Accident_Junction Details"
-          TopLeft="433.800004512927,906.141184085134" />
-        <NodeLayout
-          Size="150.4,41.6"
-          Id="Package\Data Flow Task\Road Class 2nd"
-          TopLeft="414.285721340958,92.529413062396" />
-        <NodeLayout
-          Size="165.6,41.6"
-          Id="Package\Data Flow Task\Weather Condition"
-          TopLeft="167.619050473583,576.886279750614" />
+          TopLeft="1076.65715831786,273.984312474275" />
         <NodeLayout
           Size="207.2,41.6"
           Id="Package\Data Flow Task\Accident_Ped Cross Human"
-          TopLeft="444.742862032867,1074.35295091451" />
+          TopLeft="1087.6000158378,442.196079303651" />
+        <NodeLayout
+          Size="161.6,41.6"
+          Id="Package\Data Flow Task\Ped Cross Human"
+          TopLeft="811.171439701684,443.725491089811" />
         <NodeLayout
           Size="186.4,41.6"
           Id="Package\Data Flow Task\Accident_Road Surface"
-          TopLeft="438.333340798107,656.41569263069" />
+          TopLeft="1081.19049460304,24.2588210198307" />
+        <NodeLayout
+          Size="134.4,41.6"
+          Id="Package\Data Flow Task\Urban Rural"
+          TopLeft="184.897962332468,658.687396016669" />
         <NodeLayout
           Size="150.4,41.6"
           Id="Package\Data Flow Task\2nd Road Class"
           TopLeft="137.857145204836,94.0588248485513" />
         <NodeLayout
+          Size="154.4,41.6"
+          Id="Package\Data Flow Task\Junction Control"
+          TopLeft="806.885725342985,364.196078209731" />
+        <NodeLayout
           Size="211.2,41.6"
           Id="Package\Data Flow Task\Accident_Weather Condition"
           TopLeft="444.047626609706,575.356867964458" />
         <NodeLayout
-          Size="152,41.6"
-          Id="Package\Data Flow Task\Junction Details"
-          TopLeft="162.371428461951,902.317654619746" />
-        <NodeLayout
-          Size="161.6,41.6"
-          Id="Package\Data Flow Task\Ped Cross Human"
-          TopLeft="168.314285896749,1075.88236270067" />
+          Size="185.6,41.6"
+          Id="Package\Data Flow Task\Accident_1stRoadClass"
+          TopLeft="411.428578435159,15.294117861553" />
         <NodeLayout
           Size="200,41.6"
           Id="Package\Data Flow Task\Accident_Junction Control"
-          TopLeft="442.600004853517,997.117655713666" />
+          TopLeft="1085.45715865845,364.960784102807" />
         <NodeLayout
-          Size="154.4,41.6"
-          Id="Package\Data Flow Task\Junction Control"
-          TopLeft="164.02857153805,996.35294982059" />
+          Size="237.6,41.6"
+          Id="Package\Data Flow Task\Accident_Local Authority Highway"
+          TopLeft="631.699556272337,748.098748963806" />
         <NodeLayout
-          Size="134.4,41.6"
-          Id="Package\Data Flow Task\Urban Rural"
-          TopLeft="176.326533615069,1384.138386583" />
+          Size="192,41.6"
+          Id="Package\Data Flow Task\Local Authority Highway"
+          TopLeft="115.873017846322,744.274515392688" />
         <NodeLayout
-          Size="140.8,41.6"
-          Id="Package\Data Flow Task\Road Surface"
-          TopLeft="167.925172927776,652.592163165301" />
+          Size="192,41.6"
+          Id="Package\Data Flow Task\Special Condition at Site"
+          TopLeft="814.591850607111,596.746218677382" />
         <NodeLayout
           Size="147.2,41.6"
           Id="Package\Data Flow Task\1st Road Class"
           TopLeft="133.571430846137,14.5294119684756" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Excel Source Output13]"
-          TopLeft="283.400002469335,277.358827127553">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="140.171433315472,0"
-              Start="0,0"
-              End="132.671433315472,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="132.671433315472,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Excel Source Output12]"
-          TopLeft="283.685716828035,355.741181168012">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="142.028576136121,0"
-              Start="0,0"
-              End="134.528576136121,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="134.528576136121,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Excel Source Output11]"
-          TopLeft="333.371431101585,434.123535208471">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="86.628576050972,0"
-              Start="0,0"
-              End="79.128576050972,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="79.128576050972,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Excel Source Output10]"
-          TopLeft="291.885714188401,846.647065311981">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="147.628576136117,0"
-              Start="0,0"
-              End="140.128576136117,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="140.128576136117,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Excel Source Output9]"
-          TopLeft="318.428571538049,1017.53530276713">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="124.171433315468,0"
-              Start="0,0"
-              End="116.671433315468,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="116.671433315468,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Excel Source Output8]"
-          TopLeft="310.726533615069,1406.85015131569">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="136.008167870329,0"
-              Start="0,0"
-              End="128.508167870329,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="128.508167870329,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Excel Source Output7]"
-          TopLeft="329.914285896749,1095.91765680759">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="114.828576136119,0"
-              Start="0,0"
-              End="107.328576136119,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="107.328576136119,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Excel Source Output6]"
-          TopLeft="333.2000001703,1174.30001084805">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="105.828576050978,0"
-              Start="0,0"
-              End="98.328576050978,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="98.328576050978,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Excel Source Output5]"
-          TopLeft="312.133336114884,518.539219817077">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="129.771433315472,0"
-              Start="0,0"
-              End="122.271433315472,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="122.271433315472,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Excel Source Output4]"
-          TopLeft="333.219050473583,596.921573857536">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="110.828576136123,0"
-              Start="0,0"
-              End="103.328576136123,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="103.328576136123,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+        <NodeLayout
+          Size="138.4,41.6"
+          Id="Package\Data Flow Task\Day of Week"
+          TopLeft="145.000002469335,256.176474181014" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Excel Source Output3]"
-          TopLeft="308.725172927776,675.303927897995">
+          TopLeft="296.342859478386,192.476472995933">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="129.608167870331,0"
+              EndConnector="112.228576050973,0"
               Start="0,0"
-              End="122.108167870331,0">
+              End="104.728576050973,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="122.108167870331,0" />
+                    End="104.728576050973,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5254,18 +5126,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Excel Source Output2]"
-          TopLeft="363.734696802176,1250.08544323478">
+          TopLeft="288.257145204836,114.094118955474">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="86.5714333154721,0"
+              EndConnector="126.028576136122,0"
               Start="0,0"
-              End="79.0714333154721,0">
+              End="118.528576136122,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="79.0714333154721,0" />
+                    End="118.528576136122,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5276,18 +5148,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Excel Source Output1]"
-          TopLeft="353.620411160876,1328.46779727524">
+          TopLeft="957.228582266885,292.872547741581">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="98.828576136122,0"
+              EndConnector="119.428576050977,0"
               Start="0,0"
-              End="91.328576136122,0">
+              End="111.928576050977,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="91.328576136122,0" />
+                    End="111.928576050977,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5298,6 +5170,50 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Excel Source Output]"
+          TopLeft="982.971442341319,119.702938288844">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="102.028576136121,0"
+              Start="0,0"
+              End="94.528576136121,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="94.528576136121,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Data Conversion Output]"
+          TopLeft="544.850800165406,769.143495078257">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="86.8487561069313,0"
+              Start="0,0"
+              End="79.3487561069313,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="79.3487561069313,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Excel Source Output18]"
           TopLeft="280.771430846137,35.7117649150143">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5320,18 +5236,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Excel Source Output17]"
-          TopLeft="340.114288536384,751.859809899703">
+          TopLeft="307.873017846322,767.231378292698">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="102.028576136121,0"
+              EndConnector="81.7777823190841,0"
               Start="0,0"
-              End="94.528576136121,0">
+              End="74.2777823190841,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="94.528576136121,0" />
+                    End="74.2777823190841,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5342,18 +5258,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Excel Source Output16]"
-          TopLeft="314.37142846195,925.02941935244">
+          TopLeft="996.477564965811,696.310925664377">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="119.428576050977,0"
+              EndConnector="98.828576136121,0"
               Start="0,0"
-              End="111.928576050977,0">
+              End="91.328576136121,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="111.928576050977,0" />
+                    End="91.328576136121,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5364,18 +5280,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Excel Source Output15]"
-          TopLeft="288.257145204836,114.094118955474">
+          TopLeft="1006.59185060711,617.928571623922">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="126.028576136122,0"
+              EndConnector="86.5714333154722,0"
               Start="0,0"
-              End="118.528576136122,0">
+              End="79.0714333154722,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="118.528576136122,0" />
+                    End="79.0714333154722,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5386,18 +5302,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Excel Source Output14]"
-          TopLeft="296.342859478386,192.476472995933">
+          TopLeft="951.582326732711,43.1470562871356">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="112.228576050973,0"
+              EndConnector="129.608167870331,0"
               Start="0,0"
-              End="104.728576050973,0">
+              End="122.108167870331,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="104.728576050973,0" />
+                    End="122.108167870331,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5406,24 +5322,218 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="237.6,41.6"
-          Id="Package\Data Flow Task\Accident_Local Authority Highway"
-          TopLeft="703.968265956762,101.960785743687" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Excel Source Output18]"
-          TopLeft="823.784137746753,54.5176460507013">
+          Id="Package\Data Flow Task.Paths[Excel Source Output13]"
+          TopLeft="333.219050473583,596.921573857536">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,47.4431396929857"
+              EndConnector="110.828576136123,0"
               Start="0,0"
-              End="0,39.9431396929857">
+              End="103.328576136123,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,39.9431396929857" />
+                    End="103.328576136123,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Excel Source Output12]"
+          TopLeft="312.133336114884,518.539219817077">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="129.771433315472,0"
+              Start="0,0"
+              End="122.271433315472,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="122.271433315472,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Excel Source Output11]"
+          TopLeft="976.057153975235,542.143139237191">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="105.828576050978,0"
+              Start="0,0"
+              End="98.328576050978,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="98.328576050978,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Excel Source Output10]"
+          TopLeft="972.771439701684,463.760785196731">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="114.828576136119,0"
+              Start="0,0"
+              End="107.328576136119,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="107.328576136119,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Excel Source Output9]"
+          TopLeft="319.297962332469,681.399160749359">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="136.008167870329,0"
+              Start="0,0"
+              End="128.508167870329,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="128.508167870329,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Excel Source Output8]"
+          TopLeft="961.285725342984,385.378431156271">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="124.171433315468,0"
+              Start="0,0"
+              End="116.671433315468,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="116.671433315468,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Excel Source Output7]"
+          TopLeft="934.742867993336,214.490193701122">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="147.628576136117,0"
+              Start="0,0"
+              End="140.128576136117,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="140.128576136117,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Excel Source Output6]"
+          TopLeft="333.371431101585,434.123535208471">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="86.628576050972,0"
+              Start="0,0"
+              End="79.128576050972,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="79.128576050972,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Excel Source Output5]"
+          TopLeft="283.685716828035,355.741181168012">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="142.028576136121,0"
+              Start="0,0"
+              End="134.528576136121,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="134.528576136121,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Excel Source Output4]"
+          TopLeft="283.400002469335,277.358827127553">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="140.171433315472,0"
+              Start="0,0"
+              End="132.671433315472,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="132.671433315472,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5449,7 +5559,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Local Authority Highway">
+    design-time-name="Package\Data Flow Task\Weather Condition">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5462,7 +5572,20 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Special Condition at Site">
+    design-time-name="Package\Data Flow Task\Accident_2ndRoadClass">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Police Officer Attend">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5488,7 +5611,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Day of Week">
+    design-time-name="Package\Data Flow Task\Locai Authority District">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5514,7 +5637,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Police Officer Attend">
+    design-time-name="Package\Data Flow Task\Road Type">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5553,19 +5676,6 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Locai Authority District">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\Accident_Special Condition at Site">
     <Properties>
       <Property>
@@ -5579,20 +5689,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Road Type">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Road Class_1st">
+    design-time-name="Package\Data Flow Task\Police Force">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5631,7 +5728,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Accident_Light Condition">
+    design-time-name="Package\Data Flow Task\Light Condition">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5644,7 +5741,20 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Police Force">
+    design-time-name="Package\Data Flow Task\Road Surface">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Accident_Light Condition">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5670,7 +5780,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Light Condition">
+    design-time-name="Package\Data Flow Task\Accident_Road Type">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5683,7 +5793,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Accident_Road Type">
+    design-time-name="Package\Data Flow Task\Ped Cross Physical">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5722,7 +5832,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Ped Cross Physical">
+    design-time-name="Package\Data Flow Task\Junction Details">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5748,85 +5858,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Road Class 2nd">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Weather Condition">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\Accident_Ped Cross Human">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Accident_Road Surface">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\2nd Road Class">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Accident_Weather Condition">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Junction Details">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5852,20 +5884,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Accident_Junction Control">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Junction Control">
+    design-time-name="Package\Data Flow Task\Accident_Road Surface">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5891,7 +5910,59 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Road Surface">
+    design-time-name="Package\Data Flow Task\2nd Road Class">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Junction Control">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Accident_Weather Condition">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Accident_1stRoadClass">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Accident_Junction Control">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5905,6 +5976,58 @@
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\Accident_Local Authority Highway">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Local Authority Highway">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Special Condition at Site">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\1st Road Class">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Day of Week">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
