@@ -11,11 +11,35 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="17"
-  DTS:VersionGUID="{FBE16E3B-1EFB-4B8F-BB9B-34256F666D04}">
+  DTS:VersionBuild="48"
+  DTS:VersionGUID="{1BA5647F-F64A-4045-9432-4B40FC59F3B4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-UML28IP.DATH_BI_Metadata]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{C086F2E5-CABF-4042-AFA2-82A6F7E8981E}"
+      DTS:ObjectName="DESKTOP-UML28IP.DATH_BI_Metadata">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-UML28IP;Initial Catalog=DATH_BI_Metadata;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-UML28IP.DATH_BI_Source]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{E230E854-7DEB-4543-9DD6-0B6C71F9B4B9}"
+      DTS:ObjectName="DESKTOP-UML28IP.DATH_BI_Source">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-UML28IP;Initial Catalog=DATH_BI_Source;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[DESKTOP-UML28IP.DATH_BI_Stage]"
       DTS:CreationName="OLEDB"
@@ -28,163 +52,61 @@
           DTS:ConnectionString="Data Source=DESKTOP-UML28IP;Initial Catalog=DATH_BI_Stage;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[LSOA File]"
-      DTS:CreationName="FLATFILE"
-      DTS:DTSID="{9802735C-8032-40C4-8811-D0295749DA09}"
-      DTS:ObjectName="LSOA File">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:Format="Delimited"
-          DTS:LocaleID="1033"
-          DTS:HeaderRowDelimiter="_x000D__x000A_"
-          DTS:ColumnNamesInFirstDataRow="True"
-          DTS:RowDelimiter=""
-          DTS:TextQualifier="_x0022_"
-          DTS:CodePage="1252"
-          DTS:ConnectionString="D:\Documents\Năm học 2021-2022\Hệ thống thông tin phục vụ trí tuệ kinh doanh\Labs\Labs\2021-2022 - BI Project - UK Accidents\Data\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU.csv">
-          <DTS:FlatFileColumns>
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="pcd7"
-              DTS:DTSID="{25074354-777B-44C1-882E-E25368E5B4B0}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="pcd8"
-              DTS:DTSID="{0D9D8519-5F32-4A06-90C5-7B592B993C17}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="pcds"
-              DTS:DTSID="{6E2FD508-ACFF-4350-96AE-32108EA88C45}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="dointr"
-              DTS:DTSID="{143E3317-E43F-4C2C-A721-9CA81C6D9622}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="doterm"
-              DTS:DTSID="{C0FDB795-05C0-4795-9498-24B0EABBFCBC}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="usertype"
-              DTS:DTSID="{191E266B-1935-46CB-8FB8-AFF206513E2C}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="oa11cd"
-              DTS:DTSID="{39DF7A60-A581-442C-AEB6-F55FF81812FE}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="lsoa11cd"
-              DTS:DTSID="{BE8CBB89-9F26-415F-85BE-6F4DE54026A0}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="msoa11cd"
-              DTS:DTSID="{75138F89-31A5-455D-9D16-EC3ED79228A1}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="ladcd"
-              DTS:DTSID="{0D74160D-6B45-43C7-BA79-F79738E6D0E7}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="lsoa11nm"
-              DTS:DTSID="{4489D555-666D-431E-A48F-F1C2FA0C922D}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="msoa11nm"
-              DTS:DTSID="{D5EB3E82-3336-4239-B8F8-1191D72EDC68}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="ladnm"
-              DTS:DTSID="{234700BF-2067-4A1E-B75F-5BD2AA443567}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="ladnmw"
-              DTS:DTSID="{BEC67853-1D06-443B-9266-2336F9D53520}"
-              DTS:CreationName="" />
-          </DTS:FlatFileColumns>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
-  <DTS:Variables />
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{3E4BC02C-D84F-459E-9266-B7F2A23E0261}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="CETRes">
+      <DTS:VariableValue
+        DTS:DataType="7">1/1/2022</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{2977D83C-D643-4393-8C23-47A205577B85}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="LSETRes">
+      <DTS:VariableValue
+        DTS:DataType="7">12/31/2021</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Data Flow Task_PCD"
+      DTS:refId="Package\Get LSET, CET LSOA"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{184B3913-7AFA-4F57-B387-E99E0BD0495E}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Get LSET, CET LSOA"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{C086F2E5-CABF-4042-AFA2-82A6F7E8981E}"
+          SQLTask:SqlStatementSource="select  LSET, CET from Data_Flow where Name='LSOA'"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="LSET"
+            SQLTask:DtsVariableName="User::LSETRes" />
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="CET"
+            SQLTask:DtsVariableName="User::CETRes" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\LSOA"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
       DTS:DTSID="{F8A5167A-111F-4498-825F-06572DCABF41}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Data Flow Task_PCD"
+      DTS:ObjectName="LSOA"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -192,7 +114,7 @@
           version="1">
           <components>
             <component
-              refId="Package\Data Flow Task_PCD\Data Conversion"
+              refId="Package\LSOA\Data Conversion"
               componentClassID="Microsoft.DataConvert"
               contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
               description="Data Conversion"
@@ -200,42 +122,42 @@
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\Data Flow Task_PCD\Data Conversion.Inputs[Data Conversion Input]"
+                  refId="Package\LSOA\Data Conversion.Inputs[Data Conversion Input]"
                   name="Data Conversion Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task_PCD\Data Conversion.Inputs[Data Conversion Input].Columns[postcode]"
+                      refId="Package\LSOA\Data Conversion.Inputs[Data Conversion Input].Columns[PostCode]"
                       cachedDataType="wstr"
                       cachedLength="4"
-                      cachedName="postcode"
-                      lineageId="Package\Data Flow Task_PCD\get first 2, 3, 4 character of pcd8.Outputs[Derived Column Output].Columns[postcode]" />
+                      cachedName="PostCode"
+                      lineageId="Package\LSOA\Get 4 first character of pcd8.Outputs[Derived Column Output].Columns[PostCode]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task_PCD\Data Conversion.Outputs[Data Conversion Output]"
+                  refId="Package\LSOA\Data Conversion.Outputs[Data Conversion Output]"
                   exclusionGroup="1"
                   name="Data Conversion Output"
-                  synchronousInputId="Package\Data Flow Task_PCD\Data Conversion.Inputs[Data Conversion Input]">
+                  synchronousInputId="Package\LSOA\Data Conversion.Inputs[Data Conversion Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task_PCD\Data Conversion.Outputs[Data Conversion Output].Columns[Postcode]"
+                      refId="Package\LSOA\Data Conversion.Outputs[Data Conversion Output].Columns[LSOAPostCode]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      length="50"
-                      lineageId="Package\Data Flow Task_PCD\Data Conversion.Outputs[Data Conversion Output].Columns[Postcode]"
-                      name="Postcode"
+                      length="4"
+                      lineageId="Package\LSOA\Data Conversion.Outputs[Data Conversion Output].Columns[LSOAPostCode]"
+                      name="LSOAPostCode"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task_PCD\get first 2, 3, 4 character of pcd8.Outputs[Derived Column Output].Columns[postcode]}</property>
+                          name="SourceInputColumnLineageID">#{Package\LSOA\Get 4 first character of pcd8.Outputs[Derived Column Output].Columns[PostCode]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -246,22 +168,22 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task_PCD\Data Conversion.Outputs[Data Conversion Error Output]"
+                  refId="Package\LSOA\Data Conversion.Outputs[Data Conversion Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Data Conversion Error Output"
-                  synchronousInputId="Package\Data Flow Task_PCD\Data Conversion.Inputs[Data Conversion Input]">
+                  synchronousInputId="Package\LSOA\Data Conversion.Inputs[Data Conversion Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task_PCD\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      refId="Package\LSOA\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task_PCD\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      lineageId="Package\LSOA\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task_PCD\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      refId="Package\LSOA\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task_PCD\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\LSOA\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -270,52 +192,52 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task_PCD\get first 2, 3, 4 character of pcd8"
+              refId="Package\LSOA\Get 4 first character of pcd8"
               componentClassID="Microsoft.DerivedColumn"
               contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
               description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
-              name="get first 2, 3, 4 character of pcd8"
+              name="Get 4 first character of pcd8"
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\Data Flow Task_PCD\get first 2, 3, 4 character of pcd8.Inputs[Derived Column Input]"
+                  refId="Package\LSOA\Get 4 first character of pcd8.Inputs[Derived Column Input]"
                   description="Input to the Derived Column Transformation"
                   name="Derived Column Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task_PCD\get first 2, 3, 4 character of pcd8.Inputs[Derived Column Input].Columns[pcd8]"
+                      refId="Package\LSOA\Get 4 first character of pcd8.Inputs[Derived Column Input].Columns[pcd8]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="pcd8"
-                      lineageId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[pcd8]" />
+                      lineageId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].Columns[pcd8]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task_PCD\get first 2, 3, 4 character of pcd8.Outputs[Derived Column Output]"
+                  refId="Package\LSOA\Get 4 first character of pcd8.Outputs[Derived Column Output]"
                   description="Default Output of the Derived Column Transformation"
                   exclusionGroup="1"
                   name="Derived Column Output"
-                  synchronousInputId="Package\Data Flow Task_PCD\get first 2, 3, 4 character of pcd8.Inputs[Derived Column Input]">
+                  synchronousInputId="Package\LSOA\Get 4 first character of pcd8.Inputs[Derived Column Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task_PCD\get first 2, 3, 4 character of pcd8.Outputs[Derived Column Output].Columns[postcode]"
+                      refId="Package\LSOA\Get 4 first character of pcd8.Outputs[Derived Column Output].Columns[PostCode]"
                       dataType="wstr"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
                       length="4"
-                      lineageId="Package\Data Flow Task_PCD\get first 2, 3, 4 character of pcd8.Outputs[Derived Column Output].Columns[postcode]"
-                      name="postcode"
+                      lineageId="Package\LSOA\Get 4 first character of pcd8.Outputs[Derived Column Output].Columns[PostCode]"
+                      name="PostCode"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[SUBSTRING](#{Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[pcd8]},1,4)</property>
+                          name="Expression">[SUBSTRING](#{Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].Columns[pcd8]},1,4)</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -328,23 +250,23 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task_PCD\get first 2, 3, 4 character of pcd8.Outputs[Derived Column Error Output]"
+                  refId="Package\LSOA\Get 4 first character of pcd8.Outputs[Derived Column Error Output]"
                   description="Error Output of the Derived Column Transformation"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Derived Column Error Output"
-                  synchronousInputId="Package\Data Flow Task_PCD\get first 2, 3, 4 character of pcd8.Inputs[Derived Column Input]">
+                  synchronousInputId="Package\LSOA\Get 4 first character of pcd8.Inputs[Derived Column Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task_PCD\get first 2, 3, 4 character of pcd8.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      refId="Package\LSOA\Get 4 first character of pcd8.Outputs[Derived Column Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task_PCD\get first 2, 3, 4 character of pcd8.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      lineageId="Package\LSOA\Get 4 first character of pcd8.Outputs[Derived Column Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task_PCD\get first 2, 3, 4 character of pcd8.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      refId="Package\LSOA\Get 4 first character of pcd8.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task_PCD\get first 2, 3, 4 character of pcd8.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\LSOA\Get 4 first character of pcd8.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -353,11 +275,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task_PCD\LSOA Table"
+              refId="Package\LSOA\LSOA_Table"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
-              name="LSOA Table"
+              name="LSOA_Table"
               usesDispositions="true"
               version="4">
               <properties>
@@ -368,7 +290,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[LSOA Table]</property>
+                  name="OpenRowset">[dbo].[LSOA_Table]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -410,7 +332,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task_PCD\LSOA Table.Connections[OleDbConnection]"
+                  refId="Package\LSOA\LSOA_Table.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[DESKTOP-UML28IP.DATH_BI_Stage]"
                   connectionManagerRefId="Package.ConnectionManagers[DESKTOP-UML28IP.DATH_BI_Stage]"
                   description="The OLE DB runtime connection used to access the database."
@@ -418,218 +340,252 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task_PCD\LSOA Table.Inputs[OLE DB Destination Input]"
+                  refId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task_PCD\LSOA Table.Inputs[OLE DB Destination Input].Columns[doterm]"
+                      refId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input].Columns[doterm]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="doterm"
-                      externalMetadataColumnId="Package\Data Flow Task_PCD\LSOA Table.Inputs[OLE DB Destination Input].ExternalColumns[doterm]"
-                      lineageId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[doterm]" />
+                      externalMetadataColumnId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input].ExternalColumns[doterm]"
+                      lineageId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].Columns[doterm]" />
                     <inputColumn
-                      refId="Package\Data Flow Task_PCD\LSOA Table.Inputs[OLE DB Destination Input].Columns[usertype]"
+                      refId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input].Columns[usertype]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="usertype"
-                      externalMetadataColumnId="Package\Data Flow Task_PCD\LSOA Table.Inputs[OLE DB Destination Input].ExternalColumns[usertype]"
-                      lineageId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[usertype]" />
+                      externalMetadataColumnId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input].ExternalColumns[usertype]"
+                      lineageId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].Columns[usertype]" />
                     <inputColumn
-                      refId="Package\Data Flow Task_PCD\LSOA Table.Inputs[OLE DB Destination Input].Columns[oa11cd]"
+                      refId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input].Columns[oa11cd]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="oa11cd"
-                      externalMetadataColumnId="Package\Data Flow Task_PCD\LSOA Table.Inputs[OLE DB Destination Input].ExternalColumns[oa11cd]"
-                      lineageId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[oa11cd]" />
+                      externalMetadataColumnId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input].ExternalColumns[oa11cd]"
+                      lineageId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].Columns[oa11cd]" />
                     <inputColumn
-                      refId="Package\Data Flow Task_PCD\LSOA Table.Inputs[OLE DB Destination Input].Columns[lsoa11cd]"
+                      refId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input].Columns[lsoa11cd]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="lsoa11cd"
-                      externalMetadataColumnId="Package\Data Flow Task_PCD\LSOA Table.Inputs[OLE DB Destination Input].ExternalColumns[lsoa11cd]"
-                      lineageId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[lsoa11cd]" />
+                      externalMetadataColumnId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input].ExternalColumns[lsoa11cd]"
+                      lineageId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].Columns[lsoa11cd]" />
                     <inputColumn
-                      refId="Package\Data Flow Task_PCD\LSOA Table.Inputs[OLE DB Destination Input].Columns[msoa11cd]"
+                      refId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input].Columns[msoa11cd]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="msoa11cd"
-                      externalMetadataColumnId="Package\Data Flow Task_PCD\LSOA Table.Inputs[OLE DB Destination Input].ExternalColumns[msoa11cd]"
-                      lineageId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[msoa11cd]" />
+                      externalMetadataColumnId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input].ExternalColumns[msoa11cd]"
+                      lineageId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].Columns[msoa11cd]" />
                     <inputColumn
-                      refId="Package\Data Flow Task_PCD\LSOA Table.Inputs[OLE DB Destination Input].Columns[ladcd]"
+                      refId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input].Columns[ladcd]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="ladcd"
-                      externalMetadataColumnId="Package\Data Flow Task_PCD\LSOA Table.Inputs[OLE DB Destination Input].ExternalColumns[ladcd]"
-                      lineageId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[ladcd]" />
+                      externalMetadataColumnId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input].ExternalColumns[ladcd]"
+                      lineageId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].Columns[ladcd]" />
                     <inputColumn
-                      refId="Package\Data Flow Task_PCD\LSOA Table.Inputs[OLE DB Destination Input].Columns[lsoa11nm]"
+                      refId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input].Columns[lsoa11nm]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="lsoa11nm"
-                      externalMetadataColumnId="Package\Data Flow Task_PCD\LSOA Table.Inputs[OLE DB Destination Input].ExternalColumns[lsoa11nm]"
-                      lineageId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[lsoa11nm]" />
+                      externalMetadataColumnId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input].ExternalColumns[lsoa11nm]"
+                      lineageId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].Columns[lsoa11nm]" />
                     <inputColumn
-                      refId="Package\Data Flow Task_PCD\LSOA Table.Inputs[OLE DB Destination Input].Columns[msoa11nm]"
+                      refId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input].Columns[msoa11nm]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="msoa11nm"
-                      externalMetadataColumnId="Package\Data Flow Task_PCD\LSOA Table.Inputs[OLE DB Destination Input].ExternalColumns[msoa11nm]"
-                      lineageId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[msoa11nm]" />
+                      externalMetadataColumnId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input].ExternalColumns[msoa11nm]"
+                      lineageId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].Columns[msoa11nm]" />
                     <inputColumn
-                      refId="Package\Data Flow Task_PCD\LSOA Table.Inputs[OLE DB Destination Input].Columns[ladnm]"
+                      refId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input].Columns[ladnm]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="ladnm"
-                      externalMetadataColumnId="Package\Data Flow Task_PCD\LSOA Table.Inputs[OLE DB Destination Input].ExternalColumns[ladnm]"
-                      lineageId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[ladnm]" />
+                      externalMetadataColumnId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input].ExternalColumns[ladnm]"
+                      lineageId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].Columns[ladnm]" />
                     <inputColumn
-                      refId="Package\Data Flow Task_PCD\LSOA Table.Inputs[OLE DB Destination Input].Columns[ladnmw]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="ladnmw"
-                      externalMetadataColumnId="Package\Data Flow Task_PCD\LSOA Table.Inputs[OLE DB Destination Input].ExternalColumns[ladnmw]"
-                      lineageId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[ladnmw]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task_PCD\LSOA Table.Inputs[OLE DB Destination Input].Columns[dointr]"
+                      refId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input].Columns[dointr]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="dointr"
-                      externalMetadataColumnId="Package\Data Flow Task_PCD\LSOA Table.Inputs[OLE DB Destination Input].ExternalColumns[dointr]"
-                      lineageId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[dointr]" />
+                      externalMetadataColumnId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input].ExternalColumns[dointr]"
+                      lineageId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].Columns[dointr]" />
                     <inputColumn
-                      refId="Package\Data Flow Task_PCD\LSOA Table.Inputs[OLE DB Destination Input].Columns[pcd8]"
+                      refId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input].Columns[pcd8]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="pcd8"
-                      externalMetadataColumnId="Package\Data Flow Task_PCD\LSOA Table.Inputs[OLE DB Destination Input].ExternalColumns[pcd8]"
-                      lineageId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[pcd8]" />
+                      externalMetadataColumnId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input].ExternalColumns[pcd8]"
+                      lineageId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].Columns[pcd8]" />
                     <inputColumn
-                      refId="Package\Data Flow Task_PCD\LSOA Table.Inputs[OLE DB Destination Input].Columns[Postcode]"
+                      refId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input].Columns[LSOAPostCode]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="LSOAPostCode"
+                      externalMetadataColumnId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input].ExternalColumns[LSOAPostCode]"
+                      lineageId="Package\LSOA\Data Conversion.Outputs[Data Conversion Output].Columns[LSOAPostCode]" />
+                    <inputColumn
+                      refId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input].Columns[pcd7]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="Postcode"
-                      externalMetadataColumnId="Package\Data Flow Task_PCD\LSOA Table.Inputs[OLE DB Destination Input].ExternalColumns[Data Conversion.postcode]"
-                      lineageId="Package\Data Flow Task_PCD\Data Conversion.Outputs[Data Conversion Output].Columns[Postcode]" />
+                      cachedName="pcd7"
+                      externalMetadataColumnId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input].ExternalColumns[pcd7]"
+                      lineageId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].Columns[pcd7]" />
+                    <inputColumn
+                      refId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input].Columns[pcds]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="pcds"
+                      externalMetadataColumnId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input].ExternalColumns[pcds]"
+                      lineageId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].Columns[pcds]" />
+                    <inputColumn
+                      refId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input].Columns[CreatedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="CreatedDate"
+                      externalMetadataColumnId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
+                      lineageId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].Columns[CreatedDate]" />
+                    <inputColumn
+                      refId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input].Columns[UpdatedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="UpdatedDate"
+                      externalMetadataColumnId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
+                      lineageId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].Columns[UpdatedDate]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_PCD\LSOA Table.Inputs[OLE DB Destination Input].ExternalColumns[doterm]"
+                      refId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input].ExternalColumns[doterm]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="doterm" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_PCD\LSOA Table.Inputs[OLE DB Destination Input].ExternalColumns[usertype]"
+                      refId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input].ExternalColumns[usertype]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="usertype" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_PCD\LSOA Table.Inputs[OLE DB Destination Input].ExternalColumns[oa11cd]"
+                      refId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input].ExternalColumns[oa11cd]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="oa11cd" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_PCD\LSOA Table.Inputs[OLE DB Destination Input].ExternalColumns[lsoa11cd]"
+                      refId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input].ExternalColumns[lsoa11cd]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="lsoa11cd" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_PCD\LSOA Table.Inputs[OLE DB Destination Input].ExternalColumns[msoa11cd]"
+                      refId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input].ExternalColumns[msoa11cd]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="msoa11cd" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_PCD\LSOA Table.Inputs[OLE DB Destination Input].ExternalColumns[ladcd]"
+                      refId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input].ExternalColumns[ladcd]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="ladcd" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_PCD\LSOA Table.Inputs[OLE DB Destination Input].ExternalColumns[lsoa11nm]"
+                      refId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input].ExternalColumns[lsoa11nm]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="lsoa11nm" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_PCD\LSOA Table.Inputs[OLE DB Destination Input].ExternalColumns[msoa11nm]"
+                      refId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input].ExternalColumns[msoa11nm]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="msoa11nm" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_PCD\LSOA Table.Inputs[OLE DB Destination Input].ExternalColumns[ladnm]"
+                      refId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input].ExternalColumns[ladnm]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="ladnm" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_PCD\LSOA Table.Inputs[OLE DB Destination Input].ExternalColumns[ladnmw]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="ladnmw" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task_PCD\LSOA Table.Inputs[OLE DB Destination Input].ExternalColumns[dointr]"
+                      refId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input].ExternalColumns[dointr]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="dointr" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_PCD\LSOA Table.Inputs[OLE DB Destination Input].ExternalColumns[pcd8]"
+                      refId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input].ExternalColumns[pcd8]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="pcd8" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_PCD\LSOA Table.Inputs[OLE DB Destination Input].ExternalColumns[Data Conversion.postcode]"
+                      refId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input].ExternalColumns[LSOAPostCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="LSOAPostCode" />
+                    <externalMetadataColumn
+                      refId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input].ExternalColumns[pcd7]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      name="Data Conversion.postcode" />
+                      name="pcd7" />
+                    <externalMetadataColumn
+                      refId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input].ExternalColumns[pcds]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="pcds" />
+                    <externalMetadataColumn
+                      refId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      name="CreatedDate" />
+                    <externalMetadataColumn
+                      refId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      name="UpdatedDate" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task_PCD\LSOA Table.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\LSOA\LSOA_Table.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Data Flow Task_PCD\LSOA Table.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task_PCD\LSOA Table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\LSOA\LSOA_Table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task_PCD\LSOA Table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\LSOA\LSOA_Table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task_PCD\LSOA Table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\LSOA\LSOA_Table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task_PCD\LSOA Table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\LSOA\LSOA_Table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -638,411 +594,510 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task_PCD\Source PCD File"
-              componentClassID="Microsoft.FlatFileSource"
-              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Flat File Source"
-              localeId="1033"
-              name="Source PCD File"
+              refId="Package\LSOA\Remove space"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Remove space"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\LSOA\Remove space.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\LSOA\Remove space.Inputs[Derived Column Input].Columns[PostCode]"
+                      cachedDataType="wstr"
+                      cachedLength="4"
+                      cachedName="PostCode"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\LSOA\Get 4 first character of pcd8.Outputs[Derived Column Output].Columns[PostCode]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[RTRIM](#{Package\LSOA\Get 4 first character of pcd8.Outputs[Derived Column Output].Columns[PostCode]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">RTRIM(PostCode)</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\LSOA\Remove space.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\LSOA\Remove space.Inputs[Derived Column Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\LSOA\Remove space.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\LSOA\Remove space.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\LSOA\Remove space.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\LSOA\Remove space.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\LSOA\Remove space.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\LSOA\Remove space.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\LSOA\Source LSOA"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Source LSOA"
               usesDispositions="true"
-              version="1">
+              version="7">
               <properties>
                 <property
-                  dataType="System.Boolean"
-                  description="Specifies whether zero-length columns are treated as null."
-                  name="RetainNulls">true</property>
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
                 <property
                   dataType="System.String"
-                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
-                  name="FileNameColumnName"></property>
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[LSOA_Table]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from LSOA_Table 
+where (CreatedDate &lt; ? and CreatedDate &gt;= ?) and (UpdatedDate &lt; ? and UpdatedDate &gt;= ?)</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping">"Parameter0:Input",{3E4BC02C-D84F-459E-9266-B7F2A23E0261};"Parameter1:Input",{2977D83C-D643-4393-8C23-47A205577B85};"Parameter2:Input",{3E4BC02C-D84F-459E-9266-B7F2A23E0261};"Parameter3:Input",{2977D83C-D643-4393-8C23-47A205577B85};</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task_PCD\Source PCD File.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LSOA File]"
-                  connectionManagerRefId="Package.ConnectionManagers[LSOA File]"
-                  name="FlatFileConnection" />
+                  refId="Package\LSOA\Source LSOA.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-UML28IP.DATH_BI_Source]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-UML28IP.DATH_BI_Source]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
               </connections>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output]"
-                  name="Flat File Source Output">
+                  refId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[doterm]"
+                      refId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].Columns[pcd7]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].ExternalColumns[doterm]"
+                      externalMetadataColumnId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].ExternalColumns[pcd7]"
                       length="50"
-                      lineageId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[doterm]"
-                      name="doterm"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
+                      lineageId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].Columns[pcd7]"
+                      name="pcd7"
+                      truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[usertype]"
+                      refId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].Columns[pcd8]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].ExternalColumns[usertype]"
+                      externalMetadataColumnId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].ExternalColumns[pcd8]"
                       length="50"
-                      lineageId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[usertype]"
-                      name="usertype"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[oa11cd]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].ExternalColumns[oa11cd]"
-                      length="50"
-                      lineageId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[oa11cd]"
-                      name="oa11cd"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[lsoa11cd]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].ExternalColumns[lsoa11cd]"
-                      length="50"
-                      lineageId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[lsoa11cd]"
-                      name="lsoa11cd"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[msoa11cd]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].ExternalColumns[msoa11cd]"
-                      length="50"
-                      lineageId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[msoa11cd]"
-                      name="msoa11cd"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[ladcd]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].ExternalColumns[ladcd]"
-                      length="50"
-                      lineageId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[ladcd]"
-                      name="ladcd"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[lsoa11nm]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].ExternalColumns[lsoa11nm]"
-                      length="50"
-                      lineageId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[lsoa11nm]"
-                      name="lsoa11nm"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[msoa11nm]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].ExternalColumns[msoa11nm]"
-                      length="50"
-                      lineageId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[msoa11nm]"
-                      name="msoa11nm"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[ladnm]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].ExternalColumns[ladnm]"
-                      length="50"
-                      lineageId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[ladnm]"
-                      name="ladnm"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[ladnmw]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="IgnoreFailure"
-                      externalMetadataColumnId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].ExternalColumns[ladnmw]"
-                      length="50"
-                      lineageId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[ladnmw]"
-                      name="ladnmw"
-                      truncationRowDisposition="IgnoreFailure">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[dointr]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].ExternalColumns[dointr]"
-                      length="50"
-                      lineageId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[dointr]"
-                      name="dointr"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[pcd8]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].ExternalColumns[pcd8]"
-                      length="50"
-                      lineageId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].Columns[pcd8]"
+                      lineageId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].Columns[pcd8]"
                       name="pcd8"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].Columns[pcds]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].ExternalColumns[pcds]"
+                      length="50"
+                      lineageId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].Columns[pcds]"
+                      name="pcds"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].Columns[dointr]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].ExternalColumns[dointr]"
+                      length="50"
+                      lineageId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].Columns[dointr]"
+                      name="dointr"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].Columns[doterm]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].ExternalColumns[doterm]"
+                      length="50"
+                      lineageId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].Columns[doterm]"
+                      name="doterm"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].Columns[usertype]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].ExternalColumns[usertype]"
+                      length="50"
+                      lineageId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].Columns[usertype]"
+                      name="usertype"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].Columns[oa11cd]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].ExternalColumns[oa11cd]"
+                      length="50"
+                      lineageId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].Columns[oa11cd]"
+                      name="oa11cd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].Columns[lsoa11cd]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].ExternalColumns[lsoa11cd]"
+                      length="50"
+                      lineageId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].Columns[lsoa11cd]"
+                      name="lsoa11cd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].Columns[msoa11cd]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].ExternalColumns[msoa11cd]"
+                      length="50"
+                      lineageId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].Columns[msoa11cd]"
+                      name="msoa11cd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].Columns[ladcd]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].ExternalColumns[ladcd]"
+                      length="50"
+                      lineageId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].Columns[ladcd]"
+                      name="ladcd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].Columns[lsoa11nm]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].ExternalColumns[lsoa11nm]"
+                      length="50"
+                      lineageId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].Columns[lsoa11nm]"
+                      name="lsoa11nm"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].Columns[msoa11nm]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].ExternalColumns[msoa11nm]"
+                      length="50"
+                      lineageId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].Columns[msoa11nm]"
+                      name="msoa11nm"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].Columns[ladnm]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].ExternalColumns[ladnm]"
+                      length="50"
+                      lineageId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].Columns[ladnm]"
+                      name="ladnm"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].Columns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].ExternalColumns[CreatedDate]"
+                      lineageId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].Columns[CreatedDate]"
+                      name="CreatedDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].Columns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].ExternalColumns[UpdatedDate]"
+                      lineageId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].Columns[UpdatedDate]"
+                      name="UpdatedDate"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].ExternalColumns[pcd7]"
+                      refId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].ExternalColumns[pcd7]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="pcd7" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].ExternalColumns[pcd8]"
+                      refId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].ExternalColumns[pcd8]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="pcd8" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].ExternalColumns[pcds]"
+                      refId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].ExternalColumns[pcds]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="pcds" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].ExternalColumns[dointr]"
+                      refId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].ExternalColumns[dointr]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="dointr" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].ExternalColumns[doterm]"
+                      refId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].ExternalColumns[doterm]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="doterm" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].ExternalColumns[usertype]"
+                      refId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].ExternalColumns[usertype]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="usertype" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].ExternalColumns[oa11cd]"
+                      refId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].ExternalColumns[oa11cd]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="oa11cd" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].ExternalColumns[lsoa11cd]"
+                      refId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].ExternalColumns[lsoa11cd]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="lsoa11cd" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].ExternalColumns[msoa11cd]"
+                      refId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].ExternalColumns[msoa11cd]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="msoa11cd" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].ExternalColumns[ladcd]"
+                      refId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].ExternalColumns[ladcd]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="ladcd" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].ExternalColumns[lsoa11nm]"
+                      refId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].ExternalColumns[lsoa11nm]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="lsoa11nm" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].ExternalColumns[msoa11nm]"
+                      refId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].ExternalColumns[msoa11nm]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="msoa11nm" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].ExternalColumns[ladnm]"
+                      refId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].ExternalColumns[ladnm]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="ladnm" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output].ExternalColumns[ladnmw]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="ladnmw" />
+                      refId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].ExternalColumns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      name="CreatedDate" />
+                    <externalMetadataColumn
+                      refId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output].ExternalColumns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      name="UpdatedDate" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Error Output]"
+                  refId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Error Output]"
                   isErrorOut="true"
-                  name="Flat File Source Error Output">
+                  name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      refId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Error Output].Columns[pcd7]"
                       codePage="1252"
-                      dataType="text"
-                      description="Flat File Source Error Output Column"
-                      lineageId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
-                      name="Flat File Source Error Output Column" />
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Error Output].Columns[pcd7]"
+                      name="pcd7" />
                     <outputColumn
-                      refId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      refId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Error Output].Columns[pcd8]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Error Output].Columns[pcd8]"
+                      name="pcd8" />
+                    <outputColumn
+                      refId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Error Output].Columns[pcds]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Error Output].Columns[pcds]"
+                      name="pcds" />
+                    <outputColumn
+                      refId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Error Output].Columns[dointr]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Error Output].Columns[dointr]"
+                      name="dointr" />
+                    <outputColumn
+                      refId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Error Output].Columns[doterm]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Error Output].Columns[doterm]"
+                      name="doterm" />
+                    <outputColumn
+                      refId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Error Output].Columns[usertype]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Error Output].Columns[usertype]"
+                      name="usertype" />
+                    <outputColumn
+                      refId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Error Output].Columns[oa11cd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Error Output].Columns[oa11cd]"
+                      name="oa11cd" />
+                    <outputColumn
+                      refId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Error Output].Columns[lsoa11cd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Error Output].Columns[lsoa11cd]"
+                      name="lsoa11cd" />
+                    <outputColumn
+                      refId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Error Output].Columns[msoa11cd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Error Output].Columns[msoa11cd]"
+                      name="msoa11cd" />
+                    <outputColumn
+                      refId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Error Output].Columns[ladcd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Error Output].Columns[ladcd]"
+                      name="ladcd" />
+                    <outputColumn
+                      refId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Error Output].Columns[lsoa11nm]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Error Output].Columns[lsoa11nm]"
+                      name="lsoa11nm" />
+                    <outputColumn
+                      refId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Error Output].Columns[msoa11nm]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Error Output].Columns[msoa11nm]"
+                      name="msoa11nm" />
+                    <outputColumn
+                      refId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Error Output].Columns[ladnm]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Error Output].Columns[ladnm]"
+                      name="ladnm" />
+                    <outputColumn
+                      refId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Error Output].Columns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Error Output].Columns[CreatedDate]"
+                      name="CreatedDate" />
+                    <outputColumn
+                      refId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Error Output].Columns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Error Output].Columns[UpdatedDate]"
+                      name="UpdatedDate" />
+                    <outputColumn
+                      refId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1053,25 +1108,115 @@
           </components>
           <paths>
             <path
-              refId="Package\Data Flow Task_PCD.Paths[Data Conversion Output]"
-              endId="Package\Data Flow Task_PCD\LSOA Table.Inputs[OLE DB Destination Input]"
+              refId="Package\LSOA.Paths[Data Conversion Output]"
+              endId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input]"
               name="Data Conversion Output"
-              startId="Package\Data Flow Task_PCD\Data Conversion.Outputs[Data Conversion Output]" />
+              startId="Package\LSOA\Data Conversion.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\Data Flow Task_PCD.Paths[Derived Column Output]"
-              endId="Package\Data Flow Task_PCD\Data Conversion.Inputs[Data Conversion Input]"
+              refId="Package\LSOA.Paths[Derived Column Output]"
+              endId="Package\LSOA\Remove space.Inputs[Derived Column Input]"
               name="Derived Column Output"
-              startId="Package\Data Flow Task_PCD\get first 2, 3, 4 character of pcd8.Outputs[Derived Column Output]" />
+              startId="Package\LSOA\Get 4 first character of pcd8.Outputs[Derived Column Output]" />
             <path
-              refId="Package\Data Flow Task_PCD.Paths[Flat File Source Output]"
-              endId="Package\Data Flow Task_PCD\get first 2, 3, 4 character of pcd8.Inputs[Derived Column Input]"
-              name="Flat File Source Output"
-              startId="Package\Data Flow Task_PCD\Source PCD File.Outputs[Flat File Source Output]" />
+              refId="Package\LSOA.Paths[Derived Column Output1]"
+              endId="Package\LSOA\Data Conversion.Inputs[Data Conversion Input]"
+              name="Derived Column Output"
+              startId="Package\LSOA\Remove space.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\LSOA.Paths[OLE DB Source Output]"
+              endId="Package\LSOA\Get 4 first character of pcd8.Inputs[Derived Column Input]"
+              name="OLE DB Source Output"
+              startId="Package\LSOA\Source LSOA.Outputs[OLE DB Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Set CET LSOA"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{08C5F125-5D7D-48D7-AF0C-5147DD9EBB63}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Set CET LSOA"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{C086F2E5-CABF-4042-AFA2-82A6F7E8981E}"
+          SQLTask:SqlStatementSource="update Data_Flow set CET=GETDATE() where Name='LSOA'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Set LSET LSOA"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{C3A4BA6D-DE3D-4772-ACB4-C6C31BFAF46B}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Set LSET LSOA"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{C086F2E5-CABF-4042-AFA2-82A6F7E8981E}"
+          SQLTask:SqlStatementSource="update Data_Flow set LSET=CET where Name='LSOA'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate LSOA"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{AC095CFF-2644-49BE-BD1A-A58CB4527D68}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate LSOA"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{99671997-D8C0-481E-96E8-82D6A7712624}"
+          SQLTask:SqlStatementSource="truncate table [dbo].[LSOA_Table]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{5650AA14-7D31-4D7E-94B1-DBD2570E8999}"
+      DTS:From="Package\Truncate LSOA"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Set CET LSOA" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{DF4D930C-B4A2-4BA7-8FD8-68690DC2D270}"
+      DTS:From="Package\Set CET LSOA"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Get LSET, CET LSOA" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{D39F78C6-4B21-43C4-B489-C43DA40EF0AC}"
+      DTS:From="Package\Get LSET, CET LSOA"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\LSOA" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{25403D51-18F8-44CA-A263-14F08840DFB3}"
+      DTS:From="Package\LSOA"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\Set LSET LSOA" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -1083,93 +1228,223 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="176,41.6"
-          Id="Package\Data Flow Task_PCD"
-          TopLeft="127.142859308087,92.529413062396" />
+          Size="103.2,41.6"
+          Id="Package\LSOA"
+          TopLeft="393.57143527391,308.176474910294" />
+        <NodeLayout
+          Size="148.8,41.6"
+          Id="Package\Truncate LSOA"
+          TopLeft="379.285720744912,35.9411769746497" />
+        <NodeLayout
+          Size="144,41.6"
+          Id="Package\Set CET LSOA"
+          TopLeft="377.857149292012,118.529413427036" />
+        <NodeLayout
+          Size="175.2,41.6"
+          Id="Package\Get LSET, CET LSOA"
+          TopLeft="365.000006215913,217.176473634053" />
+        <NodeLayout
+          Size="148.8,41.6"
+          Id="Package\Set LSET LSOA"
+          TopLeft="377.142863565562,400.70588797269" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="451.771435018462,77.5411769746497">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40.9882364523865"
+              Start="0,0"
+              End="0,33.4882364523865">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.4882364523865" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="451.228577753962,160.129413427036">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,57.0470602070172"
+              Start="0,0"
+              End="0,49.5470602070172">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49.5470602070172" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="448.885720744912,258.776473634053">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,49.4000012762405"
+              Start="0,0"
+              End="0,41.9000012762405">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.9000012762405" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="448.357149419736,349.776474910294">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,50.929413062396"
+              Start="0,0"
+              End="0,43.429413062396">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.429413062396" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Data Flow Task_PCD">
+    design-time-name="Package\LSOA">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="234.4,41.6"
-          Id="Package\Data Flow Task_PCD\get first 2, 3, 4 character of pcd8"
-          TopLeft="332.142862799217,61.9411773392899" />
+          Size="146.4,41.6"
+          Id="Package\LSOA\Remove space"
+          TopLeft="300.00000510897,148.352943257065" />
         <NodeLayout
-          Size="152.8,41.6"
-          Id="Package\Data Flow Task_PCD\Source PCD File"
-          TopLeft="116.428573411339,58.1176478739016" />
+          Size="210.4,41.6"
+          Id="Package\LSOA\Get 4 first character of pcd8"
+          TopLeft="265.714290239373,55.0588243015913" />
+        <NodeLayout
+          Size="135.2,41.6"
+          Id="Package\LSOA\LSOA_Table"
+          TopLeft="303,334" />
         <NodeLayout
           Size="155.2,41.6"
-          Id="Package\Data Flow Task_PCD\Data Conversion"
-          TopLeft="374.285720659762,143.764707898599" />
+          Id="Package\LSOA\Data Conversion"
+          TopLeft="291.428576391571,234.000003281761" />
+        <EdgeLayout
+          Id="Package\LSOA.Paths[Derived Column Output]"
+          TopLeft="372.057147674172,96.6588243015913">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51.6941189554733"
+              Start="0,0"
+              End="0,44.1941189554733">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.1941189554733" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\LSOA.Paths[Data Conversion Output]"
+          TopLeft="369.814288195786,275.600003281761">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,58.399996718239"
+              Start="0,0"
+              End="0,50.899996718239">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.899996718239" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\LSOA.Paths[Derived Column Output1]"
+          TopLeft="371.114290750271,189.952943257065">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,44.047060024696"
+              Start="0,0"
+              End="0,36.547060024696">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.547060024696" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <NodeLayout
-          Size="132.8,41.6"
-          Id="Package\Data Flow Task_PCD\LSOA Table"
-          TopLeft="387.857149462311,263.058827218713" />
+          Size="139.2,41.6"
+          Id="Package\LSOA\Source LSOA"
+          TopLeft="54.2857152101946,52.0000007292804" />
         <EdgeLayout
-          Id="Package\Data Flow Task_PCD.Paths[Derived Column Output]"
-          TopLeft="450.614291729489,103.54117733929">
+          Id="Package\LSOA.Paths[OLE DB Source Output]"
+          TopLeft="193.485715210195,74.3294125154358">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,40.2235305593087"
+              EndConnector="72.2285750291784,0"
               Start="0,0"
-              End="0,32.7235305593087">
+              End="64.7285750291784,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,32.7235305593087" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task_PCD.Paths[Data Conversion Output]"
-          TopLeft="453.071435061036,185.364707898599">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,77.694119320114"
-              Start="0,0"
-              End="0,70.194119320114">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,70.194119320114" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task_PCD.Paths[Flat File Source Output]"
-          TopLeft="269.228573411339,80.8294126065957">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="62.9142893878775,0"
-              Start="0,0"
-              End="55.4142893878775,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="55.4142893878775,0" />
+                    End="64.7285750291784,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1182,7 +1457,20 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task_PCD\LSOA Table">
+    design-time-name="Package\LSOA\LSOA_Table">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\LSOA\Source LSOA">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
