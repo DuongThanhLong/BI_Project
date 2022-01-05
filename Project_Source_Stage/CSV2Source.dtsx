@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="6"
-  DTS:VersionGUID="{605763F3-B0A0-49FD-8739-E1A83B9FF33D}">
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{109348A8-9413-45A7-91BE-52CF361706DF}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1977,7 +1977,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[Accident_Table]</property>
+                  name="OpenRowset">[dbo].[Accident_Table]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -2348,9 +2348,7 @@
                       name="Number_of_Casualties" />
                     <externalMetadataColumn
                       refId="Package\Accident\Accident_Table.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="dbTimeStamp"
                       name="Date" />
                     <externalMetadataColumn
                       refId="Package\Accident\Accident_Table.Inputs[OLE DB Destination Input].ExternalColumns[Day_of_Week]"
@@ -2360,9 +2358,7 @@
                       name="Day_of_Week" />
                     <externalMetadataColumn
                       refId="Package\Accident\Accident_Table.Inputs[OLE DB Destination Input].ExternalColumns[Time]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="dbTimeStamp"
                       name="Time" />
                     <externalMetadataColumn
                       refId="Package\Accident\Accident_Table.Inputs[OLE DB Destination Input].ExternalColumns[Local_Authority_(District)]"
@@ -2484,6 +2480,14 @@
                       dataType="str"
                       length="50"
                       name="LSOA_of_Accident_Location" />
+                    <externalMetadataColumn
+                      refId="Package\Accident\Accident_Table.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      name="CreatedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Accident\Accident_Table.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      name="UpdatedDate" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -3038,7 +3042,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[Casualty_Table]</property>
+                  name="OpenRowset">[dbo].[Casualty_Table]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -3307,6 +3311,14 @@
                       dataType="str"
                       length="50"
                       name="Casualty_Home_Area_Type" />
+                    <externalMetadataColumn
+                      refId="Package\Casualty\Casualty_Table.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      name="CreatedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Casualty\Casualty_Table.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      name="UpdatedDate" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -3811,7 +3823,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[LSOA_Table]</property>
+                  name="OpenRowset">[dbo].[LSOA_Table]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -4052,6 +4064,14 @@
                       dataType="str"
                       length="50"
                       name="ladnm" />
+                    <externalMetadataColumn
+                      refId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      name="CreatedDate" />
+                    <externalMetadataColumn
+                      refId="Package\LSOA\LSOA_Table.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      name="UpdatedDate" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -4522,7 +4542,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[PostCode_Table]</property>
+                  name="OpenRowset">[dbo].[PostCode_Table]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -4749,6 +4769,14 @@
                       dataType="str"
                       length="50"
                       name="region_name" />
+                    <externalMetadataColumn
+                      refId="Package\PostCode\PostCode_Table.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      name="CreatedDate" />
+                    <externalMetadataColumn
+                      refId="Package\PostCode\PostCode_Table.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      name="UpdatedDate" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -5499,7 +5527,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[Vehicle_Table]</property>
+                  name="OpenRowset">[dbo].[Vehicle_Table]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -5866,6 +5894,14 @@
                       dataType="str"
                       length="50"
                       name="Driver_Home_Area_Type" />
+                    <externalMetadataColumn
+                      refId="Package\Vehicle\Vehicle_Table.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      name="CreatedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Vehicle\Vehicle_Table.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      name="UpdatedDate" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -5945,13 +5981,25 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="122.4,41.6"
-          Id="Package\PostCode"
-          TopLeft="105.000001788139,47.4117653708145" />
+          Size="118.4,41.6"
+          Id="Package\Accident"
+          TopLeft="110.714287599739,170.529414156317" />
+        <NodeLayout
+          Size="118.4,41.6"
+          Id="Package\Casualty"
+          TopLeft="516.428580223298,171.294120049394" />
         <NodeLayout
           Size="103.2,41.6"
           Id="Package\LSOA"
           TopLeft="306.428576647019,46.6470594777368" />
+        <NodeLayout
+          Size="122.4,41.6"
+          Id="Package\PostCode"
+          TopLeft="105.000001788139,47.4117653708145" />
+        <NodeLayout
+          Size="112,41.6"
+          Id="Package\Vehicle"
+          TopLeft="311.428576732169,171.294120049394" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="227.400001788139,67.8294124242756">
@@ -5974,14 +6022,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="118.4,41.6"
-          Id="Package\Accident"
-          TopLeft="110.714287599739,170.529414156317" />
-        <NodeLayout
-          Size="112,41.6"
-          Id="Package\Vehicle"
-          TopLeft="311.428576732169,171.294120049394" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
           TopLeft="229.114287599739,191.711767102855">
@@ -6004,10 +6044,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="118.4,41.6"
-          Id="Package\Casualty"
-          TopLeft="516.428580223298,171.294120049394" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
           TopLeft="423.428576732169,192.094120049394">
@@ -6034,120 +6070,18 @@
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\PostCode">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="122.4,41.6"
-          Id="Package\PostCode\PostCode"
-          TopLeft="144.285716742885,57.3529419808239" />
-        <NodeLayout
-          Size="153.6,41.6"
-          Id="Package\PostCode\PostCode_Table"
-          TopLeft="365.000006215913,54.2941184085133" />
-        <EdgeLayout
-          Id="Package\PostCode.Paths[Flat File Source Output]"
-          TopLeft="266.685716742885,76.6235301946686">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="98.3142894730277,0"
-              Start="0,0"
-              End="90.8142894730277,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="90.8142894730277,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\PostCode\PostCode_Table">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\LSOA">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="103.2,41.6"
-          Id="Package\LSOA\LSOA"
-          TopLeft="178.923076923077,97.2307692307692" />
-        <NodeLayout
-          Size="135.2,41.6"
-          Id="Package\LSOA\LSOA_Table"
-          TopLeft="380,97.6923076923077" />
-        <EdgeLayout
-          Id="Package\LSOA.Paths[Flat File Source Output]"
-          TopLeft="282.123076923077,118.261538461538">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="97.8769230769229,0"
-              Start="0,0"
-              End="90.3769230769229,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="90.3769230769229,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\LSOA\LSOA_Table">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
     design-time-name="Package\Accident">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="118.4,41.6"
-          Id="Package\Accident\Accident"
-          TopLeft="144.285714285714,127.857142857143" />
-        <NodeLayout
           Size="149.6,41.6"
           Id="Package\Accident\Accident_Table"
           TopLeft="360.714285714286,130.714285714286" />
+        <NodeLayout
+          Size="118.4,41.6"
+          Id="Package\Accident\Accident"
+          TopLeft="144.285714285714,127.857142857143" />
         <EdgeLayout
           Id="Package\Accident.Paths[Flat File Source Output]"
           TopLeft="262.685714285714,150.085714285714">
@@ -6187,61 +6121,10 @@
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
-    design-time-name="Package\Vehicle">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="112,41.6"
-          Id="Package\Vehicle\Vehicle"
-          TopLeft="129.307692307692,153.153846153846" />
-        <NodeLayout
-          Size="143.2,41.6"
-          Id="Package\Vehicle\Vehicle_Table"
-          TopLeft="333.076923076923,152.307692307692" />
-        <EdgeLayout
-          Id="Package\Vehicle.Paths[Flat File Source Output]"
-          TopLeft="241.307692307692,173.530769230769">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="91.7692307692307,0"
-              Start="0,0"
-              End="84.2692307692307,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="84.2692307692307,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Vehicle\Vehicle_Table">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
     design-time-name="Package\Casualty">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="118.4,41.6"
           Id="Package\Casualty\Casualty"
@@ -6269,7 +6152,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -6277,6 +6162,165 @@
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Casualty\Casualty_Table">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\LSOA">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="103.2,41.6"
+          Id="Package\LSOA\LSOA"
+          TopLeft="178.923076923077,97.2307692307692" />
+        <NodeLayout
+          Size="135.2,41.6"
+          Id="Package\LSOA\LSOA_Table"
+          TopLeft="380,97.6923076923077" />
+        <EdgeLayout
+          Id="Package\LSOA.Paths[Flat File Source Output]"
+          TopLeft="282.123076923077,118.261538461538">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="97.8769230769229,0"
+              Start="0,0"
+              End="90.3769230769229,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="90.3769230769229,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\LSOA\LSOA_Table">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\PostCode">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="153.6,41.6"
+          Id="Package\PostCode\PostCode_Table"
+          TopLeft="365.000006215913,54.2941184085133" />
+        <NodeLayout
+          Size="122.4,41.6"
+          Id="Package\PostCode\PostCode"
+          TopLeft="144.285716742885,57.3529419808239" />
+        <EdgeLayout
+          Id="Package\PostCode.Paths[Flat File Source Output]"
+          TopLeft="266.685716742885,76.6235301946686">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="98.3142894730277,0"
+              Start="0,0"
+              End="90.8142894730277,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="90.8142894730277,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\PostCode\PostCode_Table">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Vehicle">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="112,41.6"
+          Id="Package\Vehicle\Vehicle"
+          TopLeft="129.307692307692,153.153846153846" />
+        <NodeLayout
+          Size="143.2,41.6"
+          Id="Package\Vehicle\Vehicle_Table"
+          TopLeft="333.076923076923,152.307692307692" />
+        <EdgeLayout
+          Id="Package\Vehicle.Paths[Flat File Source Output]"
+          TopLeft="241.307692307692,173.530769230769">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="91.7692307692307,0"
+              Start="0,0"
+              End="84.2692307692307,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="84.2692307692307,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Vehicle\Vehicle_Table">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

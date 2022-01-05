@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="41"
-  DTS:VersionGUID="{3DCF1C55-A9C4-4E79-8739-4A40EE993FB8}">
+  DTS:VersionBuild="42"
+  DTS:VersionGUID="{E3B8902A-94F4-4C31-B9C8-95449C6BAD02}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -65,10 +65,28 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
+      DTS:DTSID="{74427202-E497-4CC2-9B5B-EB42E96C9D48}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="CETRes1">
+      <DTS:VariableValue
+        DTS:DataType="7">1/3/2022</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
       DTS:DTSID="{E0D347CF-9AA1-43CE-B3CC-4B7FD62DB79C}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="LSETRes">
+      <DTS:VariableValue
+        DTS:DataType="7">12/31/2021</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{EB479D24-18E8-4AB3-9EF0-27EAA0318693}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="LSETRes1">
       <DTS:VariableValue
         DTS:DataType="7">12/31/2021</DTS:VariableValue>
     </DTS:Variable>
@@ -92,10 +110,10 @@
           SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ResultBinding
             SQLTask:ResultName="LSET"
-            SQLTask:DtsVariableName="User::LSETRes" />
+            SQLTask:DtsVariableName="User::LSETRes1" />
           <SQLTask:ResultBinding
             SQLTask:ResultName="CET"
-            SQLTask:DtsVariableName="User::CETRes" />
+            SQLTask:DtsVariableName="User::CETRes1" />
         </SQLTask:SqlTaskData>
       </DTS:ObjectData>
     </DTS:Executable>
@@ -221,7 +239,7 @@ where [refTable].[code] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Vehicles\465:invalid};</property>
+                  name="ParameterMap">#{Package\Vehicles\775:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -382,7 +400,7 @@ where [refTable].[code] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Vehicles\480:invalid};</property>
+                  name="ParameterMap">#{Package\Vehicles\776:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -543,7 +561,7 @@ where [refTable].[code] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Vehicles\495:invalid};</property>
+                  name="ParameterMap">#{Package\Vehicles\777:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -704,7 +722,7 @@ where [refTable].[code] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Vehicles\492:invalid};</property>
+                  name="ParameterMap">#{Package\Vehicles\778:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -865,7 +883,7 @@ where [refTable].[code] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Vehicles\456:invalid};</property>
+                  name="ParameterMap">#{Package\Vehicles\779:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1026,7 +1044,7 @@ where [refTable].[code] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Vehicles\462:invalid};</property>
+                  name="ParameterMap">#{Package\Vehicles\780:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1187,7 +1205,7 @@ where [refTable].[code] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Vehicles\471:invalid};</property>
+                  name="ParameterMap">#{Package\Vehicles\781:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1348,7 +1366,7 @@ where [refTable].[code] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Vehicles\450:invalid};</property>
+                  name="ParameterMap">#{Package\Vehicles\782:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1509,7 +1527,7 @@ where [refTable].[code] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Vehicles\474:invalid};</property>
+                  name="ParameterMap">#{Package\Vehicles\783:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1670,7 +1688,7 @@ where [refTable].[code] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Vehicles\453:invalid};</property>
+                  name="ParameterMap">#{Package\Vehicles\784:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1831,7 +1849,7 @@ where [refTable].[code] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Vehicles\441:invalid};</property>
+                  name="ParameterMap">#{Package\Vehicles\785:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1992,7 +2010,7 @@ where [refTable].[code] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Vehicles\459:invalid};</property>
+                  name="ParameterMap">#{Package\Vehicles\786:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -2153,7 +2171,7 @@ where [refTable].[code] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Vehicles\447:invalid};</property>
+                  name="ParameterMap">#{Package\Vehicles\787:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -2314,7 +2332,7 @@ where [refTable].[code] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Vehicles\444:invalid};</property>
+                  name="ParameterMap">#{Package\Vehicles\788:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -2475,7 +2493,7 @@ where [refTable].[code] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Vehicles\486:invalid};</property>
+                  name="ParameterMap">#{Package\Vehicles\789:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -2636,7 +2654,7 @@ where [refTable].[code] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Vehicles\438:invalid};</property>
+                  name="ParameterMap">#{Package\Vehicles\790:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -2797,7 +2815,7 @@ where [refTable].[code] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Vehicles\468:invalid};</property>
+                  name="ParameterMap">#{Package\Vehicles\791:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -2948,7 +2966,7 @@ where (CreatedDate &lt; ? and CreatedDate &gt;= ?) or (UpdatedDate &lt; ? and Up
                 <property
                   dataType="System.String"
                   description="The mappings between the parameters in the SQL command and variables."
-                  name="ParameterMapping">"Parameter0:Input",{0C890E6C-C3D6-4E8B-9E35-17E35708AD5E};"Parameter1:Input",{E0D347CF-9AA1-43CE-B3CC-4B7FD62DB79C};"Parameter2:Input",{0C890E6C-C3D6-4E8B-9E35-17E35708AD5E};"Parameter3:Input",{E0D347CF-9AA1-43CE-B3CC-4B7FD62DB79C};</property>
+                  name="ParameterMapping">"Parameter0:Input",{74427202-E497-4CC2-9B5B-EB42E96C9D48};"Parameter1:Input",{EB479D24-18E8-4AB3-9EF0-27EAA0318693};"Parameter2:Input",{74427202-E497-4CC2-9B5B-EB42E96C9D48};"Parameter3:Input",{EB479D24-18E8-4AB3-9EF0-27EAA0318693};</property>
               </properties>
               <connections>
                 <connection
@@ -4198,39 +4216,39 @@ where (CreatedDate &lt; ? and CreatedDate &gt;= ?) or (UpdatedDate &lt; ? and Up
               startId="Package\Vehicles\Lookup Vehicle Propulsion Code.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Vehicles.Paths[Lookup Match Output15]"
-              endId="Package\Vehicles\Lookup Driver Home Area Type.Inputs[Lookup Input]"
+              endId="Package\Vehicles\Lookup Vehicle Propulsion Code.Inputs[Lookup Input]"
               name="Lookup Match Output"
-              startId="Package\Vehicles\Lookup Driver IMD Decile.Outputs[Lookup Match Output]" />
+              startId="Package\Vehicles\Lookup Journey Purpose of Driver.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Vehicles.Paths[Lookup Match Output14]"
-              endId="Package\Vehicles\Lookup Towing and Articulation.Inputs[Lookup Input]"
+              endId="Package\Vehicles\Lookup Journey Purpose of Driver.Inputs[Lookup Input]"
               name="Lookup Match Output"
-              startId="Package\Vehicles\Lookup Vehicle Type.Outputs[Lookup Match Output]" />
+              startId="Package\Vehicles\Lookup Was Vehicle Left Hand Drive.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Vehicles.Paths[Lookup Match Output13]"
-              endId="Package\Vehicles\Lookup Vehicle Manoeuvre.Inputs[Lookup Input]"
+              endId="Package\Vehicles\Lookup Was Vehicle Left Hand Drive.Inputs[Lookup Input]"
               name="Lookup Match Output"
-              startId="Package\Vehicles\Lookup Towing and Articulation.Outputs[Lookup Match Output]" />
+              startId="Package\Vehicles\Lookup 1st Point of Impact.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Vehicles.Paths[Lookup Match Output12]"
-              endId="Package\Vehicles\Lookup Vehicle Location.Inputs[Lookup Input]"
+              endId="Package\Vehicles\Lookup 1st Point of Impact.Inputs[Lookup Input]"
               name="Lookup Match Output"
-              startId="Package\Vehicles\Lookup Vehicle Manoeuvre.Outputs[Lookup Match Output]" />
+              startId="Package\Vehicles\Lookup Vehicle Leaving Carriageway.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Vehicles.Paths[Lookup Match Output11]"
-              endId="Package\Vehicles\Lookup Junction Location.Inputs[Lookup Input]"
+              endId="Package\Vehicles\Lookup Vehicle Leaving Carriageway.Inputs[Lookup Input]"
               name="Lookup Match Output"
-              startId="Package\Vehicles\Lookup Vehicle Location.Outputs[Lookup Match Output]" />
+              startId="Package\Vehicles\Lookup Hit Object off Carriageway.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Vehicles.Paths[Lookup Match Output10]"
-              endId="Package\Vehicles\Lookup Skidding and Overturning.Inputs[Lookup Input]"
+              endId="Package\Vehicles\Lookup Hit Object off Carriageway.Inputs[Lookup Input]"
               name="Lookup Match Output"
-              startId="Package\Vehicles\Lookup Junction Location.Outputs[Lookup Match Output]" />
+              startId="Package\Vehicles\Lookup Hit Object in Carriageway.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Vehicles.Paths[Lookup Match Output9]"
-              endId="Package\Vehicles\Lookup Sex of Driver.Inputs[Lookup Input]"
+              endId="Package\Vehicles\Lookup Hit Object in Carriageway.Inputs[Lookup Input]"
               name="Lookup Match Output"
-              startId="Package\Vehicles\Lookup Skidding and Overturning.Outputs[Lookup Match Output]" />
+              startId="Package\Vehicles\Lookup Age Band.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Vehicles.Paths[Lookup Match Output8]"
               endId="Package\Vehicles\Lookup Age Band.Inputs[Lookup Input]"
@@ -4238,39 +4256,39 @@ where (CreatedDate &lt; ? and CreatedDate &gt;= ?) or (UpdatedDate &lt; ? and Up
               startId="Package\Vehicles\Lookup Sex of Driver.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Vehicles.Paths[Lookup Match Output7]"
-              endId="Package\Vehicles\Lookup Hit Object in Carriageway.Inputs[Lookup Input]"
+              endId="Package\Vehicles\Lookup Sex of Driver.Inputs[Lookup Input]"
               name="Lookup Match Output"
-              startId="Package\Vehicles\Lookup Age Band.Outputs[Lookup Match Output]" />
+              startId="Package\Vehicles\Lookup Skidding and Overturning.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Vehicles.Paths[Lookup Match Output6]"
-              endId="Package\Vehicles\Lookup Hit Object off Carriageway.Inputs[Lookup Input]"
+              endId="Package\Vehicles\Lookup Skidding and Overturning.Inputs[Lookup Input]"
               name="Lookup Match Output"
-              startId="Package\Vehicles\Lookup Hit Object in Carriageway.Outputs[Lookup Match Output]" />
+              startId="Package\Vehicles\Lookup Junction Location.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Vehicles.Paths[Lookup Match Output5]"
-              endId="Package\Vehicles\Lookup Vehicle Leaving Carriageway.Inputs[Lookup Input]"
+              endId="Package\Vehicles\Lookup Junction Location.Inputs[Lookup Input]"
               name="Lookup Match Output"
-              startId="Package\Vehicles\Lookup Hit Object off Carriageway.Outputs[Lookup Match Output]" />
+              startId="Package\Vehicles\Lookup Vehicle Location.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Vehicles.Paths[Lookup Match Output4]"
-              endId="Package\Vehicles\Lookup 1st Point of Impact.Inputs[Lookup Input]"
+              endId="Package\Vehicles\Lookup Vehicle Location.Inputs[Lookup Input]"
               name="Lookup Match Output"
-              startId="Package\Vehicles\Lookup Vehicle Leaving Carriageway.Outputs[Lookup Match Output]" />
+              startId="Package\Vehicles\Lookup Vehicle Manoeuvre.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Vehicles.Paths[Lookup Match Output3]"
-              endId="Package\Vehicles\Lookup Was Vehicle Left Hand Drive.Inputs[Lookup Input]"
+              endId="Package\Vehicles\Lookup Vehicle Manoeuvre.Inputs[Lookup Input]"
               name="Lookup Match Output"
-              startId="Package\Vehicles\Lookup 1st Point of Impact.Outputs[Lookup Match Output]" />
+              startId="Package\Vehicles\Lookup Towing and Articulation.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Vehicles.Paths[Lookup Match Output2]"
-              endId="Package\Vehicles\Lookup Journey Purpose of Driver.Inputs[Lookup Input]"
+              endId="Package\Vehicles\Lookup Towing and Articulation.Inputs[Lookup Input]"
               name="Lookup Match Output"
-              startId="Package\Vehicles\Lookup Was Vehicle Left Hand Drive.Outputs[Lookup Match Output]" />
+              startId="Package\Vehicles\Lookup Vehicle Type.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Vehicles.Paths[Lookup Match Output1]"
-              endId="Package\Vehicles\Lookup Vehicle Propulsion Code.Inputs[Lookup Input]"
+              endId="Package\Vehicles\Lookup Driver Home Area Type.Inputs[Lookup Input]"
               name="Lookup Match Output"
-              startId="Package\Vehicles\Lookup Journey Purpose of Driver.Outputs[Lookup Match Output]" />
+              startId="Package\Vehicles\Lookup Driver IMD Decile.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Vehicles.Paths[Lookup Match Output16]"
               endId="Package\Vehicles\Vehicle Table.Inputs[OLE DB Destination Input]"
@@ -4333,25 +4351,25 @@ where (CreatedDate &lt; ? and CreatedDate &gt;= ?) or (UpdatedDate &lt; ? and Up
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="116.8,41.6"
-          Id="Package\Vehicles"
-          TopLeft="369.285720574613,256.941180074091" />
-        <NodeLayout
-          Size="161.6,41.6"
-          Id="Package\Truncate Vehicles"
-          TopLeft="342.857148695965,19.882353220019" />
+          Size="188,41.6"
+          Id="Package\Get LSET, CET Vehicles"
+          TopLeft="330.000005619867,175.88235540786" />
         <NodeLayout
           Size="156.8,41.6"
           Id="Package\Set CET Vehicles"
           TopLeft="342.142862969516,94.8235307416289" />
         <NodeLayout
-          Size="188,41.6"
-          Id="Package\Get LSET, CET Vehicles"
-          TopLeft="330.000005619867,175.88235540786" />
-        <NodeLayout
           Size="161.6,41.6"
           Id="Package\Set LSET Vehicles"
           TopLeft="343.571434422415,334.176475274934" />
+        <NodeLayout
+          Size="161.6,41.6"
+          Id="Package\Truncate Vehicles"
+          TopLeft="342.857148695965,19.882353220019" />
+        <NodeLayout
+          Size="116.8,41.6"
+          Id="Package\Vehicles"
+          TopLeft="369.285720574613,256.941180074091" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="422.100005832741,61.482353220019">
@@ -4449,6 +4467,10 @@ where (CreatedDate &lt; ? and CreatedDate &gt;= ?) or (UpdatedDate &lt; ? and Up
       <GraphLayout
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="140.8,41.6"
+          Id="Package\Vehicles\Vehicle Table"
+          TopLeft="916.071444172033,438.750006153302" />
+        <NodeLayout
           Size="249.6,41.6"
           Id="Package\Vehicles\Lookup Was Vehicle Left Hand Drive"
           TopLeft="435.357150271231,349.173532883889" />
@@ -4473,6 +4495,10 @@ where (CreatedDate &lt; ? and CreatedDate &gt;= ?) or (UpdatedDate &lt; ? and Up
           Id="Package\Vehicles\Lookup Age Band"
           TopLeft="25.5357147205853,252.629413882836" />
         <NodeLayout
+          Size="152,41.6"
+          Id="Package\Vehicles\Source Vehicles"
+          TopLeft="41.6000006811959,45.1176476915815" />
+        <NodeLayout
           Size="228,41.6"
           Id="Package\Vehicles\Lookup Vehicle Propulsion Code"
           TopLeft="21.0714289302734,447.629416617637" />
@@ -4492,10 +4518,6 @@ where (CreatedDate &lt; ? and CreatedDate &gt;= ?) or (UpdatedDate &lt; ? and Up
           Size="226.4,41.6"
           Id="Package\Vehicles\Lookup Driver Home Area Type"
           TopLeft="614.821439041776,445.717651884943" />
-        <NodeLayout
-          Size="140.8,41.6"
-          Id="Package\Vehicles\Vehicle Table"
-          TopLeft="916.071444172033,438.750006153302" />
         <NodeLayout
           Size="175.2,41.6"
           Id="Package\Vehicles\Lookup Vehicle Type"
@@ -4520,6 +4542,174 @@ where (CreatedDate &lt; ? and CreatedDate &gt;= ?) or (UpdatedDate &lt; ? and Up
           Size="205.6,41.6"
           Id="Package\Vehicles\Lookup 1st Point of Impact"
           TopLeft="880.000014986312,347.261768151195" />
+        <EdgeLayout
+          Id="Package\Vehicles.Paths[Lookup Match Output15]"
+          TopLeft="137.025000351242,395.552944715624">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,52.0764719020129"
+              Start="0,0"
+              End="0,44.5764719020129">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.5764719020129" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,16.4835484510064,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Vehicles.Paths[Lookup Match Output14]"
+          TopLeft="435.357150271231,372.363238799757">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-177.57857849902,0"
+              Start="0,0"
+              End="-170.07857849902,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-170.07857849902,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-133.23067596826,5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Vehicles.Paths[Lookup Match Output13]"
+          TopLeft="880.000014986312,369.017650517542">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-195.042864715081,0"
+              Start="0,0"
+              End="-187.542864715081,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-187.542864715081,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-141.962819076291,5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Vehicles.Paths[Lookup Match Output12]"
+          TopLeft="981.300014773438,288.494119684753">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,58.767648466442"
+              Start="0,0"
+              End="0,51.267648466442">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,51.267648466442" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,19.829136733221,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Vehicles.Paths[Lookup Match Output11]"
+          TopLeft="789.64286650322,270.222060184227">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="65.3571480573439,0"
+              Start="0,0"
+              End="57.8571480573439,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="57.8571480573439,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-19.2628126900781,5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Vehicles.Paths[Lookup Match Output10]"
+          TopLeft="490.107147184562,272.272059500527">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="59.535719318658,0"
+              Start="0,0"
+              End="52.035719318658,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="52.035719318658,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-22.173527059421,5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Vehicles.Paths[Lookup Match Output9]"
+          TopLeft="186.335714720585,272.611766100095">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="67.7714324639767,0"
+              Start="0,0"
+              End="60.2714324639767,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="60.2714324639767,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-18.0556704867617,5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Vehicles.Paths[Lookup Match Output8]"
           TopLeft="104.578571772211,185.25882411927">
@@ -4546,169 +4736,169 @@ where (CreatedDate &lt; ? and CreatedDate &gt;= ?) or (UpdatedDate &lt; ? and Up
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Vehicles.Paths[Lookup Match Output7]"
-          TopLeft="186.335714720585,272.611766100095">
+          TopLeft="243.392861287813,164.936765302444">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="67.7714324639767,0"
+              EndConnector="-51.7714324639765,0"
               Start="0,0"
-              End="60.2714324639767,0">
+              End="-44.2714324639765,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="60.2714324639767,0" />
+                    End="-44.2714324639765,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-18.0556704867617,5,96.3827734375,11.609375"
+              BoundingBox="-70.3271029507383,5,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Vehicles.Paths[Lookup Match Output6]"
-          TopLeft="490.107147184562,272.272059500527">
+          TopLeft="535.357151974221,163.502941752923">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="59.535719318658,0"
+              EndConnector="-56.764290686408,0"
               Start="0,0"
-              End="52.035719318658,0">
+              End="-49.264290686408,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="52.035719318658,0" />
+                    End="-49.264290686408,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-22.173527059421,5,96.3827734375,11.609375"
+              BoundingBox="-72.823532061954,5,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Vehicles.Paths[Lookup Match Output5]"
-          TopLeft="789.64286650322,270.222060184227">
+          TopLeft="854.107157402501,162.069118203403">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="65.3571480573439,0"
+              EndConnector="-121.15000542828,0"
               Start="0,0"
-              End="57.8571480573439,0">
+              End="-113.65000542828,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="57.8571480573439,0" />
+                    End="-113.65000542828,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-19.2628126900781,5,96.3827734375,11.609375"
+              BoundingBox="-105.01638943289,5,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Vehicles.Paths[Lookup Match Output4]"
-          TopLeft="981.300014773438,288.494119684753">
+          TopLeft="949.982157349283,83.9352932864811">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,58.767648466442"
+              EndConnector="0,57.8117661000949"
               Start="0,0"
-              End="0,51.267648466442">
+              End="0,50.3117661000949">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,51.267648466442" />
+                    End="0,50.3117661000949" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,19.829136733221,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,19.3511955500475,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Vehicles.Paths[Lookup Match Output3]"
-          TopLeft="880.000014986312,369.017650517542">
+          TopLeft="713.985722575626,64.0485293058578">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-195.042864715081,0"
+              EndConnector="133.871434720439,0"
               Start="0,0"
-              End="-187.542864715081,0">
+              End="126.371434720439,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-187.542864715081,0" />
+                    End="126.371434720439,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-141.962819076291,5,96.3827734375,11.609375"
+              BoundingBox="14.9943306414695,5,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Vehicles.Paths[Lookup Match Output2]"
-          TopLeft="435.357150271231,372.363238799757">
+          TopLeft="424.307147099412,63.7191182489833">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-177.57857849902,0"
+              EndConnector="62.478575476214,0"
               Start="0,0"
-              End="-170.07857849902,0">
+              End="54.978575476214,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-170.07857849902,0" />
+                    End="54.978575476214,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-133.23067596826,5,96.3827734375,11.609375"
+              BoundingBox="-20.702098980643,5,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Vehicles.Paths[Lookup Match Output1]"
-          TopLeft="137.025000351242,395.552944715624">
+          TopLeft="528.757148483092,467.754416731588">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,52.0764719020129"
+              EndConnector="86.064290558684,0"
               Start="0,0"
-              End="0,44.5764719020129">
+              End="78.564290558684,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,44.5764719020129" />
+                    End="78.564290558684,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,16.4835484510064,96.3827734375,11.609375"
+              BoundingBox="-8.90924143940801,5,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -4737,6 +4927,28 @@ where (CreatedDate &lt; ? and CreatedDate &gt;= ?) or (UpdatedDate &lt; ? and Up
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\Vehicles.Paths[OLE DB Source Output]"
+          TopLeft="193.600000681196,64.1970594321568">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="55.5071464182161,0"
+              Start="0,0"
+              End="48.0071464182161,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="48.0071464182161,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Vehicles.Paths[Lookup Match Output16]"
           TopLeft="841.221439041776,463.033829019123">
           <EdgeLayout.Curve>
@@ -4760,203 +4972,22 @@ where (CreatedDate &lt; ? and CreatedDate &gt;= ?) or (UpdatedDate &lt; ? and Up
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Vehicles.Paths[Lookup Match Output15]"
-          TopLeft="528.757148483092,467.754416731588">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="86.064290558684,0"
-              Start="0,0"
-              End="78.564290558684,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="78.564290558684,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-8.90924143940801,5,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Vehicles.Paths[Lookup Match Output14]"
-          TopLeft="424.307147099412,63.7191182489833">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="62.478575476214,0"
-              Start="0,0"
-              End="54.978575476214,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="54.978575476214,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-20.702098980643,5,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Vehicles.Paths[Lookup Match Output13]"
-          TopLeft="713.985722575626,64.0485293058578">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="133.871434720439,0"
-              Start="0,0"
-              End="126.371434720439,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="126.371434720439,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="14.9943306414695,5,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Vehicles.Paths[Lookup Match Output12]"
-          TopLeft="949.982157349283,83.9352932864811">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,57.8117661000949"
-              Start="0,0"
-              End="0,50.3117661000949">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,50.3117661000949" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,19.3511955500475,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Vehicles.Paths[Lookup Match Output11]"
-          TopLeft="854.107157402501,162.069118203403">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-121.15000542828,0"
-              Start="0,0"
-              End="-113.65000542828,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-113.65000542828,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-105.01638943289,5,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Vehicles.Paths[Lookup Match Output10]"
-          TopLeft="535.357151974221,163.502941752923">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-56.764290686408,0"
-              Start="0,0"
-              End="-49.264290686408,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-49.264290686408,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-72.823532061954,5,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Vehicles.Paths[Lookup Match Output9]"
-          TopLeft="243.392861287813,164.936765302444">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-51.7714324639765,0"
-              Start="0,0"
-              End="-44.2714324639765,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-44.2714324639765,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-70.3271029507383,5,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="152,41.6"
-          Id="Package\Vehicles\Source Vehicles"
-          TopLeft="41.6000006811959,45.1176476915815" />
-        <EdgeLayout
-          Id="Package\Vehicles.Paths[OLE DB Source Output]"
-          TopLeft="193.600000681196,64.1970594321568">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="55.5071464182161,0"
-              Start="0,0"
-              End="48.0071464182161,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="48.0071464182161,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Vehicles\Vehicle Table">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Vehicles\Lookup Was Vehicle Left Hand Drive">
     <Properties>
@@ -5096,6 +5127,14 @@ where (CreatedDate &lt; ? and CreatedDate &gt;= ?) or (UpdatedDate &lt; ? and Up
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+    design-time-name="Package\Vehicles\Source Vehicles">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Vehicles\Lookup Vehicle Propulsion Code">
     <Properties>
       <Property>
@@ -5207,19 +5246,6 @@ where (CreatedDate &lt; ? and CreatedDate &gt;= ?) or (UpdatedDate &lt; ? and Up
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Vehicles\Vehicle Table">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -5356,14 +5382,6 @@ where (CreatedDate &lt; ? and CreatedDate &gt;= ?) or (UpdatedDate &lt; ? and Up
         <Value
           type="q4:string">0</Value>
       </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Vehicles\Source Vehicles">
-    <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>

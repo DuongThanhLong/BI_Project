@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="48"
-  DTS:VersionGUID="{1BA5647F-F64A-4045-9432-4B40FC59F3B4}">
+  DTS:VersionBuild="49"
+  DTS:VersionGUID="{916D4DEF-E1CA-4A99-B0CE-F80C2B411D1C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -65,10 +65,28 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
+      DTS:DTSID="{600AE43C-D633-426E-9C20-E51D9C974D17}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="CETRes1">
+      <DTS:VariableValue
+        DTS:DataType="7">1/3/2022</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
       DTS:DTSID="{2977D83C-D643-4393-8C23-47A205577B85}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="LSETRes">
+      <DTS:VariableValue
+        DTS:DataType="7">12/31/2021</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{26DD458D-7910-4093-BD0B-54C67EEFC1AF}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="LSETRes1">
       <DTS:VariableValue
         DTS:DataType="7">12/31/2021</DTS:VariableValue>
     </DTS:Variable>
@@ -92,10 +110,10 @@
           SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ResultBinding
             SQLTask:ResultName="LSET"
-            SQLTask:DtsVariableName="User::LSETRes" />
+            SQLTask:DtsVariableName="User::LSETRes1" />
           <SQLTask:ResultBinding
             SQLTask:ResultName="CET"
-            SQLTask:DtsVariableName="User::CETRes" />
+            SQLTask:DtsVariableName="User::CETRes1" />
         </SQLTask:SqlTaskData>
       </DTS:ObjectData>
     </DTS:Executable>
@@ -715,7 +733,7 @@ where (CreatedDate &lt; ? and CreatedDate &gt;= ?) and (UpdatedDate &lt; ? and U
                 <property
                   dataType="System.String"
                   description="The mappings between the parameters in the SQL command and variables."
-                  name="ParameterMapping">"Parameter0:Input",{3E4BC02C-D84F-459E-9266-B7F2A23E0261};"Parameter1:Input",{2977D83C-D643-4393-8C23-47A205577B85};"Parameter2:Input",{3E4BC02C-D84F-459E-9266-B7F2A23E0261};"Parameter3:Input",{2977D83C-D643-4393-8C23-47A205577B85};</property>
+                  name="ParameterMapping">"Parameter0:Input",{600AE43C-D633-426E-9C20-E51D9C974D17};"Parameter1:Input",{26DD458D-7910-4093-BD0B-54C67EEFC1AF};"Parameter2:Input",{600AE43C-D633-426E-9C20-E51D9C974D17};"Parameter3:Input",{26DD458D-7910-4093-BD0B-54C67EEFC1AF};</property>
               </properties>
               <connections>
                 <connection
@@ -1230,25 +1248,25 @@ where (CreatedDate &lt; ? and CreatedDate &gt;= ?) and (UpdatedDate &lt; ? and U
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="175.2,41.6"
+          Id="Package\Get LSET, CET LSOA"
+          TopLeft="365.000006215913,217.176473634053" />
+        <NodeLayout
           Size="103.2,41.6"
           Id="Package\LSOA"
           TopLeft="393.57143527391,308.176474910294" />
-        <NodeLayout
-          Size="148.8,41.6"
-          Id="Package\Truncate LSOA"
-          TopLeft="379.285720744912,35.9411769746497" />
         <NodeLayout
           Size="144,41.6"
           Id="Package\Set CET LSOA"
           TopLeft="377.857149292012,118.529413427036" />
         <NodeLayout
-          Size="175.2,41.6"
-          Id="Package\Get LSET, CET LSOA"
-          TopLeft="365.000006215913,217.176473634053" />
-        <NodeLayout
           Size="148.8,41.6"
           Id="Package\Set LSET LSOA"
           TopLeft="377.142863565562,400.70588797269" />
+        <NodeLayout
+          Size="148.8,41.6"
+          Id="Package\Truncate LSOA"
+          TopLeft="379.285720744912,35.9411769746497" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="451.771435018462,77.5411769746497">
@@ -1346,9 +1364,9 @@ where (CreatedDate &lt; ? and CreatedDate &gt;= ?) and (UpdatedDate &lt; ? and U
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="146.4,41.6"
-          Id="Package\LSOA\Remove space"
-          TopLeft="300.00000510897,148.352943257065" />
+          Size="139.2,41.6"
+          Id="Package\LSOA\Source LSOA"
+          TopLeft="54.2857152101946,52.0000007292804" />
         <NodeLayout
           Size="210.4,41.6"
           Id="Package\LSOA\Get 4 first character of pcd8"
@@ -1358,9 +1376,57 @@ where (CreatedDate &lt; ? and CreatedDate &gt;= ?) and (UpdatedDate &lt; ? and U
           Id="Package\LSOA\LSOA_Table"
           TopLeft="303,334" />
         <NodeLayout
+          Size="146.4,41.6"
+          Id="Package\LSOA\Remove space"
+          TopLeft="300.00000510897,148.352943257065" />
+        <NodeLayout
           Size="155.2,41.6"
           Id="Package\LSOA\Data Conversion"
           TopLeft="291.428576391571,234.000003281761" />
+        <EdgeLayout
+          Id="Package\LSOA.Paths[OLE DB Source Output]"
+          TopLeft="193.485715210195,74.3294125154358">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="72.2285750291784,0"
+              Start="0,0"
+              End="64.7285750291784,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="64.7285750291784,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\LSOA.Paths[Derived Column Output1]"
+          TopLeft="371.114290750271,189.952943257065">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,44.047060024696"
+              Start="0,0"
+              End="0,36.547060024696">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.547060024696" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\LSOA.Paths[Derived Column Output]"
           TopLeft="372.057147674172,96.6588243015913">
@@ -1405,59 +1471,11 @@ where (CreatedDate &lt; ? and CreatedDate &gt;= ?) and (UpdatedDate &lt; ? and U
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\LSOA.Paths[Derived Column Output1]"
-          TopLeft="371.114290750271,189.952943257065">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,44.047060024696"
-              Start="0,0"
-              End="0,36.547060024696">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,36.547060024696" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="139.2,41.6"
-          Id="Package\LSOA\Source LSOA"
-          TopLeft="54.2857152101946,52.0000007292804" />
-        <EdgeLayout
-          Id="Package\LSOA.Paths[OLE DB Source Output]"
-          TopLeft="193.485715210195,74.3294125154358">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="72.2285750291784,0"
-              Start="0,0"
-              End="64.7285750291784,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="64.7285750291784,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\LSOA\LSOA_Table">
+    design-time-name="Package\LSOA\Source LSOA">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1470,7 +1488,7 @@ where (CreatedDate &lt; ? and CreatedDate &gt;= ?) and (UpdatedDate &lt; ? and U
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\LSOA\Source LSOA">
+    design-time-name="Package\LSOA\LSOA_Table">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="39"
-  DTS:VersionGUID="{56BBB2A8-6326-4182-B5ED-316DDD2B6B34}">
+  DTS:VersionBuild="40"
+  DTS:VersionGUID="{2C8B6552-0FF1-487B-B1CF-B0CA94A8ACCB}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -83,10 +83,28 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
+      DTS:DTSID="{E9E1A894-9BCD-4453-A711-FBDF50E6003E}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="CETRes3">
+      <DTS:VariableValue
+        DTS:DataType="7">1/3/2022</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
       DTS:DTSID="{58501EBB-2F64-4686-A605-90128D358BBE}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="LSETRes">
+      <DTS:VariableValue
+        DTS:DataType="7">12/31/2021</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{900BD825-BE33-4CA2-9E24-7760DC89C007}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="LSETRes1">
       <DTS:VariableValue
         DTS:DataType="7">12/31/2021</DTS:VariableValue>
     </DTS:Variable>
@@ -110,10 +128,10 @@
           SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ResultBinding
             SQLTask:ResultName="LSET"
-            SQLTask:DtsVariableName="User::LSETRes" />
+            SQLTask:DtsVariableName="User::LSETRes1" />
           <SQLTask:ResultBinding
             SQLTask:ResultName="CET"
-            SQLTask:DtsVariableName="User::CETRes2" />
+            SQLTask:DtsVariableName="User::CETRes3" />
         </SQLTask:SqlTaskData>
       </DTS:ObjectData>
     </DTS:Executable>
@@ -469,7 +487,7 @@ where (CreatedDate &lt; ? and CreatedDate &gt;= ?) or (UpdatedDate &lt; ? and Up
                 <property
                   dataType="System.String"
                   description="The mappings between the parameters in the SQL command and variables."
-                  name="ParameterMapping">"Parameter0:Input",{FA9837AA-2ADD-4F2D-B9B1-71412B3592A8};"Parameter1:Input",{58501EBB-2F64-4686-A605-90128D358BBE};"Parameter2:Input",{FA9837AA-2ADD-4F2D-B9B1-71412B3592A8};"Parameter3:Input",{58501EBB-2F64-4686-A605-90128D358BBE};</property>
+                  name="ParameterMapping">"Parameter0:Input",{E9E1A894-9BCD-4453-A711-FBDF50E6003E};"Parameter1:Input",{900BD825-BE33-4CA2-9E24-7760DC89C007};"Parameter2:Input",{E9E1A894-9BCD-4453-A711-FBDF50E6003E};"Parameter3:Input",{900BD825-BE33-4CA2-9E24-7760DC89C007};</property>
               </properties>
               <connections>
                 <connection
@@ -945,17 +963,13 @@ where (CreatedDate &lt; ? and CreatedDate &gt;= ?) or (UpdatedDate &lt; ? and Up
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="122.4,41.6"
-          Id="Package\PostCode"
-          TopLeft="332.142862799217,275.294121507955" />
-        <NodeLayout
-          Size="167.2,41.6"
-          Id="Package\Truncate PostCode"
-          TopLeft="300.00000510897,18.3529414338637" />
-        <NodeLayout
           Size="193.6,41.6"
           Id="Package\Get LSET, CET PostCode"
           TopLeft="297.85714792962,188.117649697103" />
+        <NodeLayout
+          Size="122.4,41.6"
+          Id="Package\PostCode"
+          TopLeft="332.142862799217,275.294121507955" />
         <NodeLayout
           Size="162.4,41.6"
           Id="Package\Set CET PostCode"
@@ -964,6 +978,10 @@ where (CreatedDate &lt; ? and CreatedDate &gt;= ?) or (UpdatedDate &lt; ? and Up
           Size="167.2,41.6"
           Id="Package\Set LSET PostCode"
           TopLeft="308.571433826369,368.588240463429" />
+        <NodeLayout
+          Size="167.2,41.6"
+          Id="Package\Truncate PostCode"
+          TopLeft="300.00000510897,18.3529414338637" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="385.257148014769,59.9529414338637">
@@ -1061,13 +1079,13 @@ where (CreatedDate &lt; ? and CreatedDate &gt;= ?) or (UpdatedDate &lt; ? and Up
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="156,41.6"
-          Id="Package\PostCode\PostCodes Table"
-          TopLeft="125.714287855188,127.705884143968" />
-        <NodeLayout
           Size="157.6,41.6"
           Id="Package\PostCode\Source PostCode"
           TopLeft="127.142859308087,11.4705883961648" />
+        <NodeLayout
+          Size="156,41.6"
+          Id="Package\PostCode\PostCodes Table"
+          TopLeft="125.714287855188,127.705884143968" />
         <EdgeLayout
           Id="Package\PostCode.Paths[OLE DB Source Output]"
           TopLeft="204.828573581638,53.0705883961648">
