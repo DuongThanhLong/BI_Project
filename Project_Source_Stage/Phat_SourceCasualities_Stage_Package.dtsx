@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="32"
-  DTS:VersionGUID="{3D95EAEF-7B7D-44BE-9E0C-ECE8C55A8C1F}">
+  DTS:VersionBuild="34"
+  DTS:VersionGUID="{BA64C510-25E0-4278-BE86-42F159038276}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -65,10 +65,28 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
+      DTS:DTSID="{CBF76D12-669C-4BDB-A822-4163845E9D0E}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="CETRes1">
+      <DTS:VariableValue
+        DTS:DataType="7">1/3/2022</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
       DTS:DTSID="{EE8FF482-E464-4E2A-8A75-84A2F84C9110}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="LSETRes">
+      <DTS:VariableValue
+        DTS:DataType="7">12/31/2021</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{91812632-9958-47D1-BC81-779030E2C907}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="LSETRes1">
       <DTS:VariableValue
         DTS:DataType="7">12/31/2021</DTS:VariableValue>
     </DTS:Variable>
@@ -369,6 +387,12 @@
                       refId="Package\Casualties\Casualties Table.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
                       dataType="dbTimeStamp"
                       name="UpdatedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Casualties\Casualties Table.Inputs[OLE DB Destination Input].ExternalColumns[DoTuoi]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="DoTuoi" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -454,7 +478,7 @@ where [refTable].[code] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Casualties\189:invalid};</property>
+                  name="ParameterMap">#{Package\Casualties\809:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -615,7 +639,7 @@ where [refTable].[code] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Casualties\180:invalid};</property>
+                  name="ParameterMap">#{Package\Casualties\810:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -776,7 +800,7 @@ where [refTable].[code] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Casualties\192:invalid};</property>
+                  name="ParameterMap">#{Package\Casualties\811:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -937,7 +961,7 @@ where [refTable].[code] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Casualties\195:invalid};</property>
+                  name="ParameterMap">#{Package\Casualties\812:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1098,7 +1122,7 @@ where [refTable].[code] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Casualties\183:invalid};</property>
+                  name="ParameterMap">#{Package\Casualties\813:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1249,7 +1273,7 @@ where (CreatedDate &lt; ? and CreatedDate &gt;= ?) or (UpdatedDate &lt; ? or Upd
                 <property
                   dataType="System.String"
                   description="The mappings between the parameters in the SQL command and variables."
-                  name="ParameterMapping">"Parameter0:Input",{771DB535-0543-42D3-A76C-9DCB57575A1B};"Parameter1:Input",{EE8FF482-E464-4E2A-8A75-84A2F84C9110};"Parameter2:Input",{771DB535-0543-42D3-A76C-9DCB57575A1B};"Parameter3:Input",{EE8FF482-E464-4E2A-8A75-84A2F84C9110};</property>
+                  name="ParameterMapping">"Parameter0:Input",{CBF76D12-669C-4BDB-A822-4163845E9D0E};"Parameter1:Input",{91812632-9958-47D1-BC81-779030E2C907};"Parameter2:Input",{CBF76D12-669C-4BDB-A822-4163845E9D0E};"Parameter3:Input",{91812632-9958-47D1-BC81-779030E2C907};</property>
               </properties>
               <connections>
                 <connection
@@ -1741,10 +1765,10 @@ where (CreatedDate &lt; ? and CreatedDate &gt;= ?) or (UpdatedDate &lt; ? or Upd
           SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ResultBinding
             SQLTask:ResultName="LSET"
-            SQLTask:DtsVariableName="User::LSETRes" />
+            SQLTask:DtsVariableName="User::LSETRes1" />
           <SQLTask:ResultBinding
             SQLTask:ResultName="CET"
-            SQLTask:DtsVariableName="User::CETRes" />
+            SQLTask:DtsVariableName="User::CETRes1" />
         </SQLTask:SqlTaskData>
       </DTS:ObjectData>
     </DTS:Executable>
@@ -1851,21 +1875,21 @@ where (CreatedDate &lt; ? and CreatedDate &gt;= ?) or (UpdatedDate &lt; ? or Upd
           Id="Package\Casualties"
           TopLeft="384.732146794737,271.738237632681" />
         <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\Truncate Casualties"
-          TopLeft="349.285720234015,25.2352944715625" />
+          Size="196.8,41.6"
+          Id="Package\Get LSET, CET Casualties"
+          TopLeft="350.000005960464,191.941179162491" />
         <NodeLayout
           Size="165.6,41.6"
           Id="Package\Set CET Casualties"
           TopLeft="359.285720404314,103.235295565483" />
         <NodeLayout
-          Size="196.8,41.6"
-          Id="Package\Get LSET, CET Casualties"
-          TopLeft="350.000005960464,191.941179162491" />
-        <NodeLayout
           Size="170.4,41.6"
           Id="Package\Set LSET Casualties"
           TopLeft="365.000006215913,364.76471099804" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Truncate Casualties"
+          TopLeft="349.285720234015,25.2352944715625" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="438.285720319164,66.8352944715625">
@@ -1963,10 +1987,6 @@ where (CreatedDate &lt; ? and CreatedDate &gt;= ?) or (UpdatedDate &lt; ? or Upd
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="160.8,41.6"
-          Id="Package\Casualties\Lookup Age Band"
-          TopLeft="766.805565700467,36.5895383634993" />
-        <NodeLayout
           Size="196,41.6"
           Id="Package\Casualties\Lookup Casualty Severity"
           TopLeft="743.789692292636,130.542479432723" />
@@ -1983,9 +2003,39 @@ where (CreatedDate &lt; ? and CreatedDate &gt;= ?) or (UpdatedDate &lt; ? or Upd
           Id="Package\Casualties\Lookup Casualty Type"
           TopLeft="500.329369899054,128.354245532818" />
         <NodeLayout
+          Size="160.8,41.6"
+          Id="Package\Casualties\Source Casualties"
+          TopLeft="46.6857150398955,35.9411769746497" />
+        <NodeLayout
           Size="154.4,41.6"
           Id="Package\Casualties\Casualties Table"
           TopLeft="206.80555600407,125.316338418382" />
+        <NodeLayout
+          Size="160.8,41.6"
+          Id="Package\Casualties\Lookup Age Band"
+          TopLeft="766.805565700467,36.5895383634993" />
+        <EdgeLayout
+          Id="Package\Casualties.Paths[OLE DB Source Output]"
+          TopLeft="207.485715039896,55.976471081572">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="62.5142895581775,0"
+              Start="0,0"
+              End="55.0142895581775,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="55.0142895581775,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Casualties.Paths[Lookup Match Output4]"
           TopLeft="695.539691183032,56.6830047225356">
@@ -2106,58 +2156,9 @@ where (CreatedDate &lt; ? and CreatedDate &gt;= ?) or (UpdatedDate &lt; ? or Upd
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="160.8,41.6"
-          Id="Package\Casualties\Source Casualties"
-          TopLeft="46.6857150398955,35.9411769746497" />
-        <EdgeLayout
-          Id="Package\Casualties.Paths[OLE DB Source Output]"
-          TopLeft="207.485715039896,55.976471081572">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="62.5142895581775,0"
-              Start="0,0"
-              End="55.0142895581775,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="55.0142895581775,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Casualties\Lookup Age Band">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Casualty_Age Band]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Casualties\Lookup Casualty Severity">
     <Properties>
@@ -2251,6 +2252,14 @@ where (CreatedDate &lt; ? and CreatedDate &gt;= ?) or (UpdatedDate &lt; ? or Upd
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+    design-time-name="Package\Casualties\Source Casualties">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Casualties\Casualties Table">
     <Properties>
       <Property>
@@ -2264,8 +2273,23 @@ where (CreatedDate &lt; ? and CreatedDate &gt;= ?) or (UpdatedDate &lt; ? or Upd
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Casualties\Source Casualties">
+    design-time-name="Package\Casualties\Lookup Age Band">
     <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Casualty_Age Band]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>
