@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{109348A8-9413-45A7-91BE-52CF361706DF}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{F5E4A506-7E4B-412E-B73A-5FAE436D9AAD}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2348,7 +2348,7 @@
                       name="Number_of_Casualties" />
                     <externalMetadataColumn
                       refId="Package\Accident\Accident_Table.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
-                      dataType="dbTimeStamp"
+                      dataType="dbDate"
                       name="Date" />
                     <externalMetadataColumn
                       refId="Package\Accident\Accident_Table.Inputs[OLE DB Destination Input].ExternalColumns[Day_of_Week]"
@@ -2358,7 +2358,9 @@
                       name="Day_of_Week" />
                     <externalMetadataColumn
                       refId="Package\Accident\Accident_Table.Inputs[OLE DB Destination Input].ExternalColumns[Time]"
-                      dataType="dbTimeStamp"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Time" />
                     <externalMetadataColumn
                       refId="Package\Accident\Accident_Table.Inputs[OLE DB Destination Input].ExternalColumns[Local_Authority_(District)]"

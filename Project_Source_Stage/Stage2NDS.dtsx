@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="121"
-  DTS:VersionGUID="{073BF8F8-D529-49FD-BF45-95D6543F7C25}">
+  DTS:VersionBuild="158"
+  DTS:VersionGUID="{48178A29-EC84-460B-9D73-F22AB75490D9}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -47,7 +47,8 @@
       DTS:refId="Package\Get Date"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{F868DF58-D6FD-48D6-848C-800864119FF6}"
+      DTS:Disabled="True"
+      DTS:DTSID="{26E2A4F6-B13B-442E-BB27-8ECE6B8C0D37}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Get Date"
@@ -58,146 +59,479 @@
           version="1">
           <components>
             <component
-              refId="Package\Get Date\Add new Column"
-              componentClassID="Microsoft.DerivedColumn"
-              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
-              name="Add new Column"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\Get Date\Add new Column.Inputs[Derived Column Input]"
-                  description="Input to the Derived Column Transformation"
-                  name="Derived Column Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Get Date\Add new Column.Inputs[Derived Column Input].Columns[Date]"
-                      cachedDataType="dbDate"
-                      cachedName="Date"
-                      lineageId="Package\Get Date\Load date from accident_NDS.Outputs[OLE DB Source Output].Columns[Date]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
+              refId="Package\Get Date\Date_Accident"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Date_Accident"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Accidents_NDS]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Get Date\Date_Accident.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-UML28IP.DATH_BI_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-UML28IP.DATH_BI_NDS]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
               <outputs>
                 <output
-                  refId="Package\Get Date\Add new Column.Outputs[Derived Column Output]"
-                  description="Default Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  name="Derived Column Output"
-                  synchronousInputId="Package\Get Date\Add new Column.Inputs[Derived Column Input]">
+                  refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Get Date\Add new Column.Outputs[Derived Column Output].Columns[Day]"
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].Columns[IDAccidentSK]"
                       dataType="i4"
-                      errorOrTruncationOperation="Computation"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Get Date\Add new Column.Outputs[Derived Column Output].Columns[Day]"
-                      name="Day"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">[DAY](#{Package\Get Date\Load date from accident_NDS.Outputs[OLE DB Source Output].Columns[Date]})</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">DAY(Date)</property>
-                      </properties>
-                    </outputColumn>
+                      externalMetadataColumnId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[IDAccidentSK]"
+                      lineageId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].Columns[IDAccidentSK]"
+                      name="IDAccidentSK"
+                      truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Get Date\Add new Column.Outputs[Derived Column Output].Columns[Quarter]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Computation"
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].Columns[Date]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Get Date\Add new Column.Outputs[Derived Column Output].Columns[Quarter]"
-                      name="Quarter"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">[DATEPART]("Quarter",#{Package\Get Date\Load date from accident_NDS.Outputs[OLE DB Source Output].Columns[Date]})</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">DATEPART("Quarter",Date)</property>
-                      </properties>
-                    </outputColumn>
+                      externalMetadataColumnId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[Date]"
+                      lineageId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].Columns[Date]"
+                      name="Date"
+                      truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Get Date\Add new Column.Outputs[Derived Column Output].Columns[Month]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Computation"
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].Columns[Day_of_Week]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Get Date\Add new Column.Outputs[Derived Column Output].Columns[Month]"
-                      name="Month"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">[MONTH](#{Package\Get Date\Load date from accident_NDS.Outputs[OLE DB Source Output].Columns[Date]})</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">MONTH(Date)</property>
-                      </properties>
-                    </outputColumn>
+                      externalMetadataColumnId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[Day_of_Week]"
+                      length="50"
+                      lineageId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].Columns[Day_of_Week]"
+                      name="Day_of_Week"
+                      truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Get Date\Add new Column.Outputs[Derived Column Output].Columns[Year]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Computation"
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].Columns[Time]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Get Date\Add new Column.Outputs[Derived Column Output].Columns[Year]"
-                      name="Year"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">[YEAR](#{Package\Get Date\Load date from accident_NDS.Outputs[OLE DB Source Output].Columns[Date]})</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">YEAR(Date)</property>
-                      </properties>
-                    </outputColumn>
+                      externalMetadataColumnId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[Time]"
+                      length="50"
+                      lineageId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].Columns[Time]"
+                      name="Time"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].Columns[TimeMoment]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[TimeMoment]"
+                      length="20"
+                      lineageId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].Columns[TimeMoment]"
+                      name="TimeMoment"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
-                  <externalMetadataColumns />
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[IDAccidentSK]"
+                      dataType="i4"
+                      name="IDAccidentSK" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[Accident_Index]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Accident_Index" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[Location_Easting_OSGR]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Location_Easting_OSGR" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[Location_Northing_OSGR]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Location_Northing_OSGR" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[Longitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Longitude" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[Latitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Latitude" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[Police_Force]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Police_Force" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[Accident_Severity]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Accident_Severity" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[Number_of_Vehicles]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Number_of_Vehicles" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[Number_of_Casualties]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Number_of_Casualties" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[Date]"
+                      dataType="dbDate"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[Day_of_Week]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Day_of_Week" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[Time]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Time" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[Local_Authority_(District)]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Local_Authority_(District)" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[Local_Authority_(Highway)]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Local_Authority_(Highway)" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[1st_Road_Class]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="1st_Road_Class" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[1st_Road_Number]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="1st_Road_Number" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[Road_Type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Road_Type" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[Speed_limit]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Speed_limit" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[Junction_Detail]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Junction_Detail" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[Junction_Control]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Junction_Control" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[2nd_Road_Class]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="2nd_Road_Class" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[2nd_Road_Number]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="2nd_Road_Number" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[Pedestrian_Crossing-Human_Control]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Pedestrian_Crossing-Human_Control" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[Pedestrian_Crossing-Physical_Facilities]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Pedestrian_Crossing-Physical_Facilities" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[Light_Conditions]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Light_Conditions" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[Weather_Conditions]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Weather_Conditions" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[Road_Surface_Conditions]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Road_Surface_Conditions" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[Special_Conditions_at_Site]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Special_Conditions_at_Site" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[Carriageway_Hazards]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Carriageway_Hazards" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[Urban_or_Rural_Area]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Urban_or_Rural_Area" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[Did_Police_Officer_Attend_Scene_of_Accident]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Did_Police_Officer_Attend_Scene_of_Accident" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[LSOA_of_Accident_Location]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="LSOA_of_Accident_Location" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[1stRoadClass_Name]"
+                      dataType="wstr"
+                      length="255"
+                      name="1stRoadClass_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[2ndRoadClass_Name]"
+                      dataType="wstr"
+                      length="255"
+                      name="2ndRoadClass_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[Accident Severity_Name]"
+                      dataType="wstr"
+                      length="255"
+                      name="Accident Severity_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[Day of Week_Name]"
+                      dataType="wstr"
+                      length="255"
+                      name="Day of Week_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[Police Force_Name]"
+                      dataType="wstr"
+                      length="255"
+                      name="Police Force_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[Local Authority District._Name]"
+                      dataType="wstr"
+                      length="255"
+                      name="Local Authority District._Name" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[Light Condition._Name]"
+                      dataType="wstr"
+                      length="255"
+                      name="Light Condition._Name" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[Weather Condition_Name]"
+                      dataType="wstr"
+                      length="255"
+                      name="Weather Condition_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[Road Surface_Name]"
+                      dataType="wstr"
+                      length="255"
+                      name="Road Surface_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[Did_Police_Officer_Attend_Scene_of_Accident_Name]"
+                      dataType="wstr"
+                      length="255"
+                      name="Did_Police_Officer_Attend_Scene_of_Accident_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[Local Authority Highway_Name]"
+                      dataType="wstr"
+                      length="255"
+                      name="Local Authority Highway_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[Road Type_Name]"
+                      dataType="wstr"
+                      length="255"
+                      name="Road Type_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[Junction Details_Name]"
+                      dataType="wstr"
+                      length="255"
+                      name="Junction Details_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[Junction Control_Name]"
+                      dataType="wstr"
+                      length="255"
+                      name="Junction Control_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[Ped Cross Human_Name]"
+                      dataType="wstr"
+                      length="255"
+                      name="Ped Cross Human_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[Ped Cross Physical_Name]"
+                      dataType="wstr"
+                      length="255"
+                      name="Ped Cross Physical_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[Special Condition at Site_Name]"
+                      dataType="wstr"
+                      length="255"
+                      name="Special Condition at Site_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[Carriageway Hazards_Name]"
+                      dataType="wstr"
+                      length="255"
+                      name="Carriageway Hazards_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[Urban Rural_Name]"
+                      dataType="wstr"
+                      length="255"
+                      name="Urban Rural_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      name="CreatedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      name="UpdatedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[Built_up_Road]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Built_up_Road" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].ExternalColumns[TimeMoment]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="TimeMoment" />
+                  </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Get Date\Add new Column.Outputs[Derived Column Error Output]"
-                  description="Error Output of the Derived Column Transformation"
-                  exclusionGroup="1"
+                  refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Error Output]"
                   isErrorOut="true"
-                  name="Derived Column Error Output"
-                  synchronousInputId="Package\Get Date\Add new Column.Inputs[Derived Column Input]">
+                  name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Get Date\Add new Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Get Date\Add new Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Get Date\Add new Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Get Date\Add new Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Error Output].Columns[IDAccidentSK]"
+                      dataType="i4"
+                      lineageId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Error Output].Columns[IDAccidentSK]"
+                      name="IDAccidentSK" />
+                    <outputColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Error Output].Columns[Date]"
+                      dataType="dbDate"
+                      lineageId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Error Output].Columns[Date]"
+                      name="Date" />
+                    <outputColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Error Output].Columns[Day_of_Week]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Error Output].Columns[Day_of_Week]"
+                      name="Day_of_Week" />
+                    <outputColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Error Output].Columns[Time]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Error Output].Columns[Time]"
+                      name="Time" />
+                    <outputColumn
+                      refId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Error Output].Columns[TimeMoment]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Error Output].Columns[TimeMoment]"
+                      name="TimeMoment" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -276,92 +610,86 @@
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
+                      refId="Package\Get Date\Date_NDS.Inputs[OLE DB Destination Input].Columns[IDAccidentSK]"
+                      cachedDataType="i4"
+                      cachedName="IDAccidentSK"
+                      externalMetadataColumnId="Package\Get Date\Date_NDS.Inputs[OLE DB Destination Input].ExternalColumns[IDAccidentSK]"
+                      lineageId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].Columns[IDAccidentSK]" />
+                    <inputColumn
                       refId="Package\Get Date\Date_NDS.Inputs[OLE DB Destination Input].Columns[Date]"
                       cachedDataType="dbDate"
                       cachedName="Date"
                       externalMetadataColumnId="Package\Get Date\Date_NDS.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
-                      lineageId="Package\Get Date\Load date from accident_NDS.Outputs[OLE DB Source Output].Columns[Date]" />
+                      lineageId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].Columns[Date]" />
+                    <inputColumn
+                      refId="Package\Get Date\Date_NDS.Inputs[OLE DB Destination Input].Columns[Day_of_Week]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Day_of_Week"
+                      externalMetadataColumnId="Package\Get Date\Date_NDS.Inputs[OLE DB Destination Input].ExternalColumns[Day_of_Week]"
+                      lineageId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].Columns[Day_of_Week]" />
+                    <inputColumn
+                      refId="Package\Get Date\Date_NDS.Inputs[OLE DB Destination Input].Columns[Time]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Time"
+                      externalMetadataColumnId="Package\Get Date\Date_NDS.Inputs[OLE DB Destination Input].ExternalColumns[Time]"
+                      lineageId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].Columns[Time]" />
+                    <inputColumn
+                      refId="Package\Get Date\Date_NDS.Inputs[OLE DB Destination Input].Columns[TimeMoment]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="TimeMoment"
+                      externalMetadataColumnId="Package\Get Date\Date_NDS.Inputs[OLE DB Destination Input].ExternalColumns[TimeMoment]"
+                      lineageId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].Columns[TimeMoment]" />
                     <inputColumn
                       refId="Package\Get Date\Date_NDS.Inputs[OLE DB Destination Input].Columns[Day]"
                       cachedDataType="i4"
                       cachedName="Day"
                       externalMetadataColumnId="Package\Get Date\Date_NDS.Inputs[OLE DB Destination Input].ExternalColumns[Day]"
-                      lineageId="Package\Get Date\Add new Column.Outputs[Derived Column Output].Columns[Day]" />
-                    <inputColumn
-                      refId="Package\Get Date\Date_NDS.Inputs[OLE DB Destination Input].Columns[Quarter]"
-                      cachedDataType="i4"
-                      cachedName="Quarter"
-                      externalMetadataColumnId="Package\Get Date\Date_NDS.Inputs[OLE DB Destination Input].ExternalColumns[Quarter]"
-                      lineageId="Package\Get Date\Add new Column.Outputs[Derived Column Output].Columns[Quarter]" />
+                      lineageId="Package\Get Date\Split day, month, quarter, year.Outputs[Derived Column Output].Columns[Day]" />
                     <inputColumn
                       refId="Package\Get Date\Date_NDS.Inputs[OLE DB Destination Input].Columns[Month]"
                       cachedDataType="i4"
                       cachedName="Month"
                       externalMetadataColumnId="Package\Get Date\Date_NDS.Inputs[OLE DB Destination Input].ExternalColumns[Month]"
-                      lineageId="Package\Get Date\Add new Column.Outputs[Derived Column Output].Columns[Month]" />
+                      lineageId="Package\Get Date\Split day, month, quarter, year.Outputs[Derived Column Output].Columns[Month]" />
+                    <inputColumn
+                      refId="Package\Get Date\Date_NDS.Inputs[OLE DB Destination Input].Columns[Quarter]"
+                      cachedDataType="i4"
+                      cachedName="Quarter"
+                      externalMetadataColumnId="Package\Get Date\Date_NDS.Inputs[OLE DB Destination Input].ExternalColumns[Quarter]"
+                      lineageId="Package\Get Date\Split day, month, quarter, year.Outputs[Derived Column Output].Columns[Quarter]" />
                     <inputColumn
                       refId="Package\Get Date\Date_NDS.Inputs[OLE DB Destination Input].Columns[Year]"
                       cachedDataType="i4"
                       cachedName="Year"
                       externalMetadataColumnId="Package\Get Date\Date_NDS.Inputs[OLE DB Destination Input].ExternalColumns[Year]"
-                      lineageId="Package\Get Date\Add new Column.Outputs[Derived Column Output].Columns[Year]" />
-                    <inputColumn
-                      refId="Package\Get Date\Date_NDS.Inputs[OLE DB Destination Input].Columns[IDAccidentSK_NDS]"
-                      cachedDataType="i4"
-                      cachedName="IDAccidentSK_NDS"
-                      externalMetadataColumnId="Package\Get Date\Date_NDS.Inputs[OLE DB Destination Input].ExternalColumns[IDAccidentSK_NDS]"
-                      lineageId="Package\Get Date\Lookup.Outputs[Lookup Match Output].Columns[IDAccidentSK_NDS]" />
-                    <inputColumn
-                      refId="Package\Get Date\Date_NDS.Inputs[OLE DB Destination Input].Columns[CreatedDate]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="CreatedDate"
-                      externalMetadataColumnId="Package\Get Date\Date_NDS.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
-                      lineageId="Package\Get Date\Load date from accident_NDS.Outputs[OLE DB Source Output].Columns[CreatedDate]" />
-                    <inputColumn
-                      refId="Package\Get Date\Date_NDS.Inputs[OLE DB Destination Input].Columns[UpdatedDate]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="UpdatedDate"
-                      externalMetadataColumnId="Package\Get Date\Date_NDS.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
-                      lineageId="Package\Get Date\Load date from accident_NDS.Outputs[OLE DB Source Output].Columns[UpdatedDate]" />
+                      lineageId="Package\Get Date\Split day, month, quarter, year.Outputs[Derived Column Output].Columns[Year]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Get Date\Date_NDS.Inputs[OLE DB Destination Input].ExternalColumns[IDDate]"
+                      refId="Package\Get Date\Date_NDS.Inputs[OLE DB Destination Input].ExternalColumns[IDDate_NDS]"
                       dataType="i4"
-                      name="IDDate" />
+                      name="IDDate_NDS" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_NDS.Inputs[OLE DB Destination Input].ExternalColumns[IDAccidentSK]"
+                      dataType="i4"
+                      name="IDAccidentSK" />
                     <externalMetadataColumn
                       refId="Package\Get Date\Date_NDS.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
                       dataType="dbDate"
                       name="Date" />
                     <externalMetadataColumn
-                      refId="Package\Get Date\Date_NDS.Inputs[OLE DB Destination Input].ExternalColumns[Day]"
-                      dataType="i4"
-                      name="Day" />
-                    <externalMetadataColumn
-                      refId="Package\Get Date\Date_NDS.Inputs[OLE DB Destination Input].ExternalColumns[Quarter]"
-                      dataType="i4"
-                      name="Quarter" />
-                    <externalMetadataColumn
-                      refId="Package\Get Date\Date_NDS.Inputs[OLE DB Destination Input].ExternalColumns[Month]"
-                      dataType="i4"
-                      name="Month" />
-                    <externalMetadataColumn
-                      refId="Package\Get Date\Date_NDS.Inputs[OLE DB Destination Input].ExternalColumns[Year]"
-                      dataType="i4"
-                      name="Year" />
-                    <externalMetadataColumn
-                      refId="Package\Get Date\Date_NDS.Inputs[OLE DB Destination Input].ExternalColumns[IDAccidentSK_NDS]"
-                      dataType="i4"
-                      name="IDAccidentSK_NDS" />
-                    <externalMetadataColumn
-                      refId="Package\Get Date\Date_NDS.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
-                      dataType="dbTimeStamp"
-                      name="CreatedDate" />
-                    <externalMetadataColumn
-                      refId="Package\Get Date\Date_NDS.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
-                      dataType="dbTimeStamp"
-                      name="UpdatedDate" />
+                      refId="Package\Get Date\Date_NDS.Inputs[OLE DB Destination Input].ExternalColumns[Day_of_Week]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Day_of_Week" />
                     <externalMetadataColumn
                       refId="Package\Get Date\Date_NDS.Inputs[OLE DB Destination Input].ExternalColumns[Time]"
                       codePage="1252"
@@ -369,11 +697,27 @@
                       length="50"
                       name="Time" />
                     <externalMetadataColumn
-                      refId="Package\Get Date\Date_NDS.Inputs[OLE DB Destination Input].ExternalColumns[Session]"
+                      refId="Package\Get Date\Date_NDS.Inputs[OLE DB Destination Input].ExternalColumns[TimeMoment]"
                       codePage="1252"
                       dataType="str"
                       length="20"
-                      name="Session" />
+                      name="TimeMoment" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_NDS.Inputs[OLE DB Destination Input].ExternalColumns[Day]"
+                      dataType="i4"
+                      name="Day" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_NDS.Inputs[OLE DB Destination Input].ExternalColumns[Month]"
+                      dataType="i4"
+                      name="Month" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_NDS.Inputs[OLE DB Destination Input].ExternalColumns[Quarter]"
+                      dataType="i4"
+                      name="Quarter" />
+                    <externalMetadataColumn
+                      refId="Package\Get Date\Date_NDS.Inputs[OLE DB Destination Input].ExternalColumns[Year]"
+                      dataType="i4"
+                      name="Year" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -403,298 +747,144 @@
               </outputs>
             </component>
             <component
-              refId="Package\Get Date\Load date from accident_NDS"
-              componentClassID="Microsoft.OLEDBSource"
-              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
-              description="OLE DB Source"
-              name="Load date from accident_NDS"
-              usesDispositions="true"
-              version="7">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset"></property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select Date, CreatedDate, UpdatedDate from Accidents_NDS</property>
-                <property
-                  dataType="System.String"
-                  description="The variable that contains the SQL command to be executed."
-                  name="SqlCommandVariable"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">2</property>
-                <property
-                  dataType="System.String"
-                  description="The mappings between the parameters in the SQL command and variables."
-                  name="ParameterMapping"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Get Date\Load date from accident_NDS.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-UML28IP.DATH_BI_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-UML28IP.DATH_BI_NDS]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\Get Date\Load date from accident_NDS.Outputs[OLE DB Source Output]"
-                  name="OLE DB Source Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Get Date\Load date from accident_NDS.Outputs[OLE DB Source Output].Columns[Date]"
-                      dataType="dbDate"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Get Date\Load date from accident_NDS.Outputs[OLE DB Source Output].ExternalColumns[Date]"
-                      lineageId="Package\Get Date\Load date from accident_NDS.Outputs[OLE DB Source Output].Columns[Date]"
-                      name="Date"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Get Date\Load date from accident_NDS.Outputs[OLE DB Source Output].Columns[CreatedDate]"
-                      dataType="dbTimeStamp"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Get Date\Load date from accident_NDS.Outputs[OLE DB Source Output].ExternalColumns[CreatedDate]"
-                      lineageId="Package\Get Date\Load date from accident_NDS.Outputs[OLE DB Source Output].Columns[CreatedDate]"
-                      name="CreatedDate"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Get Date\Load date from accident_NDS.Outputs[OLE DB Source Output].Columns[UpdatedDate]"
-                      dataType="dbTimeStamp"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Get Date\Load date from accident_NDS.Outputs[OLE DB Source Output].ExternalColumns[UpdatedDate]"
-                      lineageId="Package\Get Date\Load date from accident_NDS.Outputs[OLE DB Source Output].Columns[UpdatedDate]"
-                      name="UpdatedDate"
-                      truncationRowDisposition="FailComponent" />
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Get Date\Load date from accident_NDS.Outputs[OLE DB Source Output].ExternalColumns[Date]"
-                      dataType="dbDate"
-                      name="Date" />
-                    <externalMetadataColumn
-                      refId="Package\Get Date\Load date from accident_NDS.Outputs[OLE DB Source Output].ExternalColumns[CreatedDate]"
-                      dataType="dbTimeStamp"
-                      name="CreatedDate" />
-                    <externalMetadataColumn
-                      refId="Package\Get Date\Load date from accident_NDS.Outputs[OLE DB Source Output].ExternalColumns[UpdatedDate]"
-                      dataType="dbTimeStamp"
-                      name="UpdatedDate" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\Get Date\Load date from accident_NDS.Outputs[OLE DB Source Error Output]"
-                  isErrorOut="true"
-                  name="OLE DB Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Get Date\Load date from accident_NDS.Outputs[OLE DB Source Error Output].Columns[Date]"
-                      dataType="dbDate"
-                      lineageId="Package\Get Date\Load date from accident_NDS.Outputs[OLE DB Source Error Output].Columns[Date]"
-                      name="Date" />
-                    <outputColumn
-                      refId="Package\Get Date\Load date from accident_NDS.Outputs[OLE DB Source Error Output].Columns[CreatedDate]"
-                      dataType="dbTimeStamp"
-                      lineageId="Package\Get Date\Load date from accident_NDS.Outputs[OLE DB Source Error Output].Columns[CreatedDate]"
-                      name="CreatedDate" />
-                    <outputColumn
-                      refId="Package\Get Date\Load date from accident_NDS.Outputs[OLE DB Source Error Output].Columns[UpdatedDate]"
-                      dataType="dbTimeStamp"
-                      lineageId="Package\Get Date\Load date from accident_NDS.Outputs[OLE DB Source Error Output].Columns[UpdatedDate]"
-                      name="UpdatedDate" />
-                    <outputColumn
-                      refId="Package\Get Date\Load date from accident_NDS.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Get Date\Load date from accident_NDS.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Get Date\Load date from accident_NDS.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Get Date\Load date from accident_NDS.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Get Date\Lookup"
-              componentClassID="Microsoft.Lookup"
-              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
-              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
-              name="Lookup"
-              usesDispositions="true"
-              version="6">
-              <properties>
-                <property
-                  dataType="System.String"
-                  description="Specifies the SQL statement that generates the lookup table."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select IDAccidentSK, Date from Accidents_NDS</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
-                  expressionType="Notify"
-                  name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select IDAccidentSK, Date from Accidents_NDS) [refTable]
-where [refTable].[Date] = ?</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the type of connection used to access the reference dataset."
-                  name="ConnectionType"
-                  typeConverter="LookupConnectionType">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the cache type of the lookup table."
-                  name="CacheType"
-                  typeConverter="CacheType">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
-                  name="NoMatchBehavior"
-                  typeConverter="LookupNoMatchBehavior">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
-                  name="NoMatchCachePercentage">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
-                  name="MaxMemoryUsage">25</property>
-                <property
-                  dataType="System.Int64"
-                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
-                  name="MaxMemoryUsage64">25</property>
-                <property
-                  dataType="System.String"
-                  description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="IDAccidentSK" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Date" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
-                <property
-                  containsID="true"
-                  dataType="System.String"
-                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Get Date\Load date from accident_NDS.Outputs[OLE DB Source Output].Columns[Date]};</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
-                  name="TreatDuplicateKeysAsError">false</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Get Date\Lookup.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-UML28IP.DATH_BI_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-UML28IP.DATH_BI_NDS]"
-                  description="Connection manager used to access lookup data."
-                  name="OleDbConnection" />
-              </connections>
+              refId="Package\Get Date\Split day, month, quarter, year"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Split day, month, quarter, year"
+              usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\Get Date\Lookup.Inputs[Lookup Input]"
-                  name="Lookup Input">
+                  refId="Package\Get Date\Split day, month, quarter, year.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Get Date\Lookup.Inputs[Lookup Input].Columns[Date]"
+                      refId="Package\Get Date\Split day, month, quarter, year.Inputs[Derived Column Input].Columns[Date]"
                       cachedDataType="dbDate"
                       cachedName="Date"
-                      lineageId="Package\Get Date\Load date from accident_NDS.Outputs[OLE DB Source Output].Columns[Date]">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">Date</property>
-                        <property
-                          dataType="System.Null"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn" />
-                      </properties>
-                    </inputColumn>
+                      lineageId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].Columns[Date]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Get Date\Lookup.Outputs[Lookup Match Output]"
-                  errorOrTruncationOperation="Lookup"
-                  errorRowDisposition="FailComponent"
+                  refId="Package\Get Date\Split day, month, quarter, year.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
                   exclusionGroup="1"
-                  name="Lookup Match Output"
-                  synchronousInputId="Package\Get Date\Lookup.Inputs[Lookup Input]">
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Get Date\Split day, month, quarter, year.Inputs[Derived Column Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Get Date\Lookup.Outputs[Lookup Match Output].Columns[IDAccidentSK_NDS]"
+                      refId="Package\Get Date\Split day, month, quarter, year.Outputs[Derived Column Output].Columns[Day]"
                       dataType="i4"
-                      errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Get Date\Lookup.Outputs[Lookup Match Output].Columns[IDAccidentSK_NDS]"
-                      name="IDAccidentSK_NDS"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Get Date\Split day, month, quarter, year.Outputs[Derived Column Output].Columns[Day]"
+                      name="Day"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
+                          containsID="true"
                           dataType="System.String"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn">IDAccidentSK</property>
+                          description="Derived Column Expression"
+                          name="Expression">[DAY](#{Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].Columns[Date]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">DAY(Date)</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Get Date\Split day, month, quarter, year.Outputs[Derived Column Output].Columns[Month]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Get Date\Split day, month, quarter, year.Outputs[Derived Column Output].Columns[Month]"
+                      name="Month"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[MONTH](#{Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].Columns[Date]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">MONTH(Date)</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Get Date\Split day, month, quarter, year.Outputs[Derived Column Output].Columns[Quarter]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Get Date\Split day, month, quarter, year.Outputs[Derived Column Output].Columns[Quarter]"
+                      name="Quarter"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[DATEPART]("Quarter",#{Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].Columns[Date]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">DATEPART("Quarter",Date)</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Get Date\Split day, month, quarter, year.Outputs[Derived Column Output].Columns[Year]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Get Date\Split day, month, quarter, year.Outputs[Derived Column Output].Columns[Year]"
+                      name="Year"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[YEAR](#{Package\Get Date\Date_Accident.Outputs[OLE DB Source Output].Columns[Date]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">YEAR(Date)</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Get Date\Lookup.Outputs[Lookup No Match Output]"
-                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
-                  exclusionGroup="1"
-                  name="Lookup No Match Output"
-                  synchronousInputId="Package\Get Date\Lookup.Inputs[Lookup Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Get Date\Lookup.Outputs[Lookup Error Output]"
+                  refId="Package\Get Date\Split day, month, quarter, year.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
                   exclusionGroup="1"
                   isErrorOut="true"
-                  name="Lookup Error Output"
-                  synchronousInputId="Package\Get Date\Lookup.Inputs[Lookup Input]">
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Get Date\Split day, month, quarter, year.Inputs[Derived Column Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Get Date\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      refId="Package\Get Date\Split day, month, quarter, year.Outputs[Derived Column Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Get Date\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Get Date\Split day, month, quarter, year.Outputs[Derived Column Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Get Date\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      refId="Package\Get Date\Split day, month, quarter, year.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Get Date\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Get Date\Split day, month, quarter, year.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -706,19 +896,14 @@ where [refTable].[Date] = ?</property>
           <paths>
             <path
               refId="Package\Get Date.Paths[Derived Column Output]"
-              endId="Package\Get Date\Lookup.Inputs[Lookup Input]"
-              name="Derived Column Output"
-              startId="Package\Get Date\Add new Column.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\Get Date.Paths[Lookup Match Output]"
               endId="Package\Get Date\Date_NDS.Inputs[OLE DB Destination Input]"
-              name="Lookup Match Output"
-              startId="Package\Get Date\Lookup.Outputs[Lookup Match Output]" />
+              name="Derived Column Output"
+              startId="Package\Get Date\Split day, month, quarter, year.Outputs[Derived Column Output]" />
             <path
               refId="Package\Get Date.Paths[OLE DB Source Output]"
-              endId="Package\Get Date\Add new Column.Inputs[Derived Column Input]"
+              endId="Package\Get Date\Split day, month, quarter, year.Inputs[Derived Column Input]"
               name="OLE DB Source Output"
-              startId="Package\Get Date\Load date from accident_NDS.Outputs[OLE DB Source Output]" />
+              startId="Package\Get Date\Date_Accident.Outputs[OLE DB Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -9794,14 +9979,6 @@ where [Accident_Index]=?</property>
                       externalMetadataColumnId="Package\Nuong_Accidents_Stage --&gt; NDS\Update data.Inputs[OLE DB Command Input].ExternalColumns[Param_50]"
                       lineageId="Package\Nuong_Accidents_Stage --&gt; NDS\Load Accident_Stage --&gt; NDS.Outputs[OLE DB Source Output].Columns[built_up_road]" />
                     <inputColumn
-                      refId="Package\Nuong_Accidents_Stage --&gt; NDS\Update data.Inputs[OLE DB Command Input].Columns[TimeMoment]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="20"
-                      cachedName="TimeMoment"
-                      externalMetadataColumnId="Package\Nuong_Accidents_Stage --&gt; NDS\Update data.Inputs[OLE DB Command Input].ExternalColumns[Param_51]"
-                      lineageId="Package\Nuong_Accidents_Stage --&gt; NDS\Load Accident_Stage --&gt; NDS.Outputs[OLE DB Source Output].Columns[TimeMoment]" />
-                    <inputColumn
                       refId="Package\Nuong_Accidents_Stage --&gt; NDS\Update data.Inputs[OLE DB Command Input].Columns[Accident_Index]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -9809,6 +9986,14 @@ where [Accident_Index]=?</property>
                       cachedName="Accident_Index"
                       externalMetadataColumnId="Package\Nuong_Accidents_Stage --&gt; NDS\Update data.Inputs[OLE DB Command Input].ExternalColumns[Param_52]"
                       lineageId="Package\Nuong_Accidents_Stage --&gt; NDS\Load Accident_Stage --&gt; NDS.Outputs[OLE DB Source Output].Columns[Accident_Index]" />
+                    <inputColumn
+                      refId="Package\Nuong_Accidents_Stage --&gt; NDS\Update data.Inputs[OLE DB Command Input].Columns[TimeMoment]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="TimeMoment"
+                      externalMetadataColumnId="Package\Nuong_Accidents_Stage --&gt; NDS\Update data.Inputs[OLE DB Command Input].ExternalColumns[Param_51]"
+                      lineageId="Package\Nuong_Accidents_Stage --&gt; NDS\Load Accident_Stage --&gt; NDS.Outputs[OLE DB Source Output].Columns[TimeMoment]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -12607,7 +12792,7 @@ where [Accident_Index]=? and [Casualty_Reference]=?</property>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
       DTS:CreationName=""
-      DTS:DTSID="{48B7148A-AA93-4F1B-A166-9ED57B6D40CE}"
+      DTS:DTSID="{0C6B13A8-1B9B-4B30-89A8-D0964EC95F13}"
       DTS:From="Package\Long_PCD_Stage --&gt; NDS"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 3"
@@ -12615,7 +12800,7 @@ where [Accident_Index]=? and [Casualty_Reference]=?</property>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
       DTS:CreationName=""
-      DTS:DTSID="{E4869823-BA21-4774-B09F-D949F8CDC095}"
+      DTS:DTSID="{C932989A-94BE-45BC-ADA3-00B01E5DC2EA}"
       DTS:From="Package\Phat_Casualities_Stage --&gt; NDS"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 4"
@@ -12636,37 +12821,37 @@ where [Accident_Index]=? and [Casualty_Reference]=?</property>
         <NodeLayout
           Size="201.6,41.6"
           Id="Package\Long_PCD_Stage --&gt; NDS"
-          TopLeft="70.7936519992603,195.25490469916" />
+          TopLeft="312.222227539336,35.0915037601184" />
         <NodeLayout
           Size="230.4,41.6"
           Id="Package\Long_PostCodes_Stage --&gt; NDS"
-          TopLeft="52.8571437572949,284.470592224887" />
+          TopLeft="31.5873021252303,35.9411769746499" />
         <NodeLayout
           Size="221.6,41.6"
           Id="Package\Nhan_Vehicles_Stage --&gt; NDS"
-          TopLeft="355.000006045615,102.470589672406" />
+          TopLeft="573.551597069114,192.514708582299" />
         <NodeLayout
           Size="234.4,41.6"
           Id="Package\Nuong_Accidents_Stage --&gt; NDS"
-          TopLeft="55.7142866630946,104.764707351638" />
+          TopLeft="573.888898662159,32.096405678898" />
         <NodeLayout
           Size="229.6,41.6"
           Id="Package\Phat_Casualities_Stage --&gt; NDS"
-          TopLeft="356.349212417798,192.875819698476" />
+          TopLeft="277.242068213468,196.168303404783" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="290.114286663095,124.417648512022">
+          TopLeft="687.720247865636,73.696405678898">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="64.8857193825204,0"
+              EndConnector="0,118.818302903401"
               Start="0,0"
-              End="57.3857193825204,0">
+              End="0,111.318302903401">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="57.3857193825204,0" />
+                    End="0,111.318302903401" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -12677,18 +12862,18 @@ where [Accident_Index]=? and [Casualty_Reference]=?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="468.474609231706,144.070589672406">
+          TopLeft="573.551597069114,215.141505993541">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,48.80523002607"
+              EndConnector="-66.7095288556453,0"
               Start="0,0"
-              End="0,41.30523002607">
+              End="-59.2095288556453,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,41.30523002607" />
+                    End="-59.2095288556453,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -12699,18 +12884,18 @@ where [Accident_Index]=? and [Casualty_Reference]=?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="169.825397878278,284.470592224887">
+          TopLeft="261.98730212523,56.3163403673842">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,-47.6156875257265"
+              EndConnector="50.2349254141056,0"
               Start="0,0"
-              End="0,-40.1156875257265">
+              End="42.7349254141056,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-40.1156875257265" />
+                    End="42.7349254141056,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -12721,18 +12906,18 @@ where [Accident_Index]=? and [Casualty_Reference]=?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="172.253969331177,195.25490469916">
+          TopLeft="513.822227539336,54.3939547195082">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,-48.8901973475222"
+              EndConnector="60.0666711228232,0"
               Start="0,0"
-              End="0,-41.3901973475222">
+              End="52.5666711228232,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-41.3901973475222" />
+                    End="52.5666711228232,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -12744,21 +12929,21 @@ where [Accident_Index]=? and [Casualty_Reference]=?</property>
         <NodeLayout
           Size="120,41.6"
           Id="Package\Get Date"
-          TopLeft="415.000007067408,280.647062759498" />
+          TopLeft="331.428577072766,321.941180985692" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="473.074609742603,234.475819698476">
+          TopLeft="391.735322643117,237.768303404783">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,46.1712430610224"
+              EndConnector="0,84.1728775809091"
               Start="0,0"
-              End="0,38.6712430610224">
+              End="0,76.6728775809091">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,38.6712430610224" />
+                    End="0,76.6728775809091" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -13095,7 +13280,7 @@ where [Accident_Index]=? and [Casualty_Reference]=?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-25.0951171875,16.8668795072116,50.190234375,11.2431640625"
+              BoundingBox="0,0,0,0"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -13131,7 +13316,7 @@ where [Accident_Index]=? and [Casualty_Reference]=?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-10.8659690930555,22.4331175680608,170.7934765625,11.609375"
+              BoundingBox="18.7243824694445,22.4331175680608,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -13191,7 +13376,7 @@ where [Accident_Index]=? and [Casualty_Reference]=?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-25.0951171875,17.778644331066,50.190234375,11.2431640625"
+              BoundingBox="0,0,0,0"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -13323,7 +13508,9 @@ where [Accident_Index]=? and [Casualty_Reference]=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13441,7 +13628,9 @@ where [Accident_Index]=? and [Casualty_Reference]=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13463,7 +13652,9 @@ where [Accident_Index]=? and [Casualty_Reference]=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -13547,9 +13738,13 @@ where [Accident_Index]=? and [Casualty_Reference]=?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="188,41.6"
+          Id="Package\Nuong_Accidents_Stage --&gt; NDS\Lookup Accident_Index"
+          TopLeft="366.329676119837,182.926309263975" />
+        <NodeLayout
           Size="139.2,41.6"
           Id="Package\Nuong_Accidents_Stage --&gt; NDS\Insert record"
-          TopLeft="556.758251063866,295.832193407944" />
+          TopLeft="572.758251063866,377.832193407944" />
         <NodeLayout
           Size="219.2,41.6"
           Id="Package\Nuong_Accidents_Stage --&gt; NDS\Load Accident_Stage --&gt; NDS"
@@ -13557,22 +13752,54 @@ where [Accident_Index]=? and [Casualty_Reference]=?</property>
         <NodeLayout
           Size="136,41.6"
           Id="Package\Nuong_Accidents_Stage --&gt; NDS\Update data"
-          TopLeft="204.615387924051,295.161606105699" />
+          TopLeft="220.615387924051,377.161606105699" />
         <NodeLayout
           Size="176.8,41.6"
           Id="Package\Nuong_Accidents_Stage --&gt; NDS\Update UpdatedDate"
-          TopLeft="190.329673395053,199.573369470992" />
+          TopLeft="206.329673395053,281.573369470992" />
         <NodeLayout
           Size="239.2,41.6"
           Id="Package\Nuong_Accidents_Stage --&gt; NDS\Create CreatedDate, UpdatedDate"
-          TopLeft="506.758250212371,201.867487150226" />
-        <NodeLayout
-          Size="188,41.6"
-          Id="Package\Nuong_Accidents_Stage --&gt; NDS\Lookup Accident_Index"
-          TopLeft="350.329676119837,100.926309263975" />
+          TopLeft="522.758250212371,283.867487150226" />
+        <EdgeLayout
+          Id="Package\Nuong_Accidents_Stage --&gt; NDS.Paths[Lookup No Match Output]"
+          TopLeft="490.329676119837,224.526309263975">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="152.028574092534,59.3411778862504"
+              Start="0,0"
+              End="152.028574092534,51.8411778862504">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.0369328146837" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.0369328146837"
+                    Point2="0,24.0369328146837"
+                    Point3="4,24.0369328146837" />
+                  <mssgle:LineSegment
+                    End="148.028574092534,24.0369328146837" />
+                  <mssgle:CubicBezierSegment
+                    Point1="148.028574092534,24.0369328146837"
+                    Point2="152.028574092534,24.0369328146837"
+                    Point3="152.028574092534,28.0369328146837" />
+                  <mssgle:LineSegment
+                    End="152.028574092534,51.8411778862504" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="20.207900327517,29.0369328146837,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Nuong_Accidents_Stage --&gt; NDS.Paths[Lookup Match Output]"
-          TopLeft="414.329676119837,142.526309263975">
+          TopLeft="430.329676119837,224.526309263975">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -13608,7 +13835,7 @@ where [Accident_Index]=? and [Casualty_Reference]=?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Nuong_Accidents_Stage --&gt; NDS.Paths[Derived Column Output1]"
-          TopLeft="275.672530659552,241.173369470992">
+          TopLeft="291.672530659552,323.173369470992">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -13625,12 +13852,14 @@ where [Accident_Index]=? and [Casualty_Reference]=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Nuong_Accidents_Stage --&gt; NDS.Paths[Derived Column Output]"
-          TopLeft="626.358250638118,243.467487150226">
+          TopLeft="642.358250638118,325.467487150226">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -13647,70 +13876,73 @@ where [Accident_Index]=? and [Casualty_Reference]=?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Nuong_Accidents_Stage --&gt; NDS.Paths[OLE DB Source Output]"
-          TopLeft="440.536269416952,55.3647060753978">
+          TopLeft="436.742862714067,55.3647060753978">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,45.5616031885775"
+              EndConnector="23.58681340577,127.561603188577"
               Start="0,0"
-              End="0,38.0616031885775">
+              End="23.58681340577,120.061603188577">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,38.0616031885775" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Nuong_Accidents_Stage --&gt; NDS.Paths[Lookup No Match Output]"
-          TopLeft="474.329676119837,142.526309263975">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="152.028574092534,59.3411778862504"
-              Start="0,0"
-              End="152.028574092534,51.8411778862504">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.0369328146837" />
+                    End="0,59.7808015942886" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,20.0369328146837"
-                    Point2="0,24.0369328146837"
-                    Point3="4,24.0369328146837" />
+                    Point1="0,59.7808015942886"
+                    Point2="0,63.7808015942886"
+                    Point3="4,63.7808015942886" />
                   <mssgle:LineSegment
-                    End="148.028574092534,24.0369328146837" />
+                    End="19.58681340577,63.7808015942886" />
                   <mssgle:CubicBezierSegment
-                    Point1="148.028574092534,24.0369328146837"
-                    Point2="152.028574092534,24.0369328146837"
-                    Point3="152.028574092534,28.0369328146837" />
+                    Point1="19.58681340577,63.7808015942886"
+                    Point2="23.58681340577,63.7808015942886"
+                    Point3="23.58681340577,67.7808015942886" />
                   <mssgle:LineSegment
-                    End="152.028574092534,51.8411778862504" />
+                    End="23.58681340577,120.061603188577" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="20.207900327517,29.0369328146837,111.6127734375,11.609375"
+              BoundingBox="0,0,0,0"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Nuong_Accidents_Stage --&gt; NDS\Lookup Accident_Index">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Nuong_Accidents_Stage --&gt; NDS\Insert record">
     <Properties>
@@ -13734,29 +13966,6 @@ where [Accident_Index]=? and [Casualty_Reference]=?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Nuong_Accidents_Stage --&gt; NDS\Lookup Accident_Index">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -14085,61 +14294,29 @@ where [Accident_Index]=? and [Casualty_Reference]=?</property>
     design-time-name="Package\Get Date">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="158.4,41.6"
-          Id="Package\Get Date\Add new Column"
-          TopLeft="376.153846153846,111.538461538462" />
+          Size="145.6,41.6"
+          Id="Package\Get Date\Date_Accident"
+          TopLeft="319.692307692308,31.6153846153846" />
         <NodeLayout
-          Size="112.8,41.6"
-          Id="Package\Get Date\Lookup"
-          TopLeft="403.846153846154,197.692307692308" />
-        <NodeLayout
-          Size="126.4,41.6"
-          Id="Package\Get Date\Date_NDS"
-          TopLeft="403.846153846154,316.923076923077" />
-        <NodeLayout
-          Size="218.4,41.6"
-          Id="Package\Get Date\Load date from accident_NDS"
-          TopLeft="349.384615384615,17.7692307692308" />
-        <EdgeLayout
-          Id="Package\Get Date.Paths[Lookup Match Output]"
-          TopLeft="463.646153846154,239.292307692308">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,77.6307692307693"
-              Start="0,0"
-              End="0,70.1307692307693">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,70.1307692307693" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,29.2606971153846,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="223.2,41.6"
+          Id="Package\Get Date\Split day, month, quarter, year"
+          TopLeft="283.846153846154,119.230769230769" />
         <EdgeLayout
           Id="Package\Get Date.Paths[OLE DB Source Output]"
-          TopLeft="456.969230769231,59.3692307692308">
+          TopLeft="393.969230769231,73.2153846153846">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,52.1692307692308"
+              EndConnector="0,46.0153846153846"
               Start="0,0"
-              End="0,44.6692307692308">
+              End="0,38.5153846153846">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,44.6692307692308" />
+                    End="0,38.5153846153846" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -14148,20 +14325,24 @@ where [Accident_Index]=? and [Casualty_Reference]=?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="126.4,41.6"
+          Id="Package\Get Date\Date_NDS"
+          TopLeft="330,219.230769230769" />
         <EdgeLayout
           Id="Package\Get Date.Paths[Derived Column Output]"
-          TopLeft="457.8,153.138461538462">
+          TopLeft="394.323076923077,160.830769230769">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,44.5538461538461"
+              EndConnector="0,58.4000000000001"
               Start="0,0"
-              End="0,37.0538461538461">
+              End="0,50.9000000000001">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,37.0538461538461" />
+                    End="0,50.9000000000001" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -14173,5 +14354,31 @@ where [Accident_Index]=? and [Casualty_Reference]=?</property>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Get Date\Date_Accident">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Get Date\Date_NDS">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
