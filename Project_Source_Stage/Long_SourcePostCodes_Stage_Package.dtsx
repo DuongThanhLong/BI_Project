@@ -11,46 +11,138 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{5F62ECB1-6D7E-4AC0-A7BF-3FEFC452C95C}">
+  DTS:VersionBuild="40"
+  DTS:VersionGUID="{2C8B6552-0FF1-487B-B1CF-B0CA94A8ACCB}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
-      DTS:CreationName="EXCEL"
-      DTS:DTSID="{372399A9-0B2B-4695-BBD4-7D878944E133}"
-      DTS:ObjectName="Excel Connection Manager">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="0"
-          DTS:ConnectRetryInterval="0"
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Documents\Năm học 2021-2022\Hệ thống thông tin phục vụ trí tuệ kinh doanh\Labs\Labs\2021-2022 - BI Project - UK Accidents\Data\postcodes.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[LocalHost.SourceBI]"
+      DTS:refId="Package.ConnectionManagers[DESKTOP-UML28IP.DATH_BI_Metadata]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{573AF9DD-470D-4500-BD8B-34DE974C98AE}"
-      DTS:ObjectName="LocalHost.SourceBI">
+      DTS:DTSID="{692325AD-B85D-4271-90C0-75D4CECDC4DE}"
+      DTS:ObjectName="DESKTOP-UML28IP.DATH_BI_Metadata">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=.;Initial Catalog=SourceBI;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=DESKTOP-UML28IP;Initial Catalog=DATH_BI_Metadata;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-UML28IP.DATH_BI_Source]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{9CC3A1A4-097A-4D66-91F5-7BE87841A488}"
+      DTS:ObjectName="DESKTOP-UML28IP.DATH_BI_Source">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-UML28IP;Initial Catalog=DATH_BI_Source;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-UML28IP.DATH_BI_Stage]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{BEC57621-CA65-4DCA-87CA-20CC476DB692}"
+      DTS:ObjectName="DESKTOP-UML28IP.DATH_BI_Stage">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-UML28IP;Initial Catalog=DATH_BI_Stage;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
-  <DTS:Variables />
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{31B822AA-AF00-4919-A758-ED0F152EFD26}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="CETRes">
+      <DTS:VariableValue
+        DTS:DataType="7">12/31/2021</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{C0485ED0-182C-4CDF-9B08-D40E9BB5D4F0}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="CETRes1">
+      <DTS:VariableValue
+        DTS:DataType="7">12/31/2021</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{FA9837AA-2ADD-4F2D-B9B1-71412B3592A8}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="CETRes2">
+      <DTS:VariableValue
+        DTS:DataType="7">1/1/2022</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{E9E1A894-9BCD-4453-A711-FBDF50E6003E}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="CETRes3">
+      <DTS:VariableValue
+        DTS:DataType="7">1/3/2022</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{58501EBB-2F64-4686-A605-90128D358BBE}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="LSETRes">
+      <DTS:VariableValue
+        DTS:DataType="7">12/31/2021</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{900BD825-BE33-4CA2-9E24-7760DC89C007}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="LSETRes1">
+      <DTS:VariableValue
+        DTS:DataType="7">12/31/2021</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Data Flow Task_PostCodes"
+      DTS:refId="Package\Get LSET, CET PostCode"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{CF8670FC-E977-455E-A189-FEDA212B6F16}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Get LSET, CET PostCode"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{692325AD-B85D-4271-90C0-75D4CECDC4DE}"
+          SQLTask:SqlStatementSource="select LSET, CET from Data_Flow where Name='PostCodes'"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="LSET"
+            SQLTask:DtsVariableName="User::LSETRes1" />
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="CET"
+            SQLTask:DtsVariableName="User::CETRes3" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\PostCode"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
       DTS:DTSID="{8550D596-D235-41AC-818C-03A1ABC06EF5}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Data Flow Task_PostCodes"
+      DTS:ObjectName="PostCode"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -58,7 +150,7 @@
           version="1">
           <components>
             <component
-              refId="Package\Data Flow Task_PostCodes\PostCodes Table"
+              refId="Package\PostCode\PostCodes Table"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
@@ -73,7 +165,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[PostCodes Table]</property>
+                  name="OpenRowset">[dbo].[PostCodes_Table]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -115,180 +207,232 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task_PostCodes\PostCodes Table.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LocalHost.SourceBI]"
-                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.SourceBI]"
+                  refId="Package\PostCode\PostCodes Table.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-UML28IP.DATH_BI_Stage]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-UML28IP.DATH_BI_Stage]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task_PostCodes\PostCodes Table.Inputs[OLE DB Destination Input]"
+                  refId="Package\PostCode\PostCodes Table.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task_PostCodes\PostCodes Table.Inputs[OLE DB Destination Input].Columns[postcode]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
+                      refId="Package\PostCode\PostCodes Table.Inputs[OLE DB Destination Input].Columns[postcode]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
                       cachedName="postcode"
-                      externalMetadataColumnId="Package\Data Flow Task_PostCodes\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[postcode]"
-                      lineageId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].Columns[postcode]" />
+                      externalMetadataColumnId="Package\PostCode\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[postcode]"
+                      lineageId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].Columns[postcode]" />
                     <inputColumn
-                      refId="Package\Data Flow Task_PostCodes\PostCodes Table.Inputs[OLE DB Destination Input].Columns[easting]"
-                      cachedDataType="r8"
+                      refId="Package\PostCode\PostCodes Table.Inputs[OLE DB Destination Input].Columns[easting]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
                       cachedName="easting"
-                      externalMetadataColumnId="Package\Data Flow Task_PostCodes\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[easting]"
-                      lineageId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].Columns[easting]" />
+                      externalMetadataColumnId="Package\PostCode\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[easting]"
+                      lineageId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].Columns[easting]" />
                     <inputColumn
-                      refId="Package\Data Flow Task_PostCodes\PostCodes Table.Inputs[OLE DB Destination Input].Columns[northing]"
-                      cachedDataType="r8"
+                      refId="Package\PostCode\PostCodes Table.Inputs[OLE DB Destination Input].Columns[northing]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
                       cachedName="northing"
-                      externalMetadataColumnId="Package\Data Flow Task_PostCodes\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[northing]"
-                      lineageId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].Columns[northing]" />
+                      externalMetadataColumnId="Package\PostCode\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[northing]"
+                      lineageId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].Columns[northing]" />
                     <inputColumn
-                      refId="Package\Data Flow Task_PostCodes\PostCodes Table.Inputs[OLE DB Destination Input].Columns[latitude]"
-                      cachedDataType="r8"
+                      refId="Package\PostCode\PostCodes Table.Inputs[OLE DB Destination Input].Columns[latitude]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
                       cachedName="latitude"
-                      externalMetadataColumnId="Package\Data Flow Task_PostCodes\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[latitude]"
-                      lineageId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].Columns[latitude]" />
+                      externalMetadataColumnId="Package\PostCode\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[latitude]"
+                      lineageId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].Columns[latitude]" />
                     <inputColumn
-                      refId="Package\Data Flow Task_PostCodes\PostCodes Table.Inputs[OLE DB Destination Input].Columns[longitude]"
-                      cachedDataType="r8"
+                      refId="Package\PostCode\PostCodes Table.Inputs[OLE DB Destination Input].Columns[longitude]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
                       cachedName="longitude"
-                      externalMetadataColumnId="Package\Data Flow Task_PostCodes\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[longitude]"
-                      lineageId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].Columns[longitude]" />
+                      externalMetadataColumnId="Package\PostCode\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[longitude]"
+                      lineageId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].Columns[longitude]" />
                     <inputColumn
-                      refId="Package\Data Flow Task_PostCodes\PostCodes Table.Inputs[OLE DB Destination Input].Columns[city]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
+                      refId="Package\PostCode\PostCodes Table.Inputs[OLE DB Destination Input].Columns[city]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
                       cachedName="city"
-                      externalMetadataColumnId="Package\Data Flow Task_PostCodes\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[city]"
-                      lineageId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].Columns[city]" />
+                      externalMetadataColumnId="Package\PostCode\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[city]"
+                      lineageId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].Columns[city]" />
                     <inputColumn
-                      refId="Package\Data Flow Task_PostCodes\PostCodes Table.Inputs[OLE DB Destination Input].Columns[county]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
+                      refId="Package\PostCode\PostCodes Table.Inputs[OLE DB Destination Input].Columns[county]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
                       cachedName="county"
-                      externalMetadataColumnId="Package\Data Flow Task_PostCodes\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[county]"
-                      lineageId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].Columns[county]" />
+                      externalMetadataColumnId="Package\PostCode\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[county]"
+                      lineageId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].Columns[county]" />
                     <inputColumn
-                      refId="Package\Data Flow Task_PostCodes\PostCodes Table.Inputs[OLE DB Destination Input].Columns[country_code]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
+                      refId="Package\PostCode\PostCodes Table.Inputs[OLE DB Destination Input].Columns[country_code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
                       cachedName="country_code"
-                      externalMetadataColumnId="Package\Data Flow Task_PostCodes\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[country_code]"
-                      lineageId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].Columns[country_code]" />
+                      externalMetadataColumnId="Package\PostCode\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[country_code]"
+                      lineageId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].Columns[country_code]" />
                     <inputColumn
-                      refId="Package\Data Flow Task_PostCodes\PostCodes Table.Inputs[OLE DB Destination Input].Columns[country_name]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
+                      refId="Package\PostCode\PostCodes Table.Inputs[OLE DB Destination Input].Columns[country_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
                       cachedName="country_name"
-                      externalMetadataColumnId="Package\Data Flow Task_PostCodes\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[country_name]"
-                      lineageId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].Columns[country_name]" />
+                      externalMetadataColumnId="Package\PostCode\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[country_name]"
+                      lineageId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].Columns[country_name]" />
                     <inputColumn
-                      refId="Package\Data Flow Task_PostCodes\PostCodes Table.Inputs[OLE DB Destination Input].Columns[iso3166-2]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
+                      refId="Package\PostCode\PostCodes Table.Inputs[OLE DB Destination Input].Columns[iso3166-2]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
                       cachedName="iso3166-2"
-                      externalMetadataColumnId="Package\Data Flow Task_PostCodes\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[iso3166-2]"
-                      lineageId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].Columns[iso3166-2]" />
+                      externalMetadataColumnId="Package\PostCode\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[iso3166-2]"
+                      lineageId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].Columns[iso3166-2]" />
                     <inputColumn
-                      refId="Package\Data Flow Task_PostCodes\PostCodes Table.Inputs[OLE DB Destination Input].Columns[region_code]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
+                      refId="Package\PostCode\PostCodes Table.Inputs[OLE DB Destination Input].Columns[region_code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
                       cachedName="region_code"
-                      externalMetadataColumnId="Package\Data Flow Task_PostCodes\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[region_code]"
-                      lineageId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].Columns[region_code]" />
+                      externalMetadataColumnId="Package\PostCode\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[region_code]"
+                      lineageId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].Columns[region_code]" />
                     <inputColumn
-                      refId="Package\Data Flow Task_PostCodes\PostCodes Table.Inputs[OLE DB Destination Input].Columns[region_name]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
+                      refId="Package\PostCode\PostCodes Table.Inputs[OLE DB Destination Input].Columns[region_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
                       cachedName="region_name"
-                      externalMetadataColumnId="Package\Data Flow Task_PostCodes\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[region_name]"
-                      lineageId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].Columns[region_name]" />
+                      externalMetadataColumnId="Package\PostCode\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[region_name]"
+                      lineageId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].Columns[region_name]" />
+                    <inputColumn
+                      refId="Package\PostCode\PostCodes Table.Inputs[OLE DB Destination Input].Columns[CreatedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="CreatedDate"
+                      externalMetadataColumnId="Package\PostCode\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
+                      lineageId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].Columns[CreatedDate]" />
+                    <inputColumn
+                      refId="Package\PostCode\PostCodes Table.Inputs[OLE DB Destination Input].Columns[UpdatedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="UpdatedDate"
+                      externalMetadataColumnId="Package\PostCode\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
+                      lineageId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].Columns[UpdatedDate]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_PostCodes\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[postcode]"
-                      dataType="wstr"
-                      length="255"
+                      refId="Package\PostCode\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[postcode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="postcode" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_PostCodes\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[easting]"
-                      dataType="r8"
+                      refId="Package\PostCode\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[easting]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="easting" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_PostCodes\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[northing]"
-                      dataType="r8"
+                      refId="Package\PostCode\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[northing]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="northing" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_PostCodes\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[latitude]"
-                      dataType="r8"
+                      refId="Package\PostCode\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[latitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="latitude" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_PostCodes\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[longitude]"
-                      dataType="r8"
+                      refId="Package\PostCode\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[longitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="longitude" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_PostCodes\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[city]"
-                      dataType="wstr"
-                      length="255"
+                      refId="Package\PostCode\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[city]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="city" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_PostCodes\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[county]"
-                      dataType="wstr"
-                      length="255"
+                      refId="Package\PostCode\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[county]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="county" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_PostCodes\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[country_code]"
-                      dataType="wstr"
-                      length="255"
+                      refId="Package\PostCode\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[country_code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="country_code" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_PostCodes\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[country_name]"
-                      dataType="wstr"
-                      length="255"
+                      refId="Package\PostCode\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[country_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="country_name" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_PostCodes\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[iso3166-2]"
-                      dataType="wstr"
-                      length="255"
+                      refId="Package\PostCode\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[iso3166-2]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="iso3166-2" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_PostCodes\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[region_code]"
-                      dataType="wstr"
-                      length="255"
+                      refId="Package\PostCode\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[region_code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="region_code" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_PostCodes\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[region_name]"
-                      dataType="wstr"
-                      length="255"
+                      refId="Package\PostCode\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[region_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="region_name" />
+                    <externalMetadataColumn
+                      refId="Package\PostCode\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      name="CreatedDate" />
+                    <externalMetadataColumn
+                      refId="Package\PostCode\PostCodes Table.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      name="UpdatedDate" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task_PostCodes\PostCodes Table.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\PostCode\PostCodes Table.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Data Flow Task_PostCodes\PostCodes Table.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\PostCode\PostCodes Table.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task_PostCodes\PostCodes Table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\PostCode\PostCodes Table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task_PostCodes\PostCodes Table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\PostCode\PostCodes Table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task_PostCodes\PostCodes Table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\PostCode\PostCodes Table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task_PostCodes\PostCodes Table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\PostCode\PostCodes Table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -297,13 +441,13 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task_PostCodes\Reading PostCodes"
-              componentClassID="Microsoft.ExcelSource"
-              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Excel Source"
-              name="Reading PostCodes"
+              refId="Package\PostCode\Source PostCode"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Source PostCode"
               usesDispositions="true"
-              version="1">
+              version="7">
               <properties>
                 <property
                   dataType="System.Int32"
@@ -312,7 +456,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">postcodes$</property>
+                  name="OpenRowset"></property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -321,294 +465,387 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from PostCode_Table
+where (CreatedDate &lt; ? and CreatedDate &gt;= ?) or (UpdatedDate &lt; ? and UpdatedDate &gt;= ?)</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
                   name="SqlCommandVariable"></property>
                 <property
                   dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">2</property>
                 <property
                   dataType="System.String"
-                  description="The mapping from parameters in the SQL command to variables."
-                  name="ParameterMapping"></property>
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping">"Parameter0:Input",{E9E1A894-9BCD-4453-A711-FBDF50E6003E};"Parameter1:Input",{900BD825-BE33-4CA2-9E24-7760DC89C007};"Parameter2:Input",{E9E1A894-9BCD-4453-A711-FBDF50E6003E};"Parameter3:Input",{900BD825-BE33-4CA2-9E24-7760DC89C007};</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task_PostCodes\Reading PostCodes.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
-                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
+                  refId="Package\PostCode\Source PostCode.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-UML28IP.DATH_BI_Source]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-UML28IP.DATH_BI_Source]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output]"
-                  name="Excel Source Output">
+                  refId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].Columns[postcode]"
-                      dataType="wstr"
+                      refId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].Columns[postcode]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].ExternalColumns[postcode]"
-                      length="255"
-                      lineageId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].Columns[postcode]"
+                      externalMetadataColumnId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].ExternalColumns[postcode]"
+                      length="50"
+                      lineageId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].Columns[postcode]"
                       name="postcode"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].Columns[easting]"
-                      dataType="r8"
+                      refId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].Columns[easting]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].ExternalColumns[easting]"
-                      lineageId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].Columns[easting]"
+                      externalMetadataColumnId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].ExternalColumns[easting]"
+                      length="50"
+                      lineageId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].Columns[easting]"
                       name="easting"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].Columns[northing]"
-                      dataType="r8"
+                      refId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].Columns[northing]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].ExternalColumns[northing]"
-                      lineageId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].Columns[northing]"
+                      externalMetadataColumnId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].ExternalColumns[northing]"
+                      length="50"
+                      lineageId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].Columns[northing]"
                       name="northing"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].Columns[latitude]"
-                      dataType="r8"
+                      refId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].Columns[latitude]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].ExternalColumns[latitude]"
-                      lineageId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].Columns[latitude]"
+                      externalMetadataColumnId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].ExternalColumns[latitude]"
+                      length="50"
+                      lineageId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].Columns[latitude]"
                       name="latitude"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].Columns[longitude]"
-                      dataType="r8"
+                      refId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].Columns[longitude]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].ExternalColumns[longitude]"
-                      lineageId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].Columns[longitude]"
+                      externalMetadataColumnId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].ExternalColumns[longitude]"
+                      length="50"
+                      lineageId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].Columns[longitude]"
                       name="longitude"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].Columns[city]"
-                      dataType="wstr"
+                      refId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].Columns[city]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].ExternalColumns[city]"
-                      length="255"
-                      lineageId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].Columns[city]"
+                      externalMetadataColumnId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].ExternalColumns[city]"
+                      length="50"
+                      lineageId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].Columns[city]"
                       name="city"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].Columns[county]"
-                      dataType="wstr"
+                      refId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].Columns[county]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].ExternalColumns[county]"
-                      length="255"
-                      lineageId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].Columns[county]"
+                      externalMetadataColumnId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].ExternalColumns[county]"
+                      length="50"
+                      lineageId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].Columns[county]"
                       name="county"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].Columns[country_code]"
-                      dataType="wstr"
+                      refId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].Columns[country_code]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].ExternalColumns[country_code]"
-                      length="255"
-                      lineageId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].Columns[country_code]"
+                      externalMetadataColumnId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].ExternalColumns[country_code]"
+                      length="50"
+                      lineageId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].Columns[country_code]"
                       name="country_code"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].Columns[country_name]"
-                      dataType="wstr"
+                      refId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].Columns[country_name]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].ExternalColumns[country_name]"
-                      length="255"
-                      lineageId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].Columns[country_name]"
+                      externalMetadataColumnId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].ExternalColumns[country_name]"
+                      length="50"
+                      lineageId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].Columns[country_name]"
                       name="country_name"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].Columns[iso3166-2]"
-                      dataType="wstr"
+                      refId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].Columns[iso3166-2]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].ExternalColumns[iso3166-2]"
-                      length="255"
-                      lineageId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].Columns[iso3166-2]"
+                      externalMetadataColumnId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].ExternalColumns[iso3166-2]"
+                      length="50"
+                      lineageId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].Columns[iso3166-2]"
                       name="iso3166-2"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].Columns[region_code]"
-                      dataType="wstr"
+                      refId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].Columns[region_code]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].ExternalColumns[region_code]"
-                      length="255"
-                      lineageId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].Columns[region_code]"
+                      externalMetadataColumnId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].ExternalColumns[region_code]"
+                      length="50"
+                      lineageId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].Columns[region_code]"
                       name="region_code"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].Columns[region_name]"
-                      dataType="wstr"
+                      refId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].Columns[region_name]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].ExternalColumns[region_name]"
-                      length="255"
-                      lineageId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].Columns[region_name]"
+                      externalMetadataColumnId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].ExternalColumns[region_name]"
+                      length="50"
+                      lineageId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].Columns[region_name]"
                       name="region_name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].Columns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].ExternalColumns[CreatedDate]"
+                      lineageId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].Columns[CreatedDate]"
+                      name="CreatedDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].Columns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].ExternalColumns[UpdatedDate]"
+                      lineageId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].Columns[UpdatedDate]"
+                      name="UpdatedDate"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].ExternalColumns[postcode]"
-                      dataType="wstr"
-                      length="255"
+                      refId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].ExternalColumns[postcode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="postcode" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].ExternalColumns[easting]"
-                      dataType="r8"
+                      refId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].ExternalColumns[easting]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="easting" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].ExternalColumns[northing]"
-                      dataType="r8"
+                      refId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].ExternalColumns[northing]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="northing" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].ExternalColumns[latitude]"
-                      dataType="r8"
+                      refId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].ExternalColumns[latitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="latitude" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].ExternalColumns[longitude]"
-                      dataType="r8"
+                      refId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].ExternalColumns[longitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="longitude" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].ExternalColumns[city]"
-                      dataType="wstr"
-                      length="255"
+                      refId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].ExternalColumns[city]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="city" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].ExternalColumns[county]"
-                      dataType="wstr"
-                      length="255"
+                      refId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].ExternalColumns[county]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="county" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].ExternalColumns[country_code]"
-                      dataType="wstr"
-                      length="255"
+                      refId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].ExternalColumns[country_code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="country_code" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].ExternalColumns[country_name]"
-                      dataType="wstr"
-                      length="255"
+                      refId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].ExternalColumns[country_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="country_name" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].ExternalColumns[iso3166-2]"
-                      dataType="wstr"
-                      length="255"
+                      refId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].ExternalColumns[iso3166-2]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="iso3166-2" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].ExternalColumns[region_code]"
-                      dataType="wstr"
-                      length="255"
+                      refId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].ExternalColumns[region_code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="region_code" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output].ExternalColumns[region_name]"
-                      dataType="wstr"
-                      length="255"
+                      refId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].ExternalColumns[region_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="region_name" />
+                    <externalMetadataColumn
+                      refId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].ExternalColumns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      name="CreatedDate" />
+                    <externalMetadataColumn
+                      refId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output].ExternalColumns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      name="UpdatedDate" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Error Output]"
+                  refId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Error Output]"
                   isErrorOut="true"
-                  name="Excel Source Error Output">
+                  name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Error Output].Columns[postcode]"
-                      dataType="wstr"
-                      length="255"
-                      lineageId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Error Output].Columns[postcode]"
+                      refId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Error Output].Columns[postcode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Error Output].Columns[postcode]"
                       name="postcode" />
                     <outputColumn
-                      refId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Error Output].Columns[easting]"
-                      dataType="r8"
-                      lineageId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Error Output].Columns[easting]"
+                      refId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Error Output].Columns[easting]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Error Output].Columns[easting]"
                       name="easting" />
                     <outputColumn
-                      refId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Error Output].Columns[northing]"
-                      dataType="r8"
-                      lineageId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Error Output].Columns[northing]"
+                      refId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Error Output].Columns[northing]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Error Output].Columns[northing]"
                       name="northing" />
                     <outputColumn
-                      refId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Error Output].Columns[latitude]"
-                      dataType="r8"
-                      lineageId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Error Output].Columns[latitude]"
+                      refId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Error Output].Columns[latitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Error Output].Columns[latitude]"
                       name="latitude" />
                     <outputColumn
-                      refId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Error Output].Columns[longitude]"
-                      dataType="r8"
-                      lineageId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Error Output].Columns[longitude]"
+                      refId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Error Output].Columns[longitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Error Output].Columns[longitude]"
                       name="longitude" />
                     <outputColumn
-                      refId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Error Output].Columns[city]"
-                      dataType="wstr"
-                      length="255"
-                      lineageId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Error Output].Columns[city]"
+                      refId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Error Output].Columns[city]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Error Output].Columns[city]"
                       name="city" />
                     <outputColumn
-                      refId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Error Output].Columns[county]"
-                      dataType="wstr"
-                      length="255"
-                      lineageId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Error Output].Columns[county]"
+                      refId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Error Output].Columns[county]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Error Output].Columns[county]"
                       name="county" />
                     <outputColumn
-                      refId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Error Output].Columns[country_code]"
-                      dataType="wstr"
-                      length="255"
-                      lineageId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Error Output].Columns[country_code]"
+                      refId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Error Output].Columns[country_code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Error Output].Columns[country_code]"
                       name="country_code" />
                     <outputColumn
-                      refId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Error Output].Columns[country_name]"
-                      dataType="wstr"
-                      length="255"
-                      lineageId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Error Output].Columns[country_name]"
+                      refId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Error Output].Columns[country_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Error Output].Columns[country_name]"
                       name="country_name" />
                     <outputColumn
-                      refId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Error Output].Columns[iso3166-2]"
-                      dataType="wstr"
-                      length="255"
-                      lineageId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Error Output].Columns[iso3166-2]"
+                      refId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Error Output].Columns[iso3166-2]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Error Output].Columns[iso3166-2]"
                       name="iso3166-2" />
                     <outputColumn
-                      refId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Error Output].Columns[region_code]"
-                      dataType="wstr"
-                      length="255"
-                      lineageId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Error Output].Columns[region_code]"
+                      refId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Error Output].Columns[region_code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Error Output].Columns[region_code]"
                       name="region_code" />
                     <outputColumn
-                      refId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Error Output].Columns[region_name]"
-                      dataType="wstr"
-                      length="255"
-                      lineageId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Error Output].Columns[region_name]"
+                      refId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Error Output].Columns[region_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Error Output].Columns[region_name]"
                       name="region_name" />
                     <outputColumn
-                      refId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      refId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Error Output].Columns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Error Output].Columns[CreatedDate]"
+                      name="CreatedDate" />
+                    <outputColumn
+                      refId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Error Output].Columns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Error Output].Columns[UpdatedDate]"
+                      name="UpdatedDate" />
+                    <outputColumn
+                      refId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -619,15 +856,100 @@
           </components>
           <paths>
             <path
-              refId="Package\Data Flow Task_PostCodes.Paths[Excel Source Output]"
-              endId="Package\Data Flow Task_PostCodes\PostCodes Table.Inputs[OLE DB Destination Input]"
-              name="Excel Source Output"
-              startId="Package\Data Flow Task_PostCodes\Reading PostCodes.Outputs[Excel Source Output]" />
+              refId="Package\PostCode.Paths[OLE DB Source Output]"
+              endId="Package\PostCode\PostCodes Table.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\PostCode\Source PostCode.Outputs[OLE DB Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Set CET PostCode"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{D0B55F24-9A7E-4E4B-A548-9F50447712B8}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Set CET PostCode"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{692325AD-B85D-4271-90C0-75D4CECDC4DE}"
+          SQLTask:SqlStatementSource="update Data_Flow set CET=GETDATE() where Name='PostCodes'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Set LSET PostCode"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{0A4CA519-DEE8-4002-B695-D583B24E58B0}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Set LSET PostCode"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{692325AD-B85D-4271-90C0-75D4CECDC4DE}"
+          SQLTask:SqlStatementSource="update Data_Flow set LSET=CET where Name='PostCodes'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate PostCode"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{79FCB7E1-EC78-4523-A689-293A1D5F241A}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate PostCode"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{BEC57621-CA65-4DCA-87CA-20CC476DB692}"
+          SQLTask:SqlStatementSource="truncate table [dbo].[PostCodes_Table]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{99850C1A-3C3E-4A5F-90F0-516E2D596174}"
+      DTS:From="Package\Truncate PostCode"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Set CET PostCode" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{0D0C3604-0479-4D56-B997-DDB762F9EA60}"
+      DTS:From="Package\Set CET PostCode"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Get LSET, CET PostCode" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{EE02E518-023C-4B2B-863C-1300F934DAB2}"
+      DTS:From="Package\Get LSET, CET PostCode"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\PostCode" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{2F7C8FE7-D8D7-42C9-8425-2F1C582EED05}"
+      DTS:From="Package\PostCode"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\Set LSET PostCode" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -639,53 +961,145 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="204.8,41.6"
-          Id="Package\Data Flow Task_PostCodes"
-          TopLeft="126.428573581637,34.4117651884944" />
-      </GraphLayout>
-    </LayoutInfo>
-  </Package>
-  <TaskHost
-    design-time-name="Package\Data Flow Task_PostCodes">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+          Size="193.6,41.6"
+          Id="Package\Get LSET, CET PostCode"
+          TopLeft="297.85714792962,188.117649697103" />
         <NodeLayout
-          Size="156,41.6"
-          Id="Package\Data Flow Task_PostCodes\PostCodes Table"
-          TopLeft="373.571434933313,54.2941184085134" />
+          Size="122.4,41.6"
+          Id="Package\PostCode"
+          TopLeft="332.142862799217,275.294121507955" />
         <NodeLayout
-          Size="168,41.6"
-          Id="Package\Data Flow Task_PostCodes\Reading PostCodes"
-          TopLeft="68.571429739193,36.7058828677273" />
+          Size="162.4,41.6"
+          Id="Package\Set CET PostCode"
+          TopLeft="305.714290920569,97.1176484208618" />
+        <NodeLayout
+          Size="167.2,41.6"
+          Id="Package\Set LSET PostCode"
+          TopLeft="308.571433826369,368.588240463429" />
+        <NodeLayout
+          Size="167.2,41.6"
+          Id="Package\Truncate PostCode"
+          TopLeft="300.00000510897,18.3529414338637" />
         <EdgeLayout
-          Id="Package\Data Flow Task_PostCodes.Paths[Excel Source Output]"
-          TopLeft="236.571429739193,57.5058828677273">
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="385.257148014769,59.9529414338637">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="137.00000519412,17.5882355407861"
+              EndConnector="0,37.1647069869981"
               Start="0,0"
-              End="129.50000519412,17.5882355407861">
+              End="0,29.6647069869981">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="64.5000025970598,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="64.5000025970598,0"
-                    Point2="68.5000025970598,0"
-                    Point3="68.5000025970598,4" />
+                    End="0,29.6647069869981" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="390.785719425095,138.717648420862">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,49.4000012762408"
+              Start="0,0"
+              End="0,41.9000012762408">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="68.5000025970598,13.5882355407861" />
-                  <mssgle:CubicBezierSegment
-                    Point1="68.5000025970598,13.5882355407861"
-                    Point2="68.5000025970598,17.5882355407861"
-                    Point3="72.5000025970598,17.5882355407861" />
+                    End="0,41.9000012762408" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="394.000005364418,229.717649697103">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,45.5764718108524"
+              Start="0,0"
+              End="0,38.0764718108524">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="129.50000519412,17.5882355407861" />
+                    End="0,38.0764718108524" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="392.757148312793,316.894121507955">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51.6941189554737"
+              Start="0,0"
+              End="0,44.1941189554737">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.1941189554737" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\PostCode">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="157.6,41.6"
+          Id="Package\PostCode\Source PostCode"
+          TopLeft="127.142859308087,11.4705883961648" />
+        <NodeLayout
+          Size="156,41.6"
+          Id="Package\PostCode\PostCodes Table"
+          TopLeft="125.714287855188,127.705884143968" />
+        <EdgeLayout
+          Id="Package\PostCode.Paths[OLE DB Source Output]"
+          TopLeft="204.828573581638,53.0705883961648">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,74.6352957478032"
+              Start="0,0"
+              End="0,67.1352957478032">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,67.1352957478032" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -698,7 +1112,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task_PostCodes\PostCodes Table">
+    design-time-name="Package\PostCode\PostCodes Table">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -711,15 +1125,10 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task_PostCodes\Reading PostCodes">
+    design-time-name="Package\PostCode\Source PostCode">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
