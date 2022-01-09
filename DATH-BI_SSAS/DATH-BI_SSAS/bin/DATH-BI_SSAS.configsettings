@@ -1,0 +1,140 @@
+﻿<ConfigurationSettings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Database>
+    <DataSources>
+      <DataSource>
+        <ID>BI DDS</ID>
+        <ConnectionString>Provider=SQLNCLI11.1;Data Source=NHANLANG\NHANLANG;Password=;User ID=;Initial Catalog=BI_DDS</ConnectionString>
+        <ImpersonationInfo>
+          <ImpersonationMode xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">ImpersonateServiceAccount</ImpersonationMode>
+          <ImpersonationInfoSecurity xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">Unchanged</ImpersonationInfoSecurity>
+        </ImpersonationInfo>
+      </DataSource>
+    </DataSources>
+    <Dimensions>
+      <Dimension>
+        <ID>Dim Accident Severity</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Session</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Urban Rural</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Road Type</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Vehicle Type</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Journey Purpose</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Built Up Road</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Name Dayof Week</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Weather Conditions</ID>
+      </Dimension>
+    </Dimensions>
+    <Cubes>
+      <Cube>
+        <ID>Q4</ID>
+        <MeasureGroups>
+          <MeasureGroup>
+            <ID>Fact Cau4</ID>
+            <Partitions>
+              <Partition>
+                <ID>Fact Cau4</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+        </MeasureGroups>
+      </Cube>
+      <Cube>
+        <ID>Q5</ID>
+        <MeasureGroups>
+          <MeasureGroup>
+            <ID>Fact Cau5</ID>
+            <Partitions>
+              <Partition>
+                <ID>Fact Cau5</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+        </MeasureGroups>
+      </Cube>
+      <Cube>
+        <ID>Q7</ID>
+        <MeasureGroups>
+          <MeasureGroup>
+            <ID>Fact Cau7</ID>
+            <Partitions>
+              <Partition>
+                <ID>Fact Cau7</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+        </MeasureGroups>
+      </Cube>
+      <Cube>
+        <ID>BI DDS</ID>
+        <MeasureGroups>
+          <MeasureGroup>
+            <ID>Fact Cau9</ID>
+            <Partitions>
+              <Partition>
+                <ID>Fact Cau9</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+        </MeasureGroups>
+      </Cube>
+      <Cube>
+        <ID>Q10a</ID>
+        <MeasureGroups>
+          <MeasureGroup>
+            <ID>Fact Cau10a</ID>
+            <Partitions>
+              <Partition>
+                <ID>Fact Cau10a</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+        </MeasureGroups>
+      </Cube>
+      <Cube>
+        <ID>Q10b</ID>
+        <MeasureGroups>
+          <MeasureGroup>
+            <ID>Fact Cau10b</ID>
+            <Partitions>
+              <Partition>
+                <ID>Fact Cau10b</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+        </MeasureGroups>
+      </Cube>
+      <Cube>
+        <ID>BI DDS 1</ID>
+        <MeasureGroups>
+          <MeasureGroup>
+            <ID>Fact Variance</ID>
+            <Partitions>
+              <Partition>
+                <ID>Fact Variance</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+        </MeasureGroups>
+      </Cube>
+    </Cubes>
+    <DataSourceImpersonationInfo>
+      <ImpersonationMode xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">Default</ImpersonationMode>
+      <ImpersonationInfoSecurity xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">Unchanged</ImpersonationInfoSecurity>
+    </DataSourceImpersonationInfo>
+  </Database>
+</ConfigurationSettings>

@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "DATH-BI_SSAS", "DATH-BI_SSAS\DATH-BI_SSAS.dwproj", "{371843AC-3298-4287-9DAB-C965FB488A3C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{371843AC-3298-4287-9DAB-C965FB488A3C}.Development|Default.ActiveCfg = Development
+		{371843AC-3298-4287-9DAB-C965FB488A3C}.Development|Default.Build.0 = Development
+		{371843AC-3298-4287-9DAB-C965FB488A3C}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4F8C4328-F978-4EB5-82C2-9F81DB372AA2}
+	EndGlobalSection
+EndGlobal

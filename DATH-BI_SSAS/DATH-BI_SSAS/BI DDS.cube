@@ -1,0 +1,150 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="1bd770a4-129f-4b72-9f08-60bb4e4879ab" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>BI DDS</ID>
+  <Name>BI DDS</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="25c09e3d-449d-485d-b7fe-d6a24827598b">
+      <ID>Dim Journey Purpose</ID>
+      <Name>Dim Journey Purpose</Name>
+      <DimensionID>Dim Journey Purpose</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="13584c48-78c0-4258-8116-5f60c338cd15">
+          <AttributeID>Journey Purpose Of Driver</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="c547e01e-2d20-40be-88ca-bbf091ecadff">
+      <ID>Dim Vehicle Type</ID>
+      <Name>Dim Vehicle Type</Name>
+      <DimensionID>Dim Vehicle Type</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="5d4d4765-4c85-47a0-9321-193a0eba325a">
+          <AttributeID>Vehicle Type</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="65fbf7fe-a475-48c5-81a4-f84817b3eb10">
+      <ID>Fact Cau7</ID>
+      <Name>Fact Cau7</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="9e1b43ca-ebc2-4800-8ad6-a4d939a042ea">
+          <ID>Quantity Acc</ID>
+          <Name>Quantity Acc</Name>
+          <Source dwd:design-time-name="9b6d2e43-918e-45fe-9068-2d2bbee7b6b1">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="72ddf109-b8c0-454d-91c2-e23780555643">
+              <TableID>dbo_Fact_Cau7</TableID>
+              <ColumnID>Quantity_Acc</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="fc83bc97-60f1-4b3a-b531-612928a777c0">
+          <ID>Fact Cau7 Count</ID>
+          <Name>Fact Cau7 Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="c4b28cea-06a5-41a0-96db-90eea54ab0a0">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="5b252171-da27-4655-bf0d-fa3ec4b179e3">
+              <TableID>dbo_Fact_Cau7</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="eaa0bc84-9ea6-475a-ae25-b1459853d2ab">
+          <CubeDimensionID>Dim Journey Purpose</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="34b631aa-97f1-40b7-83f4-5e47ff022e55">
+              <AttributeID>Journey Purpose Of Driver</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="0536bd09-3d95-45af-a057-c4bc5b8de515">
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="7ff16343-1471-4173-9e46-69f2f4635a68">
+                    <TableID>dbo_Fact_Cau7</TableID>
+                    <ColumnID>Journey_Purpose_of_Driver</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="00eced6d-795c-40a6-8bfe-7c21e427252f">
+          <CubeDimensionID>Dim Vehicle Type</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="7cb94bc1-acd1-4427-be6e-6f4e469542a7">
+              <AttributeID>Vehicle Type</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="5b189a17-6b1c-45a7-a1c0-a5356de37dc8">
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="68be1379-b23f-44cf-b839-2369fd400c71">
+                    <TableID>dbo_Fact_Cau7</TableID>
+                    <ColumnID>Vehicle_Type</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="020aeee0-53c6-483f-a321-9a9d3fba49b5">
+    <DataSourceViewID>BI DDS</DataSourceViewID>
+  </Source>
+</Cube>
