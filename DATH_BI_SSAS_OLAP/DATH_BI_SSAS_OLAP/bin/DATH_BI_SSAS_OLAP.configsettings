@@ -1,0 +1,171 @@
+﻿<ConfigurationSettings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Database>
+    <DataSources>
+      <DataSource>
+        <ID>OLAP_DATH_BI</ID>
+        <ConnectionString>Provider=SQLNCLI11.1;Data Source=DESKTOP-UML28IP;Integrated Security=SSPI;Initial Catalog=DATH_BI_DDS</ConnectionString>
+        <ImpersonationInfo>
+          <ImpersonationMode xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">ImpersonateAccount</ImpersonationMode>
+          <Account xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">PC</Account>
+          <ImpersonationInfoSecurity xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">PasswordRemoved</ImpersonationInfoSecurity>
+        </ImpersonationInfo>
+      </DataSource>
+    </DataSources>
+    <Dimensions>
+      <Dimension>
+        <ID>Dim LAD</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Casualty Severity</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Session</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Age Band Of Casualty</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Casualty Type</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Sex Of Casualty</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Age</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Accident Severity</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Road Type</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Urban Or Rural</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Vehicle Type</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Journey Purpose</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Built-up Road</ID>
+      </Dimension>
+    </Dimensions>
+    <MiningStructures>
+      <MiningStructure>
+        <ID>PredictAccidentSeverity</ID>
+      </MiningStructure>
+    </MiningStructures>
+    <Cubes>
+      <Cube>
+        <ID>OLAP_DATH_BI_FactQ1</ID>
+        <MeasureGroups>
+          <MeasureGroup>
+            <ID>Fact Casualty Q1</ID>
+            <Partitions>
+              <Partition>
+                <ID>Fact Casualty Q1</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+        </MeasureGroups>
+      </Cube>
+      <Cube>
+        <ID>OLAP_DATH_BI_FactQ2</ID>
+        <MeasureGroups>
+          <MeasureGroup>
+            <ID>Fact Casualty Q2</ID>
+            <Partitions>
+              <Partition>
+                <ID>Fact Casualty Q2</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+        </MeasureGroups>
+      </Cube>
+      <Cube>
+        <ID>OLAP_DATH_BI_FactQ3</ID>
+        <MeasureGroups>
+          <MeasureGroup>
+            <ID>Fact Casualty Q3</ID>
+            <Partitions>
+              <Partition>
+                <ID>Fact Casualty Q3</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+        </MeasureGroups>
+      </Cube>
+      <Cube>
+        <ID>OLAP_DATH_BI_FactQ4</ID>
+        <MeasureGroups>
+          <MeasureGroup>
+            <ID>Fact Accident Q4</ID>
+            <Partitions>
+              <Partition>
+                <ID>Fact Accident Q4</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+        </MeasureGroups>
+      </Cube>
+      <Cube>
+        <ID>OLAP_DATH_BI_FactQ5</ID>
+        <MeasureGroups>
+          <MeasureGroup>
+            <ID>Fact Accident Q5</ID>
+            <Partitions>
+              <Partition>
+                <ID>Fact Accident Q5</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+        </MeasureGroups>
+      </Cube>
+      <Cube>
+        <ID>OLAP_DATH_BI_FactQ6</ID>
+        <MeasureGroups>
+          <MeasureGroup>
+            <ID>Fact Casualty Q6</ID>
+            <Partitions>
+              <Partition>
+                <ID>Fact Casualty Q6</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+        </MeasureGroups>
+      </Cube>
+      <Cube>
+        <ID>OLAP_DATH_BI_FactQ7</ID>
+        <MeasureGroups>
+          <MeasureGroup>
+            <ID>Fact Accident Q7</ID>
+            <Partitions>
+              <Partition>
+                <ID>Fact Accident Q7</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+        </MeasureGroups>
+      </Cube>
+      <Cube>
+        <ID>OLAP_DATH_BI_FactQ9</ID>
+        <MeasureGroups>
+          <MeasureGroup>
+            <ID>Fact Accident Q9</ID>
+            <Partitions>
+              <Partition>
+                <ID>Fact Accident Q9</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+        </MeasureGroups>
+      </Cube>
+    </Cubes>
+    <DataSourceImpersonationInfo>
+      <ImpersonationMode xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">Default</ImpersonationMode>
+      <ImpersonationInfoSecurity xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">Unchanged</ImpersonationInfoSecurity>
+    </DataSourceImpersonationInfo>
+  </Database>
+</ConfigurationSettings>
