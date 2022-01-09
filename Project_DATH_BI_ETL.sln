@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "Project_Source_Stage", "Project_Source_Stage\Project_Source_Stage.dtproj", "{2CA3F8F2-EE48-427A-98D4-FB79AE249A86}"
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "Project_DATH_BI_ETL", "Project_Source_Stage\Project_DATH_BI_ETL.dtproj", "{2CA3F8F2-EE48-427A-98D4-FB79AE249A86}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
